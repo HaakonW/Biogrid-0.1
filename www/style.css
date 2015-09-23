@@ -2,18 +2,20 @@ body{
   background-color: #282C34;
 }
 
-#continue{
-margin-top: 35%;
-margin-bottom: 5%;
-margin-left: 50%;
+.continue{
+font-size: 35px;
+text-align: center;
+margin-top: 20%;
+margin-bottom: 20%;
 }
 
 
 #topContent{
-  color: #98C379;
+  color: #2BDA77;
 }
 
 #groupName{
+  margin-top: 10%;
   font-size: 6em;
 }
 
@@ -21,16 +23,35 @@ margin-left: 50%;
   color: #4FA6EF;
 }
 
-.teamPic{
-
-}
-
 #knowledge{
-  color: #D19A66;
+  color: #FF982D;
 }
 
-#aboutBachelor{
-  color: #DB6A73;
+#lastRow{
+  margin-bottom: 35%;
 }
 
-  
+
+#endLink{
+margin-top: 10%;
+margin-bottom: 10%;
+margin-left: 40%;
+}
+
+@keyframes loadingPic{
+0% {left:40%;}
+/*10% {right:20px;}
+20% {left:30px;}
+30% {right:40px;}
+40% {left:50px;}
+50% {right:60px;}
+60% {left:70px;}
+70% {right:80px;}
+80% {left:80px;}
+90% {right:90px;}*/
+100% {left: 40%;}
+}
+
+/*#knowledge{
+  margin-top: 1300px;
+}*/
