@@ -9,14 +9,17 @@
  - AngualarJS, 
  - PHP
 3. Hvem vil vi jobbe med?
- - Sparebanken 1
- - Making waves 
+ x Sparebanken 1 - Kontaktet
+ x Making waves - Cervesos Codigos aka skrillfen & co. har fått disse.
  - Skatteetaten - LykkeRenee.Skimten@skatteetaten.no  HR Dame
  - BEKK
  - Accenture 
- - Tidal - Pål Berg
+ x Tidal - Pål Berg - Kontaktet COO og venter på riktig kontaktperson.
  - Sopra Steria - leil@soprasteria.com
- - Design Container - http://designcontainer.no/kontakt
+ x Design Container - http://designcontainer.no/kontakt - kontaktet av Haakon?
+ x Posten - Kontaktet
+ x Oslo market solutions - http://www.oslomarketsolutions.no/?page_id=127 - Kontaktet
+ x Biogrid - Kontaktet
 
 
 
