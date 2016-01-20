@@ -3,8 +3,15 @@ body{
 }
 
 #topContent{
-  color: #2BDA77;
-  margin-bottom: 50%;
+  color:#2BDA77;
+  /*color:#4FA6EF;*/
+  margin-top:28%;
+  /*margin-bottom: 50%;*/
+}
+
+#moreBtn{
+  margin-top: 6%;
+  margin-left: 70%;
 }
 
 #groupName{
@@ -13,16 +20,12 @@ body{
 
 #aboutUs{
   color: #4FA6EF;
-  margin-bottom: 40%;
-  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-top: 15%;
 }
 
 #knowledge{
   color: #FF982D;
-}
-
-#endRow{
-  margin-bottom: 35%;
 }
 
 #endLink{
@@ -35,6 +38,7 @@ padding-bottom: 5%;
   display: block;
   margin-left: 5%;
   margin-right: 5%;
+  background-color: #4FA6EF;
 }
 
 .teamPic{
@@ -60,4 +64,16 @@ padding: 2px;
 }
 .icons{
   margin-right: 5%;
+}
+
+.container{
+  margin-bottom: 10%;
+}
+
+#lastLink{
+  margin-left: 40%;
+}
+
+a:hover{
+  text-decoration: none;
 }
