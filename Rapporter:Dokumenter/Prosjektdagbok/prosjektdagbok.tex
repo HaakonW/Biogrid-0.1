@@ -2,18 +2,17 @@
 \usepackage[utf8]{inputenc}   			%Active æøå
 \usepackage{geometry}				% See geometry.pdf to learn the layout options. There are lots.
 \usepackage{color}  
-\geometry{a4paper}                   		% ... or a4paper or a5paper or ... 
-\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflatex		
+\geometry{a4paper}                   		
+\usepackage[parfill]{parskip}    		
+\usepackage{graphicx}					
 \usepackage{amssymb}
-\renewcommand{\contentsname}{Innholdsfortegnelse} 
 \usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	urlcolor=red,
+}
 
-%SetFonts
-
-%SetFonts
-
+\renewcommand{\contentsname}{Innholdsfortegnelse} 
 
 \title{Prosjektdagbok - Biogrid}
 \author{Peter Wilhelmsen}
@@ -41,6 +40,7 @@ En uke senere er vi igjen i kontakt med Biogrid og de ønsker å samarbeide med 
 
 % <---------------------------- Desember 2015 ----------------------------->
 \subsection{Desember 2015}
+
 \subsubsection{ Møte med Biogrid 14.12.15}
 Oscar og Peter i møte med August Flatby. Får presentert prosjektet og ideer Flatby har. Får innføring om diverse teknologier som Biogrid kan tenke seg skal brukes. Disse er:  
 \begin{itemize}
@@ -53,22 +53,30 @@ Biogrid gir beskjed om at vi står fritt til å komme med forslag selv til hva s
 
 Tiden frem mot nyttår går med til å se litt på aktuelle pakker i JavaScript platformen Meteor. 
 
+
 % <--------------------------- Januar 2016 -------------------------------------->
 \subsection{Januar 2016}
+
 \subsubsection{Forprosjektrapport 07.01.16}
 Møtes hos Haakon der vi diskuterer litt og går gjennom hva som skal være med i en forprosjektrapport.\\
 Sender mail til Biogrid der vi ber om møte. Får svar dagen etter. Han er opptatt med å lage til oppsett på hvordan dataen skal lagres, ingen respons på forespørsel om møte.
+
+
 
 \subsubsection{12.01.16}
 Gruppen møtes på skolen. Fortsatt ikke fått avtalt møte med Biogrid. \\
 Gruppen diskuterer bruken av GitHub og hvilken editor vi skal bruke til rapportskriving. Alternativene er Word Online, Pages og Google Docs. Gruppen blir enig om at Word er det beste alternativ da dette er editoren som har mest funksjonalitet tilgjengelig. 
 
+
+
 \subsubsection{14.01.16}
 Gruppen møtes hos Haakon. Sender ny mail til Biogrid for å avtale møte. \\
 Oppretter dokument for forprosjektrapporten, som foreløpig kun har vært notater. Gruppen kommer et godt stykke med rapporten, venter kun på Biogrid for å avtale endelige betingelser, mål og lignende.
 
+
+
 \subsubsection{Videomøte med Biogrid 15.01.16}
-Har videomøte med Biogrid på www.appear.in. Tar opp noen punkter vedrørende forprosjektrapporten. Hele gruppen deltar. Har på forhånd sendt utkastet av rapporten til Biogrid. Det er gjort noen små endringer, men ellers fornøyd med hvordan den er strukturert. \\
+Har videomøte med Biogrid på \url{http://www.appear.in}. Tar opp noen punkter vedrørende forprosjektrapporten. Hele gruppen deltar. Har på forhånd sendt utkastet av rapporten til Biogrid. Det er gjort noen små endringer, men ellers fornøyd med hvordan den er strukturert. \\
 
 Oppsummering av hovedpunkter:
 
@@ -110,6 +118,8 @@ Gruppen må få innføring i hvordan Docker og IBM Softlayer funker. Gruppen øn
 
 % <-------------------------------  Februar 2016 ----------------------------->
 \subsection{Februar}
+
+
 
 \subsubsection{Møte med Biogrid på Startup Lab - 04.02.16 }
 Hovedpunker i møte:
@@ -154,46 +164,66 @@ Det må leses opp om Docker og MongoDB.
 
 Største vending/overraskelse: Biogrid har begynt å tvile på Meteor som plattform. Meteor bygger sammen alt for deg, som gir mindre kontroll. Vil at gruppen sjekker opp andre webteknologier for å se om det finnes andre gode alternativer. Tenk også på hva gruppen har lyst og er interessert i å lære. Meteor er IKKE utelukket. 
 
+
+
 \subsubsection{JavaScript bibliotek for grafer 05.02.16}
 Gruppen møtes for å finne ut av hvilke biblioteker for fremvisning av grafer som er aktuelle. Gruppen har lest artikler om anbefalte biblioteker:\\
-http://thenextweb.com/dd/2015/06/12/20-best-javascript-chart-libraries/\\
+\url{http://thenextweb.com/dd/2015/06/12/20-best-javascript-chart-libraries/}\\
 *FLERE LINKER*\\
 Å kunne zoome er en viktig funksjon gruppen ser etter. Det må være mulig å kunne zoome seg inn fra dag, til time og til minutt. De tre aktuelle bibliotekene er:
 \begin{itemize}
-	\item Dygraphs: et open source JavaScript bibliotek som lager grafer. Det er interaktivt slik at det er mulig å forandre grafen ved å zoome inn på 		ønsket periode. På papiret ser det veldig aktuelt ut. Rent designmessig ser det ikke så bra ut, men vi regner med at dette er noe som kan 		forandres på senere. www.dypgrahps.com
-	\item Flot: et JavaScript bibliotek for jQuery. Også interaktiv som gjør det mulig å zoome inn på grafen for å få et mer detaljert bilde. Brukt av 			veldig mange forskjellige bedrifter. God dokumentasjon, med video blant annet. Ser kanskje litt bedre ut en dygraphs. Siden det bygger på 		jQuery er de fleste browsere også støttet. Støtter JSON. Virker enkelt å lære, men kanskje det blir for enkelt for oss. www.flotcharts.org
-	\item Rickshaw: Javascript rammeverk som er open source. Ble anbefalt dette av arbeidsgiver første gang, men med forbehold om at det kan 			finnes bedre alternativer der ute. Muligheter for interaktive grafer her også. Støtte for charts med time-series data. Reklamerer med at de kan 		lage grafer basert real time oppdatering. Bygger på D3 som skal være et godt rammeverk. www.code.shutterstock.com/rickshaw
+	\item Dygraphs: et open source JavaScript bibliotek som lager grafer. Det er interaktivt slik at det er mulig å forandre grafen ved å zoome inn på 		ønsket periode. På papiret ser det veldig aktuelt ut. Rent designmessig ser det ikke så bra ut, men vi regner med at dette er noe som kan 		forandres på senere. \url{http://www.dygraphs.com}
+	\item Flot: et JavaScript bibliotek for jQuery. Også interaktiv som gjør det mulig å zoome inn på grafen for å få et mer detaljert bilde. Brukt av 			veldig mange forskjellige bedrifter. God dokumentasjon, med video blant annet. Ser kanskje litt bedre ut en dygraphs. Siden det bygger på 		jQuery er de fleste browsere også støttet. Støtter JSON. Virker enkelt å lære, men kanskje det blir for enkelt for oss. \url{http://www.flotcharts.org}
+	\item Rickshaw: Javascript rammeverk som er open source. Ble anbefalt dette av arbeidsgiver første gang, men med forbehold om at det kan 			finnes bedre alternativer der ute. Muligheter for interaktive grafer her også. Støtte for charts med time-series data. Reklamerer med at de kan 		lage grafer basert real time oppdatering. Bygger på D3 som skal være et godt rammeverk. \url{http://code.shutterstock.com/rickshaw}
 \end{itemize}
+
 
 
 \subsubsection{Evaluering og valg 09.02.16}
 Frem mot i dag har tiden gått med på å lese om React, finne ut om Meteor er godt nok til å være gruppens webplattform og sjekke de grafiske JS bibliotekene og lese om Docker. 
 \begin{itemize}
-	\item Etter møte forrige uke var August litt betenkt på bruken av Meteor, men i dag virker det som har tror det vil funke bra. Han sender oss en 			link på bok/pdf om Meteor som han mener kan være en god ressurs. Dette tar vi som et tegn på at han syns gruppen skal gå for Meteor! 			Peter har 	funnet artikkel om at Meteor vil være en platform som er "up and coming" i 2016. Leter fortsatt etter flere artikler som understøtter 		denne påstanden.  Sier at Meteor er en hybrid mobile framework og at det er verdt å lære.
+	\item Etter møte forrige uke var August litt betenkt på bruken av Meteor, men i dag virker det som har tror det vil funke bra. Han sender oss en 	link på bok/pdf om 			Meteor som han mener kan være en god ressurs. Dette tar vi som et tegn på at han syns gruppen skal gå for Meteor! Peter har funnet artikkel (\url{http://t			utorialzine.com/2015/12/the-languages-and-frameworks-you-should-learn-in-2016/}) om at Meteor vil være en platform som er "up and coming" i 2016. Leter 			fortsatt etter flere artikler som understøtter denne påstanden. Sier at Meteor er en hybrid mobile framework og at det er verdt å lære.
 	\item Valg om editor lander på Atom for alle tre. Atom har flere tilleggspakker man kan installere for å optimalisere og tilpasse bruk:\\
 		 - Language støtte for ReactJS: jsx.\\
 		 - Bootstrap autocomplete. Kan være denne ikke vil fungere sammen med ReactJS pakken pga class ikke brukes i html-tagger i react, det 		er erstattet med className.
 	\item August har gjort endringer på hvordan data legges inn i collection i MongoDB. I stedet for at det skal være en collection for hver sensor 			type, er det nå 1 collection som heter sensor, der hvert dokument har  sensor-id, day og type: rh, co2. Endringene er pushet til 			GitHub og funker for gruppen.
 \end{itemize}
 
+
+
 \subsubsection{Meteor i kombinasjon med ReactJS15.02.16}
 \begin{itemize}
-	\item Biogrid har sett på alternative og foreslår å bruke Dygraphs. Dette var den gruppen likte best. Har flere funksjoner, men ser ikke veldig pent 		ut. Har sett på docs om CSS styling, og det skal være mulig å tilpasse slik gruppen måtte ønske.
-	\item Biogrid har sett mer på webstacken og selve React. Sier React virker veldig bra. Sender link på video som forklarer hvorfor Facebook 			utviklet react: https://facebook.github.io/flux/docs/overview.html (se fra 24.00 ca).
+	\item Biogrid har sett på alternative og foreslår å bruke Dygraphs. Dette var den gruppen likte best. Har flere funksjoner, men ser ikke veldig pent 		ut. Har sett på 		docs om CSS styling, og det skal være mulig å tilpasse slik gruppen måtte ønske.
+	\item Biogrid har sett mer på webstacken og selve React. Sier React virker veldig bra. Sender link på video som forklarer hvorfor Facebook 			utviklet react: 		\url{https://facebook.github.io/flux/docs/overview.html} (se fra 24.00 ca).
 	
 		Viktig: React brukes kun for å lage UI-komponenter.
 	\item Biogrid mener Meteor er en god måte å holde data syncet mellom server og klient, så det vil satses på en Meteor-React kombinasjon. 
 	\item Gruppen har prøvd seg på tutorialer om React:\\
-		https://www.youtube.com/watch?v=kVbVBp35keQ Denne tutorial bruker Flowrouter og react-layout, to pakker fra Kadira som er 		"perfomance monitoring for meteor" - www.kadira.io. Dette virker som to gode pakker for å håndtere routing og hvordan man bygger opp 			layouter i React. Gruppen sjekker fortsatt alternativer til routing og hvordan man kan bruke react. Slik det ser ut finnes det flere 				fremgangsmåter.
+		\url{https://www.youtube.com/watch?v=kVbVBp35keQ}. Denne tutorial bruker Flowrouter og react-layout, to pakker fra Kadira som er "perfomance monitoring for 			meteor" - \url{http://www.kadira.io}. Dette virker som to gode pakker for å håndtere routing og hvordan man bygger opp layouter i React. Gruppen sjekker fortsatt alternativer 		til routing og hvordan man kan bruke react. Slik det ser ut finnes det flere fremgangsmåter.
 \end{itemize}
+
+
 
 \subsubsection{Fra database til graf 18.02.16}
 \begin{itemize}
-	\item Haakon og Oscar har startet med å hente data fra MongoDB og sette disse inn i graf ved hjelp av dygraph. Pushet TestKode til github. 			Peter får kjørt dette meteorprosjektet på sin maskin. Planen er at Oscar og Haakon fortsetter på dette i morgen.
-	\item Peter er hjemme i Ålesund. (11.02 - 25.02(?)). Har lest gjennom AirBnb JS styleguide og leser om React. Skal lage oversikt over 				pakker og alternativer på hvordan React skal brukes.
-	\item Haakon funnet Robomongo. Applikasjon som man kan koble opp mot MongoDB. Oversiktlig GUI, der man lett kan se de forskjellige 			documents og gjøre spørringer. Slepper å gjøre spørringer i terminal.
+	\item Haakon og Oscar har startet med å hente data fra MongoDB og sette disse inn i graf ved hjelp av Dygraph. Pushet TestKode til GitHub. Peter får kjørt 			Meteorprosjektet på sin maskin. Planen er at Oscar og Haakon fortsetter på dette i morgen.
+	\item Peter er hjemme i Ålesund. (11.02 - 25.02(?)). Har lest gjennom AirBnb JS styleguide, \url{https://github.com/airbnb/javascript}, og leser om React. Skal lage oversikt over pakker og alternativer på hvordan 		React skal brukes.
+	\item Haakon funnet Robomongo. Applikasjon som man kan koble opp mot MongoDB. Oversiktlig GUI, der man lett kan se de forskjellige documents og gjøre 				spørringer. Slepper å gjøre spørringer i terminal.
 	\item Haakon har gjort oppdatert hjemmesiden til prosjektet. Lastet opp forprosjektrapport. 
 \end{itemize}
+
+
+
+\subsubsection{Latex og graf 19.02.16}
+Peter har testet ut Latex som teksteditor for rapportskriving. Latex gjør det lett for gruppen å jobbe på samme dokument, og man trenger ikke å logge seg på Word Online. Latex gir ryddig dokumentstruktur og det er lett å generere overskrifter, bilder/figurer og innholdsfortegnelse. 
+
+Haakon og Oscar jobber videre med spørring mot databasen. 
+
+Problemstillinger: Hvilken form for routing skal vi bruke? Peter har lest opp om Flow-router og React-router, begge ser ut til å være gode alternativer. Det finnes mer dokumentasjon på React-router, men Flowrouter har blitt brukt av mange i kombinasjon med Meteor. Lest denne linken: \url{https://forums.meteor.com/t/react-router-vs-flow-router/6867}
+
+Link til ReactJS Github med React-router \url{https://github.com/reactjs/react-router}.
+
+\input{testfil.tex}
 
 
 \end{document} 
