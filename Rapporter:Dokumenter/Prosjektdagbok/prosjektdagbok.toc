@@ -1,0 +1,19 @@
+\contentsline {section}{\numberline {1}Introduksjon}{3}{section.1}
+\contentsline {section}{\numberline {2}Dagbok}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}November 2015}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Desember 2015}{3}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1} M\IeC {\o }te med Biogrid 14.12.15}{3}{subsubsection.2.2.1}
+\contentsline {subsection}{\numberline {2.3}Januar 2016}{4}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Forprosjektrapport 07.01.16}{4}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}12.01.16}{4}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}14.01.16}{4}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Videom\IeC {\o }te med Biogrid 15.01.16}{4}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.5}M\IeC {\o }te med veileder Thor Hasle 21.01.16}{5}{subsubsection.2.3.5}
+\contentsline {subsubsection}{\numberline {2.3.6}22.01.16}{5}{subsubsection.2.3.6}
+\contentsline {subsubsection}{\numberline {2.3.7}Kravspesifikasjon 25.01.16 - 03.02.16}{6}{subsubsection.2.3.7}
+\contentsline {subsection}{\numberline {2.4}Februar}{6}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}M\IeC {\o }te med Biogrid p\IeC {\r a} Startup Lab - 04.02.16 }{6}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}JavaScript bibliotek for grafer 05.02.16}{8}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Evaluering og valg 09.02.16}{8}{subsubsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.4}Meteor i kombinasjon med ReactJS15.02.16}{9}{subsubsection.2.4.4}
+\contentsline {subsubsection}{\numberline {2.4.5}Fra database til graf 18.02.16}{10}{subsubsection.2.4.5}
