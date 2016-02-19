@@ -1,0 +1,153 @@
+\documentclass[12pt, oneside]{article}
+\usepackage[utf8]{inputenc}   			%Active æøå
+\usepackage{geometry}				% See geometry.pdf to learn the layout options. There are lots.
+\usepackage{color}  
+\geometry{a4paper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+%SetFonts
+
+%SetFonts
+
+
+\title{Prosjektdagbok - Biogrid}
+\author{Peter Wilhelmsen}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+\pagebreak
+
+\section{Introduksjon}
+Våren 2016 gjennomfører gruppe 20 bachelorprosjekt på Høgskolen i Oslo og Akerhus i samarbeid med Biogrid Cortex AS. \\
+Dagboken er delt opp i måneder, som igjen er delt opp i underpunkter. 
+
+% <---------------------------- Start dagbok -------------------------------->
+\section{Dagbok}
+
+
+% <----------------------------- November 2015 ----------------------------->
+\subsection{November 2015}
+Tok kontakt med Biogrid på mail og Oscar er i møte med August Flatby som er daglig leder for Biogrid AS.
+En uke senere er vi igjen i kontakt med Biogrid og de ønsker å samarbeide med oss. Gir oss tid til å tenke på tilbudet, men vi har ingen med å takke ja til tilbudet. Avtaler å ha møte 14.desember i Biogrids lokaler når Peter er tilbake i Oslo.
+
+
+% <---------------------------- Desember 2015 ----------------------------->
+\subsection{Desember 2015}
+\subsubsection{Møte 14.desember 2015}
+Oscar og Peter i møte med August Flatby. Får presentert prosjektet og ideer Flatby har. Får innføring om diverse teknologier som Biogrid kan tenke seg skal brukes. Disse er:  
+\begin{itemize}
+	\item Rickshaw.js for grafisk fremstilling
+	\item Bootstrap
+	\item Meteor
+	\item MongoDB
+\end{itemize}
+Biogrid gir beskjed om at vi står fritt til å komme med forslag selv til hva som kan brukes. Avtaler å møtes igjen over nyttår.
+
+Tiden frem mot nyttår går med til å se litt på aktuelle pakker i JavaScript platformen Meteor. 
+
+% <--------------------------- Januar 2016 -------------------------------------->
+\subsection{Januar 2016}
+\subsubsection{07.01.16}
+Møtes hos Haakon der vi diskuterer litt og går gjennom hva som skal være med i en forprosjektrapport.\\
+Sender mail til Biogrid der vi ber om møte. Får svar dagen etter. Han er opptatt med å lage til oppsett på hvordan dataen skal lagres, ingen respons på forespørsel om møte.
+
+\subsubsection{12.01.16}
+Gruppen møtes på skolen. Fortsatt ikke fått avtalt møte med Biogrid. \\
+Gruppen diskuterer bruken av GitHub og hvilken editor vi skal bruke til rapportskriving. Alternativene er Word Online, Pages og Google Docs. Gruppen blir enig om at Word er det beste alternativ da dette er editoren som har mest funksjonalitet tilgjengelig. 
+
+\subsubsection{14.01.16}
+Gruppen møtes hos Haakon. Sender ny mail til Biogrid for å avtale møte. \\
+Oppretter dokument for forprosjektrapporten, som foreløpig kun har vært notater. Gruppen kommer et godt stykke med rapporten, venter kun på Biogrid for å avtale endelige betingelser, mål og lignende.
+
+\subsubsection{15.01.16}
+Har videomøte med Biogrid på www.appear.in. Tar opp noen punkter vedrørende forprosjektrapporten. Hele gruppen deltar. Har på forhånd sendt utkastet av rapporten til Biogrid. Det er gjort noen små endringer, men ellers fornøyd med hvordan den er strukturert. \\
+
+Oppsummering av hovedpunkter:
+
+Løsning består av:
+\begin{itemize}
+	\item IBM Softlayer
+	\item Docker: Løsningen deployes i Docker
+	\item Node-RED: data stream processor
+	\item Mosquitto, MQTT Broker
+	\item MongoDB
+	\item Meteor: selve applikasjonen\\
+	Pakkebruk i Meteor. Mange fine løsninger, men redd det kan bli en for stor snarvei. Samtidig er det mye kode å sette seg inn i og finne ut hvordan 	fungerer. Tar dette opp veileder. 
+\end{itemize}
+Vet ikke hvor nøye det er hvor mye vi forklarer hvert enkelt hovedpunkt i løsningen siden vi konsentrerer oss om Meteor og MongoDB. Skissen vi fikk tilsendt passer fint inn her, men da kanskje greit å lage en kort forklaring til den.
+
+Det skal skrives kontrakt mellom skolen og oppdragsgiver. Gruppen skal kontakte veileder for møte. Foreløpig ingen informasjon hvordan kontrakten fungerer. Gir beskjed til Biogrid etter møte med veileder. 
+
+
+\subsubsection{21.01.16}
+Oscar og Peter i møte med gruppen veileder, Thor Hasle. Presenterer prosjektet og får innspill fra Thor.
+\begin{itemize}
+	\item  Ingen faste møter med Hasle. Ta kontakt når vi trenger, kan bruke han som konsulent.
+	\item  Kontrakt mellom arbeidsgiver og HiOA: bruke standarkontrakt som finnes på bachelorsiden.
+	\item  Begynne på kravspec og arbeidsplan vil være neste steg.
+	\item  Tips: definere Internet of Things i rapporten.
+\end{itemize}
+
+\subsubsection{22.01.16}
+Gruppen og Biogrid bruker Slack som kommunikasjonsmiddel. Dette er en applikasjon som gjør det lett å sende meldinger, dele filer og lignende.
+
+August sender over linker om ReactJS. Det er JS bibliotek som brukes til å lage UI-komponenter. Det er spådd at React er up and coming, og vi får to artikler å lese. React virker bra å bruke og gruppen starter å se på tutorials og sette seg inn i biblioteket. 
+
+Sender over kontrakten mellom skolen og Biogrid, og vi avtaler møte 4.februar når de er på plass i nye lokaler på Startup Lab i Forskningsparken.
+
+\subsubsection{25.01.16 -- 03.02.16}
+Møtes på skolen for å starte på kravspesifikasjoen. Diskuterer hvilke funksjonelle og ikke funksjonelle krav, milepælsplan. Vanskelig å sette noe veldig konkret da det fortsatt trengs innspill fra Biogrid om ønsket funksjonalitet osv.\\
+Gruppen må få innføring i hvordan Docker og IBM Softlayer funker. Gruppen ønsker også en kjapp innføring i bruken av Github da den ikke føler seg helt komfortabel med bruken av versjonshåndteringssystemet. 
+
+
+% <-------------------------------  Februar 2016 ----------------------------->
+\subsection{Februar}
+
+\subsubsection{04.02.16 - Møte med Biogrid på Startup Lab}
+Hovedpunker i møte:
+\begin{itemize}
+	\item Softwaren har gått fra å være tiltenkt kun innen landbruk til å kunne brukes i flere hold. Skal utvikles generisk slik at det kan passe flere 			formål. Det finnes lignende løsninger, men vi skal ikke skremmes av at vår løsning vil ligne/gjøre det samme som dem. Denne løsningen 			skal ikke stagnere, men kunne utvikles videre.
+	\item Hvem skal bruke systemet?\\
+	 	Målgruppen er fortsatt ikke helt sikker. Det er IKKE ment for hobbybruk, men for en industri som for tiden ligger an til å være 					innen landbruk, jordbruk eller lignende. 1. mars skal Biogrid ha seminar for bedrifter innen landbruk.
+	\item Arkitekturen\\
+		Docker er som en virtuell maskin, men kalles en container. Det er én container pr prosess der hver container tror den er en maskin. 				Containerne har hvert sitt filsystem og hersker over seg selv. Containerne kan også dele filsystem. En container kan tas ned uten å påvirke 		de andre. Containere kan snakke med hverandre. Docker Compose brukes til å starte containerne samtidig.(script). Docker lokalt er helt likt 		som på en server, veldig lett å sette ut i virkeligheten uten modifikasjoner.\\
+	
+		 BiogridCortex består av: - Cortex: orkestrer alt sammen. \\
+		 Mongo\\
+		 Mosquitto\\
+		 NODE-RED\\
+		 Meteor. (foreløpig et lite spørsmåltegn til bruken av plattformen).\\
+		 MQTT BROKER Hvis noen er interessert i disse dataene sendes de videre. Har en slags adressering. Du sier ikke hvem du er, men hvor 		du vil sende dataene. TOPIC: /sensor/<type> /sensor/co2 payload: ID:GUID (Global Uniqe ID) VALUE: 413.6
+		 
+	\item Milpæler
+		\begin{enumerate}
+			\item Visualisere data
+			\item Liste av sensorer
+			\item Logge inn - få mulighet til å velge hvilken lokasjon du vil se data for
+		\end{enumerate}
+		
+	\item Fremdrift videre
+		\begin{description}
+			\item Sette opp arbeidsmiljø
+			\item Velge editor. Biogrid mener Atom er et godt alternativ.
+			\item GitHub. Bruk Sourcetree, mange mener GitHub Desktop er for simpelt.
+			\item Sjekke forskjellige bibliotek for grafer. Sammenlign og finn beste alternativ.
+			\item UX. Biogrid mener Bootstrap er et godt alternativ. Gruppen har brukt det litt før og er enig. 
+			\item Implementasjon
+			\item Deretter begynne å gruppere sensorer og bygg/lokasjoner
+			\item User account. Vil ikke bruke tid på å logge inn og ut under utvikling
+		\end{description}
+\end{itemize}
+
+Oppsummering:\\
+Fikk satt opp arbeidsmiljø(Docker) og August viste oss hvordan dette funket. Hele gruppen er online og kan starte generering av data til MongoDB. Fremover vil vi lese oss opp på forskjellige alternativer med tanke på fremstilling av data: fokus på interaktivitet, estetikk, må kunne oppdatere data i realtime og skal ikke være kommersielt.
+
+Det må leses opp om Docker og MongoDB.
+
+Største vending/overraskelse: Biogrid har begynt å tvile på Meteor som plattform. Meteor bygger sammen alt for deg, som gir mindre kontroll. Vil at gruppen sjekker opp andre webteknologier for å se om det finnes andre gode alternativer. Tenk også på hva gruppen har lyst og er interessert i å lære. Meteor er IKKE utelukket. 
+
+\end{document} 
