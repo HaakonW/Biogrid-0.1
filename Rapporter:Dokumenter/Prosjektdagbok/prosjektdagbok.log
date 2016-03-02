@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.18)  20 FEB 2016 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.18)  2 MAR 2016 10:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -594,22 +594,39 @@ Overfull \hbox (71.16792pt too wide) in paragraph at lines 225--226
 /12 https : / / github . com / reactjs / react-[]router$[][]\OT1/cmr/m/n/12 . 
  []
 
-(./testfil.tex [10])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
+[10]
+Overfull \hbox (14.78627pt too wide) in paragraph at lines 244--245
+[]\OT1/cmr/m/n/12 Thomas Ulle-berg fra Tr^^Wadl^^\se Trond-heim/Wireless Trond-
+heim for-t-alte om radiob^^\lge-
+ []
+
+
+Overfull \hbox (43.21997pt too wide) in paragraph at lines 244--245
+\OT1/cmr/m/n/12 teknologi og LoRa. [][]$\OT1/cmtt/m/n/12 https : / / www . lora
+-[]alliance . org / What-[]Is-[]LoRa / Technology$[][]\OT1/cmr/m/n/12 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+
+ []
+
+[11] (./testfil.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 268.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 268.
  (./prosjektdagbok.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 234.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 234.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 268.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 268.
 Package rerunfilecheck Info: File `prosjektdagbok.out' has not changed.
-(rerunfilecheck)             Checksum: 746F3B6F050A4D17FEF27484B344F737;1726.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 234.
+(rerunfilecheck)             Checksum: AC7193E726C28084A2EFE1DDEE85D4AB;1958.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
  ) 
 Here is how much of TeX's memory you used:
- 6140 strings out of 493089
- 89773 string characters out of 6134842
- 178538 words of memory out of 5000000
- 9513 multiletter control sequences out of 15000+600000
+ 6147 strings out of 493089
+ 89890 string characters out of 6134842
+ 179538 words of memory out of 5000000
+ 9516 multiletter control sequences out of 15000+600000
  12572 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,6n,28p,667b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -618,10 +635,10 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on prosjektdagbok.pdf (11 pages, 86327 bytes).
+Output written on prosjektdagbok.pdf (12 pages, 90736 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 237 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
