@@ -1,71 +1,46 @@
 MyCollection = new Meteor.Collection('sensors');
+//retur = MyCollection.find({ day: '2016-02-12', type: 'rh'}, {"values.13.47":1});
+retur = MyCollection.find({ day: '2016-02-12', type: 'rh'}).fetch();
+//console.log(retur);
+
+
+//console.log("HEI "+JSON.stringify(retur));
+
 
 if (Meteor.isClient) {
-  //console.log("Client:" + MyCollection.findOne());
 
 
-  //db = connect("<192.168.99.100><:27017>/<biogrid>");
-  //var x = new Mongo('192.168.99.100[:27017]');
-  //var mydb = x.getDB('biogrid');
-
-  //var conn = new Mongo("<192.168.99.100>:<27017>");
-  //db = conn.getDB("biogrid");
-  //cursor = db.sensors.find();
-
-  // counter starts at 0
 }
 
 
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    //console.log("Server:" + MyCollection.findOne());
-    //console.log("server:" + MyCollection.find({type: "rh", sensor_id: "81772309-6FFF-4886-9977-DA15AD34C263"}));
-    //console.log(MyCollection.find({type: "rh", sensor_id: '81772309-6FFF-4886-9977-DA15AD34C263', day: '2016-02-05'}));
-    //console.log("Server" + MyCollection.find());
-    var retur = MyCollection.find({ day: '2016-02-12', type: 'rh'});
-    var tmpDay, tmpValue, tmp;
-    retur.forEach(function(tmp){
-      if(retur === null)console.log("retur er null");
-      tmpDay = tmp.day;
-      console.log("Dagen i dag: " + tmpDay);
+  var startTime = new Date().getMilliseconds();
+    //console.log(retur[0]);
+    var allValues = retur[0];
 
-      tmpValue = tmp.values;
-
-
-      var hour = findHour(tmpValue);
-      console.log("Hour: " + hour); //13
-      tmpValue = tmpValue[hour];
-
-      var minute = findHour(tmpValue);
-      console.log("Minute: " + minute); //47
-      tmpValue = tmpValue[minute];
-
-      var second = findHour(tmpValue);
-      console.log("Value: " + tmpValue[second]);
-      /*var testtemp = findHour(tmpValue);
-      console.log(testtemp);*/
+    for(var key in allValues){
+      if(key == "values")
+      for(var i in allValues[key]){ // i = hours
+        var hour = i;
+          //console.log(i);
+          for(var j in allValues[key][i]){ // j = minutes
+            var minute = j;
+            //console.log(j);
+            for(var k in allValues[key][i][j]){
+              var second = k;
+              var value = allValues[key][i][j][k];
+              //console.log("hour:" + hour + "| minute: " + minute + "| second: " + second + "| value: " + value);
+            }
+          }
+      }
+    }
+    var endTime = new Date().getMilliseconds();
+    var usedTime = endTime + startTime;
+    console.log("Algorithm takes " + usedTime + " ms." );
+    //console.log(allValues);
 
 
-      //var valueDick = findHour(tmpValue);
-      //tmpValue = tmp.values[second];
-
-
-      /*tmpValue = tmpValue[47];
-      tmpValue = tmpValue[8];
-      console.log(tmpValue);
-      //console.log(tmpValue);*/
-  });
-
-function findHour(obj){
-  for(var tmp in obj)
-
-    return tmp;
-}
-
-
-
-    //process.env.MONGO_URL = "mongodb://192.162.99.100:27017/biogrid";
-    // code to run on server at startup
-  });
+   });
 }
