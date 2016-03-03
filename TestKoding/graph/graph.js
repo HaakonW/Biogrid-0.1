@@ -1,29 +1,46 @@
 MyCollection = new Meteor.Collection('sensors');
+//retur = MyCollection.find({ day: '2016-02-12', type: 'rh'}, {"values.13.47":1});
+retur = MyCollection.find({ day: '2016-02-12', type: 'rh'}).fetch();
+//console.log(retur);
+
+
+//console.log("HEI "+JSON.stringify(retur));
+
 
 if (Meteor.isClient) {
-  console.log("Client:" + MyCollection.findOne());
 
 
-  //db = connect("<192.168.99.100><:27017>/<biogrid>");
-  //var x = new Mongo('192.168.99.100[:27017]');
-  //var mydb = x.getDB('biogrid');
-
-  //var conn = new Mongo("<192.168.99.100>:<27017>");
-  //db = conn.getDB("biogrid");
-  //cursor = db.sensors.find();
-
-  // counter starts at 0
 }
 
 
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    //console.log("Server:" + MyCollection.findOne());
-    //console.log("server:" + MyCollection.find({type: "rh", sensor_id: "81772309-6FFF-4886-9977-DA15AD34C263"}));
-    console.log(MyCollection.find({type: "rh", sensor_id: '81772309-6FFF-4886-9977-DA15AD34C263', day: '2016-02-05'}));
+  var startTime = new Date().getMilliseconds();
+    //console.log(retur[0]);
+    var allValues = retur[0];
 
-    //process.env.MONGO_URL = "mongodb://192.162.99.100:27017/biogrid";
-    // code to run on server at startup
-  });
+    for(var key in allValues){
+      if(key == "values")
+      for(var i in allValues[key]){ // i = hours
+        var hour = i;
+          //console.log(i);
+          for(var j in allValues[key][i]){ // j = minutes
+            var minute = j;
+            //console.log(j);
+            for(var k in allValues[key][i][j]){
+              var second = k;
+              var value = allValues[key][i][j][k];
+              //console.log("hour:" + hour + "| minute: " + minute + "| second: " + second + "| value: " + value);
+            }
+          }
+      }
+    }
+    var endTime = new Date().getMilliseconds();
+    var usedTime = endTime + startTime;
+    console.log("Algorithm takes " + usedTime + " ms." );
+    //console.log(allValues);
+
+
+   });
 }
