@@ -15,7 +15,7 @@
 \contentsline {subsubsection}{\numberline {2.4.1}M\IeC {\o }te med Biogrid p\IeC {\r a} Startup Lab - 04.02.16 }{6}{subsubsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.2}JavaScript bibliotek for grafer 05.02.16}{8}{subsubsection.2.4.2}
 \contentsline {subsubsection}{\numberline {2.4.3}Evaluering og valg 09.02.16}{8}{subsubsection.2.4.3}
-\contentsline {subsubsection}{\numberline {2.4.4}Meteor i kombinasjon med ReactJS15.02.16}{9}{subsubsection.2.4.4}
+\contentsline {subsubsection}{\numberline {2.4.4}Meteor i kombinasjon med ReactJS 15.02.16}{9}{subsubsection.2.4.4}
 \contentsline {subsubsection}{\numberline {2.4.5}Fra database til graf 18.02.16}{10}{subsubsection.2.4.5}
 \contentsline {subsubsection}{\numberline {2.4.6}Latex og graf 19.02.16}{10}{subsubsection.2.4.6}
 \contentsline {subsubsection}{\numberline {2.4.7}Sp\IeC {\o }rringer mot Mongo 20.02.16}{10}{subsubsection.2.4.7}

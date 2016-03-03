@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.18)  2 MAR 2016 10:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.18)  2 MAR 2016 10:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -606,11 +606,6 @@ Overfull \hbox (43.21997pt too wide) in paragraph at lines 244--245
 -[]alliance . org / What-[]Is-[]LoRa / Technology$[][]\OT1/cmr/m/n/12 . 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--252
-
- []
-
 [11] (./testfil.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 268.
  [12]
@@ -618,8 +613,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 268.
  (./prosjektdagbok.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 268.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 268.
-Package rerunfilecheck Info: File `prosjektdagbok.out' has not changed.
-(rerunfilecheck)             Checksum: AC7193E726C28084A2EFE1DDEE85D4AB;1958.
+
+
+Package rerunfilecheck Warning: File `prosjektdagbok.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `prosjektdagbok.out':
+(rerunfilecheck)             Before: AC7193E726C28084A2EFE1DDEE85D4AB;1958
+(rerunfilecheck)             After:  CA511AC45791B00CB80F0FF85C527551;1959.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
  ) 
 Here is how much of TeX's memory you used:
