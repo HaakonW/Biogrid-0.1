@@ -1,0 +1,16 @@
+.metadataColumn{
+  background-color: red;
+  color:black;
+  height:200px;
+}
+
+.graphRow{
+  background-color: yellow;
+  height: 150px;
+}
+
+.extraFunctionality{
+  background-color: blue;
+  color:black;
+  height:150px;
+}

@@ -22,4 +22,6 @@
 \contentsline {subsection}{\numberline {2.5}Mars}{11}{subsection.2.5}
 \contentsline {subsubsection}{\numberline {2.5.1}IOT-seminar p\IeC {\r a} Startup Lab 01.03.16}{11}{subsubsection.2.5.1}
 \contentsline {subsubsection}{\numberline {2.5.2}Planlegging 02.03.16}{11}{subsubsection.2.5.2}
-\contentsline {subsubsection}{\numberline {2.5.3}Fra testFil}{12}{subsubsection.2.5.3}
+\contentsline {subsubsection}{\numberline {2.5.3}Sette opp layout og sp\IeC {\o }rringer mot database 03.03.16}{12}{subsubsection.2.5.3}
+\contentsline {subsubsection}{\numberline {2.5.4}Mongo til minimongo, publish/subscribe 04.03.16}{12}{subsubsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.5}Fra testFil}{12}{subsubsection.2.5.5}
