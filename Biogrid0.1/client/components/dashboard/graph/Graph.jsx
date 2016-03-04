@@ -6,10 +6,14 @@ Graph = React.createClass({
 
     var data = [];
 
-    Meteor.subscribe('sensors');
+    var handle = Meteor.subscribe('sensors');
 
-    data = Sensors.find({}).fetch();
-    console.log("This is",data);
+    //Use ready() so data dont log before Sensors.find().fetch() is done
+    if(handle.ready()){
+      data = Sensors.find({}).fetch();
+      console.log("This is",data);
+    }
+
     return{
       sensors: Sensors.find({}).fetch()
     }
