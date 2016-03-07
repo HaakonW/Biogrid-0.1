@@ -20,24 +20,20 @@ Graph = React.createClass({
   _createGraph: function(data){
 
   var graphString = "";
-  //console.log(retur[0]);
+
   var allValues = this.data.sensors[0];
-  //console.log("this is test: ", test[0].day);
-  //console.log("this is allValues", allValues[0]);
-  //var day = allValues[0].day;
-  var day = "2016-02-09";
+
+  //FIXME day is hardcoded, get day from allValues
+  var day = "2016-03-07";
   for(var key in allValues){
-    if(key == "values")
+    if(key === "values")
     for(var i in allValues[key]){ // i = hours
       var hour = i;
-        //console.log(i);
         for(var j in allValues[key][i]){ // j = minutes
           var minute = j;
-          //console.log(j);
           for(var k in allValues[key][i][j]){ // k = seconds
             var second = k;
             var value = allValues[key][i][j][k];
-            //console.log("hour:" + hour + "| minute: " + minute + "| second: " + second + "| value: " + value);
             graphString += day + " " + hour + ":" + minute + ":" + second + "," + value + "\n";
           }
         }
@@ -68,8 +64,7 @@ Graph = React.createClass({
     }*/
 
     return(
-      <div ref="graphDiv">
-      </div>
+      <div ref="graphDiv"></div>
     )
   }
 })
