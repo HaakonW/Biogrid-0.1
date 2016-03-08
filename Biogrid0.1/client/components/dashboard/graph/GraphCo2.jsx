@@ -1,4 +1,4 @@
-Graph = React.createClass({
+GraphCo2 = React.createClass({
 
   mixins:[ReactMeteorData],
 
@@ -8,11 +8,11 @@ Graph = React.createClass({
 
     //Use ready() so data dont log before Sensors.find().fetch() is done
     if(handle.ready()){
-      data = Sensors.find({}).fetch();
-      console.log("This is",data);
+      data = Sensors.find({type:"co2"}).fetch();
+      console.log("This is Co2",data);
     }
     return{
-      sensors: Sensors.find({}).fetch()
+      sensors: Sensors.find({type:"co2"}).fetch()
     }
 
   },
@@ -24,7 +24,7 @@ Graph = React.createClass({
   var allValues = this.data.sensors[0];
 
   //FIXME day is hardcoded, get day from allValues
-  var day = "2016-03-07";
+  var day = allValues.day;
   for(var key in allValues){
     if(key === "values")
     for(var i in allValues[key]){ // i = hours
@@ -35,26 +35,41 @@ Graph = React.createClass({
             var second = k;
             var value = allValues[key][i][j][k];
             graphString += day + " " + hour + ":" + minute + ":" + second + "," + value + "\n";
+            break; //Every minute
           }
         }
     }
   }
       this.g = new Dygraph(
-      this.refs.graphDiv,
+      document.getElementById('test1'),
       "Date,Value\n" + graphString,
       {
-        connectSeparatedPoints:false,
-        ylabel: 'Value',
-        strokeWidth: 2
+        ylabel: 'Value (' + allValues.type + ")",
+        title: allValues.type,
+        strokeWidth: 2,
+        //gridLineColor: 'rgb(33,150,119)',
+        color: 'rgb(33,150,119)',
+        fillGraph: true,
+        axisLineColor: 'rgb(33,150,119)',
+        showRangeSelector: true,
+        rangeSelectorHeight: 30,
+        rangeSelectorPlotFillColor: 'rgb(33,150,119)',
+        rangeSelectorPlotStrokeColor: 'rgb(33,150,119)',
+
+        //fillGraph:true,
+        //showRangeSelector:true
+        //connectSeparatedPoints:true,
       }
     );
   },
 
   componentDidMount: function(){
     this._createGraph();
+    console.log("cdm1 called");
   },
   componentDidUpdate: function(){
     this._createGraph();
+    console.log("cdu1 called");
   },
 
 
@@ -64,7 +79,7 @@ Graph = React.createClass({
     }*/
 
     return(
-      <div ref="graphDiv"></div>
+      <div id="test1" className="testgraf" ref="graphDiv"></div>
     )
   }
 })
