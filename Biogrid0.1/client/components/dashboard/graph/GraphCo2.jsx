@@ -45,7 +45,7 @@ GraphCo2 = React.createClass({
       "Date,Value\n" + graphString,
       {
         ylabel: 'Value (' + allValues.type + ")",
-        title: allValues.type,
+        //title: allValues.type,
         strokeWidth: 2,
         //gridLineColor: 'rgb(33,150,119)',
         color: 'rgb(33,150,119)',
@@ -79,7 +79,14 @@ GraphCo2 = React.createClass({
     }*/
 
     return(
-      <div id="test1" className="testgraf" ref="graphDiv"></div>
+      <div className="panel panel-default">
+        <div className="panel-heading">
+          <h3 className="panel-title text-center">co2</h3>
+        </div>
+        <div className="panel-body">
+        <div id="test1" className="testgraf" ref="graphDiv"></div>
+        </div>
+      </div>
     )
   }
 })

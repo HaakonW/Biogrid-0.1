@@ -44,7 +44,7 @@ GraphRh = React.createClass({
       "Date,Value\n" + graphString,
       {
         ylabel: 'Value (' + allValues.type + ")",
-        title: allValues.type,
+        //title: allValues.type,
         strokeWidth: 2,
         //gridLineColor: 'rgb(204,0,255)',
         color: 'rgb(204,0,255)',
@@ -78,7 +78,14 @@ GraphRh = React.createClass({
     }*/
 
     return(
-      <div id="test2" className="testgraf" ref="graphDiv2"></div>
+      <div className="panel panel-default">
+        <div className="panel-heading">
+          <h3 className="panel-title text-center">rh</h3>
+        </div>
+        <div className="panel-body">
+        <div id="test2" className="testgraf" ref="graphDiv2"></div>
+        </div>
+      </div>
     )
   }
 })
