@@ -25,3 +25,21 @@
        top: 0;
        bottom: 10px;
 }
+
+#bg{
+  height: 100%;
+  background-color: rgb(37,40,48);
+}
+
+.panel-body{
+  background-color: rgb(37,40,48);
+}
+
+/* !important to override Bootstrap settings
+.panel-heading{
+  background-color: rgb(37,40,48)!important;
+}*/
+
+.dygraph-axis-label-y{
+  color:white;
+}

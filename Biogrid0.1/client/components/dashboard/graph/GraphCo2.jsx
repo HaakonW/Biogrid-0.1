@@ -71,6 +71,7 @@ GraphCo2 = React.createClass({
       "Date,Value\n" + graphString,
       {
         ylabel: 'Value (' + type + ")",
+        axisLabelColor:'#fff',
         //title: allValues.type,
         strokeWidth: 2,
         //gridLineColor: 'rgb(33,150,119)',

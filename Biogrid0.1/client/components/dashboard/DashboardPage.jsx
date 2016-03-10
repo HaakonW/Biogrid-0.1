@@ -1,7 +1,7 @@
 DashboardPage = React.createClass({
   render(){
     return(
-      <div>
+      <div id="bg">
         <Navbar />
         <div className="row">
           <div className="col-md-2 col-sm-12">
@@ -12,6 +12,11 @@ DashboardPage = React.createClass({
           </div>
           <div className="col-md-5 col-sm-12">
               <GraphRh />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-5 col-md-offset-2">
+            <FrameGraphCo2 />
           </div>
         </div>
       </div>

@@ -71,6 +71,7 @@ GraphRh = React.createClass({
       "Date,Value\n" + graphString,
       {
         ylabel: 'Value (' + type + ")",
+        axisLabelColor:'#fff',
         //title: allValues.type,
         strokeWidth: 2,
         //gridLineColor: 'rgb(204,0,255)',

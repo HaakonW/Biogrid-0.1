@@ -4,7 +4,7 @@ if(Meteor.isServer){
     //return Sensors.find({day:"2016-02-19"});
     return Sensors.find({day:{
                           $gte: "2016-02-19",
-                          $lt: "2016-03-01"
+                          $lt: "2016-03-11"
                         }});
   });
 }
