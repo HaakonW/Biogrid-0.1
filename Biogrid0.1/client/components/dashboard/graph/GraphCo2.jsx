@@ -9,7 +9,7 @@ GraphCo2 = React.createClass({
     //Use ready() so data dont log before Sensors.find().fetch() is done
     if(handle.ready()){
       data = Sensors.find({type:"co2"}).fetch();
-      console.log("This is Co2",data);
+      //console.log("This is Co2",data);
     }
     return{
       sensors: Sensors.find({type:"co2"}).fetch()
@@ -19,32 +19,58 @@ GraphCo2 = React.createClass({
 
   _createGraph: function(data){
 
-  var graphString = "";
+    var graphString = "";
+    var type;
+    var allValues = this.data.sensors;
 
-  var allValues = this.data.sensors[0];
-
-  //FIXME day is hardcoded, get day from allValues
-  var day = allValues.day;
-  for(var key in allValues){
-    if(key === "values")
-    for(var i in allValues[key]){ // i = hours
-      var hour = i;
-        for(var j in allValues[key][i]){ // j = minutes
-          var minute = j;
-          for(var k in allValues[key][i][j]){ // k = seconds
-            var second = k;
-            var value = allValues[key][i][j][k];
-            graphString += day + " " + hour + ":" + minute + ":" + second + "," + value + "\n";
-            break; //Every minute
+    if(Object.keys(allValues).length > 1){ //if data contains more than one day
+      type = allValues[0].type;
+      for(var i = 0; i < allValues.length; i++){
+        var dayDate = allValues[i].day;
+        for(var key in allValues[i]){
+          if(key === "values"){
+            for(var j in allValues[i][key]){ // i = hours
+              var hour = j;
+                for(var k in allValues[i][key][j]){ // j = minutes
+                  var minute = k;
+                  for(var h in allValues[i][key][j][k]){ // k = seconds
+                    var second = h;
+                    var value = allValues[i][key][j][k][h];
+                    graphString += dayDate + " " + hour + ":" + minute + ":" + second + "," + value + "\n";
+                    break; //Every minute
+                  }
+                }
+            }
           }
         }
+      }
     }
-  }
+    else if(Object.keys(allValues).length === 1){ //if data contains only one day
+      allValues = allValues[0];
+      type = allValues.type;
+      var day = allValues.day;
+      for(var key in allValues){
+        if(key === "values")
+        for(var i in allValues[key]){ // i = hours
+          var hour = i;
+            for(var j in allValues[key][i]){ // j = minutes
+              var minute = j;
+              for(var k in allValues[key][i][j]){ // k = seconds
+                var second = k;
+                var value = allValues[key][i][j][k];
+                graphString += day + " " + hour + ":" + minute + ":" + second + "," + value + "\n";
+                break; //Every minute
+              }
+            }
+        }
+      }
+    }
+
       this.g = new Dygraph(
       document.getElementById('test1'),
       "Date,Value\n" + graphString,
       {
-        ylabel: 'Value (' + allValues.type + ")",
+        ylabel: 'Value (' + type + ")",
         //title: allValues.type,
         strokeWidth: 2,
         //gridLineColor: 'rgb(33,150,119)',
@@ -65,11 +91,9 @@ GraphCo2 = React.createClass({
 
   componentDidMount: function(){
     this._createGraph();
-    console.log("cdm1 called");
   },
   componentDidUpdate: function(){
     this._createGraph();
-    console.log("cdu1 called");
   },
 
 
