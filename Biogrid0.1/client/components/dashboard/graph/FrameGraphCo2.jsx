@@ -14,7 +14,7 @@ FrameGraphCo2 = React.createClass({
   render(){
     return(
       <div>
-        {this.data.sensors && <Graph sensors={this.data.sensors[0] } /> }
+        <Graph sensors={this.data.sensors}/>
       </div>
     )
   }
