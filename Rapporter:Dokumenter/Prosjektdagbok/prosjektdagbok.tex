@@ -200,7 +200,7 @@ Frem mot i dag har tiden gått med på å lese om React, finne ut om Meteor er g
 		Viktig: React brukes kun for å lage UI-komponenter.
 	\item Biogrid mener Meteor er en god måte å holde data syncet mellom server og klient, så det vil satses på en Meteor-React kombinasjon. 
 	\item Gruppen har prøvd seg på tutorialer om React:\\
-		\url{https://www.youtube.com/watch?v=kVbVBp35keQ}. Denne tutorial bruker Flowrouter og react-layout, to pakker fra Kadira som er "perfomance monitoring for 			meteor" - \url{http://www.kadira.io}. Dette virker som to gode pakker for å håndtere routing og hvordan man bygger opp layouter i React. Gruppen sjekker fortsatt alternativer 		til routing og hvordan man kan bruke react. Slik det ser ut finnes det flere fremgangsmåter.
+		\url{https://www.youtube.com/watch?v=kVbVBp35keQ}. Denne tutorial bruker Flowrouter og react-layout, to pakker fra Kadira som er "perfomance monitoring for meteor" - \url{http://www.kadira.io}. Dette virker som to gode pakker for å håndtere routing og hvordan man bygger opp layouter i React. Gruppen sjekker fortsatt alternativer til routing og hvordan man kan bruke react. Slik det ser ut finnes det flere fremgangsmåter.
 \end{itemize}
 
 
@@ -270,6 +270,34 @@ Vær nøye på å huske/lagre referanser!
 
 \subsubsection{Mongo til minimongo, publish/subscribe 04.03.16}
 Minimongo kan by på problemer med tanke på store mengder timeseriesdata, les mer her: \url{https://www.meteor.com/mini-databases}
+
+
+\subsubsection{Grafer fungerer og en grovskisse av layout 11.03.16}
+Siste uken har vi fått til spørringene mot MongoDB. Ved bruk av Meteor.publish og .subscribe metode har vi funnet ut hvordan vi gir tilgang til data som kun skal gjelde innlogget bruker. 
+Vi har endret litt på layouten og kuttet ut 3 komponenter. I stedet for å ha en ny graf-komponent pr. sensor har vi nå én generisk komponent som mottar data fra parent-komponenter. Utfordringen videre er å gjøre om parent-komponentene til én generisk.
+
+I tidligere fase ble det nevnt at user accounts og lokasjonslisten kommer tilslutt, men dette er man mulig nødt til å endre på da dataene som genereres ved hjelp av NODE-Red vil mangle felt som UserId og lokasjon. Disse feltene er viktig i spørringer mot databasen for å hente ut data som kun gjelder en bruker. 
+
+
+\subsubsection{Planlegging 14.03.16}
+Problemstillinger til møte med Biogrid på StartUp Lab i morgen.
+\begin{itemize}
+\item Hvordan vil du ha databasen når det kommer user accounts og locations? Legge til nye felter i 'sensors'? User accounts vil være én collection. Det er ikke meningen at bruker skal kunne registreres gjennom appen? Legges de til fra annet hold? Samme gjelder sensorer.
+\item Hvor mye data vil du vise? Ta med hvert sekund eller minutt? Synkronisere data?
+\item Oppsett i forhold til user accounts og lokasjoner. Omprioritere å legge til dette snarest? Data vil være forandret og da trengs d å generere nye data. 
+\item Layout: Tenk på fargebruk på siden. Sterke farger på grafene, svart bakgrunn, oppsett av meny til venstre og interaktiviteten på høyre del.
+\item Vi har tenkt på å lage en komponent som viser været for stedet sensorene befinner seg og kart fra Google maps. Kan dette være interessant? Gjør kontrollpanelet mer spennende og interaktivt? 
+\end{itemize}
+
+Egne oppgaver/utfordringer fremover
+\begin{itemize}
+\item shouldComponentUpdate(). Hindre at graf oppdaterer seg automatisk når den viser nyeste dag.
+\item Optimalisere for-løkka i Graph.jsx og dele opp i metoder.
+\item Generisk løsning av FrameGraph. Lage komponenter ut i fra hvor mange sensorer en bruker har. 
+\item Legge til flere sensorer.
+\item Forstå componentDidMount, ..WillMount, og lignende.
+\item Sende med sett av farger som props når graph kalles. Dette for å få forskjellige farger på grafene.
+\end{itemize}
 
 \input{testfil.tex}
 
