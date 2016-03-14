@@ -9,26 +9,26 @@ Graph = React.createClass({
 
   //Loops through this.props.sensors and creates a graph in the div with id=gr
   _createGraph:function(){
-    var allValues = this.props.sensors;
-    var graphString ="";
-    var type;
-    //var day = allValues.day;
+    let allValues = this.props.sensors;
+    let graphString ="";
+    let type;
+    //let day = allValues.day;
 
     //more than one day
     if(Object.keys(allValues).length > 1)
     { //if data contains more than one day
       type = allValues[0].type;
-      for(var i = 0; i < allValues.length; i++){
-        var dayDate = allValues[i].day;
-        for(var key in allValues[i]){
+      for(let i = 0; i < allValues.length; i++){
+        let dayDate = allValues[i].day;
+        for(let key in allValues[i]){
           if(key === "values"){
-            for(var j in allValues[i][key]){ // i = hours
-              var hour = j;
-                for(var k in allValues[i][key][j]){ // j = minutes
-                  var minute = k;
-                  for(var h in allValues[i][key][j][k]){ // k = seconds
-                    var second = h;
-                    var value = allValues[i][key][j][k][h];
+            for(let j in allValues[i][key]){ // i = hours
+              let hour = j;
+                for(let k in allValues[i][key][j]){ // j = minutes
+                  let minute = k;
+                  for(let h in allValues[i][key][j][k]){ // k = seconds
+                    let second = h;
+                    let value = allValues[i][key][j][k][h];
                     graphString += dayDate + " " + hour + ":" + minute + ":" + second + "," + value + "\n";
                     break; //Every minute
                   }
@@ -42,22 +42,24 @@ Graph = React.createClass({
     {
       allValues = allValues[0];
       type = allValues.type;
-      var day = allValues.day;
+      let day = allValues.day;
 
-      for(var key in allValues){
-        if(key === "values")
-        for(var i in allValues[key]){ // i = hours
-          var hour = i;
-            for(var j in allValues[key][i]){ // j = minutes
-              var minute = j;
-              for(var k in allValues[key][i][j]){ // k = seconds
-                var second = k;
-                var value = allValues[key][i][j][k];
-                graphString += day + " " + hour + ":" + minute + ":" + second + "," + value + "\n";
-                break;
+      for(let key in allValues){
+        if(key === "values"){
+          for(let i in allValues[key]){ // i = hours
+            let hour = i;
+              for(let j in allValues[key][i]){ // j = minutes
+                let minute = j;
+                for(let k in allValues[key][i][j]){ // k = seconds
+                  let second = k;
+                  let value = allValues[key][i][j][k];
+                  graphString += day + " " + hour + ":" + minute + ":" + second + "," + value + "\n";
+                  break;
+                }
               }
-            }
+          }
         }
+
       }
     }
 
