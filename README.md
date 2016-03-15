@@ -1,10 +1,5 @@
-# Bachelor
+## Biogrid - Internet of things, Bachelor thesis 2016
 
-##To run
+A project created spring 2016. Code written by [https://github.com/petnwil](Peter Wilhelmsen), [https://github.com/Keegosc](Oscar Eckbo) and [https://github.com/haakonw](Haakon Winther).
 
-`MONGO_URL=mongodb://192.168.99.100:27017/biogrid meteor`
-
-Added Slack integration
-
-
-
+Written in cooperation with [https://github.com/augustzf](August Flatby) and [http://www.biogrid.no/](BioGrid)
