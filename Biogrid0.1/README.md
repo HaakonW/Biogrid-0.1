@@ -7,10 +7,10 @@ This is the front end part of the Biogrid [Cortex](https://github.com/BiogridCor
 Web app built in [Meteor](https://www.meteor.com/)  tied together with [react.js](https://facebook.github.io/react/) and Flow-router.
 
 ##### Meteor Packages
-*react
-*kadira:flow-router
-*kadira:react-layout
-*twbs:bootstrap
+* react
+* kadira:flow-router
+* kadira:react-layout
+* twbs:bootstrap
 
 #####Graphs technology
 Graphs are made by using the opensource Javascript charting library [dygraphs](http://dygraphs.com/)
