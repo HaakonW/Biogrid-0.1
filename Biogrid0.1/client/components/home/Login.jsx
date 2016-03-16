@@ -1,18 +1,15 @@
 Login = React.createClass({
-
   render(){
 
     return(
-      <div className="jumbotron text-center">
-        <div className="row">
-          <h2>Welcome to BiogridCortex</h2>
-        </div>
-        <div className="row">
-          <div>
-            <a href="/locationPage">Log in</a>
+        <div className="" id="loginPage">
+          <div className="row">
+            <div className="col-md-4 col-sm-12">
+              <h2 id="welcomeText" >Biogrid Cortex</h2>
+                  <AccountsUiWrapper />
+            </div>
           </div>
-        </div>
-      </div>
+        </div> //END LOGINPAGE
     )
   }
 })

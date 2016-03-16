@@ -43,3 +43,26 @@
 .dygraph-axis-label-y{
   color:white;
 }
+
+/*FRONT PAGE LOGIN*/
+body, #loginPage{
+  background-color: #282c34;
+}
+
+#welcomeText, .at-title{
+  color: #b5f45a;
+}
+
+.imCentered{
+  margin: auto;
+  max-width: 1000px;
+}
+
+.control-label, .at-signup-link{
+  color: #61abe3;
+}
+/*FRONT PAGE LOGIN*/
+/*FRONT PAGE LOGIN*/
+/*FRONT PAGE LOGIN*/
+/*FRONT PAGE LOGIN*/
+/*FRONT PAGE LOGIN*/

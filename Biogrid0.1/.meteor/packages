@@ -24,3 +24,7 @@ twbs:bootstrap
 fortawesome:fontawesome
 aldeed:simple-schema
 aldeed:collection2
+useraccounts:bootstrap
+useraccounts:core
+accounts-password
+gwendall:useraccounts-react
