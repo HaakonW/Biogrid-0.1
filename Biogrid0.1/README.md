@@ -16,6 +16,8 @@ Web app built in [Meteor](https://www.meteor.com/)  tied together with [react.js
 * kadira:flow-router
 * kadira:react-layout
 * twbs:bootstrap
+* fortawsome:fontawesome
+* aldeed:simple-schema
 
 #####Graphs technology
 Graphs are made by using the opensource Javascript charting library [dygraphs.](http://dygraphs.com/)
