@@ -1,9 +1,9 @@
-Sites = new Mongo.Collection('sites')
-Hubs = new Mongo.Collection('hubs')
-Firmwares = new Mongo.Collection('firmware')
-Sensors1 = new Mongo.Collection('sensors1')
-Things = new Mongo.Collection('things')
-Readings = new Mongo.Collection('readings')
+//Sites = new Mongo.Collection('sites')
+//Hubs = new Mongo.Collection('hubs')
+//Firmwares = new Mongo.Collection('firmware')
+//Sensors1 = new Mongo.Collection('sensors1')
+//Things = new Mongo.Collection('things')
+//Readings = new Mongo.Collection('readings')
 
 if (Sites.find().count() === 0) {
   console.log("Seeding database...")
