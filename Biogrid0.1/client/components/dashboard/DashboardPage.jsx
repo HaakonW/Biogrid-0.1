@@ -16,7 +16,6 @@ DashboardPage = React.createClass({
         </div>
         <div className="row">
           <div className="col-md-5 col-md-offset-2">
-          
           </div>
         </div>
       </div>
