@@ -19,14 +19,13 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 insecure                # Allow all DB writes from clients (for prototyping)
 react
 kadira:flow-router
-kadira:react-layout
 twbs:bootstrap
 fortawesome:fontawesome
 aldeed:simple-schema
 aldeed:collection2
 useraccounts:bootstrap
 useraccounts:core
-accounts-password
-gwendall:blaze-to-react
 useraccounts:flow-routing
-kadira:blaze-layout
+kadira:react-layout
+gwendall:blaze-to-react
+accounts-password
