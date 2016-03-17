@@ -27,4 +27,6 @@ aldeed:collection2
 useraccounts:bootstrap
 useraccounts:core
 accounts-password
-gwendall:useraccounts-react
+gwendall:blaze-to-react
+useraccounts:flow-routing
+kadira:blaze-layout
