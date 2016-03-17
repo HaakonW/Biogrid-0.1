@@ -14,10 +14,10 @@ publicRoutes.route("/",{
   }
 })
 
-privateRoutes.route("/locationPage",{
-  name:"LocationPage",
+privateRoutes.route("/site",{
+  name:"Site",
   action:function(){
-    ReactLayout.render(LocationPage,{})
+    ReactLayout.render(Site,{})
   }
 })
 
