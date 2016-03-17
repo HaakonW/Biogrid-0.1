@@ -16,8 +16,7 @@
   height:150px;
 }
 
-.testgraf{
-
+.graph{
   width: 100%;
   height: 250px;
        left: 10px;
@@ -41,6 +40,10 @@
 }*/
 
 .dygraph-axis-label-y{
+  color:white;
+}
+
+.fa-spinner{
   color:white;
 }
 
