@@ -61,6 +61,10 @@ body, #loginPage{
 .control-label, .at-signup-link{
   color: #61abe3;
 }
+
+.fa-spinner{
+  color: white;
+}
 /*FRONT PAGE LOGIN*/
 /*FRONT PAGE LOGIN*/
 /*FRONT PAGE LOGIN*/
