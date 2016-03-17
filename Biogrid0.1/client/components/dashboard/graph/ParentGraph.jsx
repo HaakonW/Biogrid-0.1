@@ -23,8 +23,8 @@ ParentGraph = React.createClass({
       //TODO should map through returned types and make a graph component
       return (
         <div>
-          <Graph sensors={this.data.sensorsRH} ready={this.data.ready} />
-          <Graph sensors={this.data.sensorsCo2} ready={this.data.ready} />
+          <Graph sensors={this.data.sensorsRH} ready={this.data.ready} color={"246,75,218"} />
+          <Graph sensors={this.data.sensorsCo2} ready={this.data.ready} color={"255,152,43"} />
         </div>
       )
     }

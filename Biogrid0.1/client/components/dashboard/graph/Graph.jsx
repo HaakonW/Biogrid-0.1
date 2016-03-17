@@ -90,7 +90,6 @@ Graph = React.createClass({
     }
     else {
       graphString = this.isObjectMoreThanOneDay(sensorData) ? this.writeGraphStringSeveralDays(sensorData) : this.writeGraphStringOneDay(sensorData);
-
       this.g2 = new Dygraph(
         /*document.getElementById('graf')*/
         this.graf,
@@ -102,13 +101,13 @@ Graph = React.createClass({
           title: sensorData.type, //TODO fix this to get the sensors.sensorType
           strokeWidth: 2,
           //gridLineColor: 'rgb(204,0,255)',
-          color: 'rgb(255,152,43)', //TODO get colors based on graphType
+          color: 'rgb('+this.props.color+')', //TODO get colors based on graphType
           fillGraph: true,
-          axisLineColor: 'rgb(255,152,43)', //TODO get colors based on graphType
+          axisLineColor: 'rgb('+this.props.color+')', //TODO get colors based on graphType
           showRangeSelector: true,
           rangeSelectorHeight: 30,
-          rangeSelectorPlotFillColor: 'rgb(255,152,43)', //TODO get colors based on graphType
-          rangeSelectorPlotStrokeColor: 'rgb(255,152,43)', //TODO get colors based on graphType
+          rangeSelectorPlotFillColor: 'rgb('+this.props.color+')', //TODO get colors based on graphType
+          rangeSelectorPlotStrokeColor: 'rgb('+this.props.color+')', //TODO get colors based on graphType
         }
       );
     }
