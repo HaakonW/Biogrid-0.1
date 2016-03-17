@@ -3,8 +3,9 @@ Nav = React.createClass({
     return Meteor.user();
   },
 
-  navLinks() {
-    if (!Meteor.loggingIn() && Meteor.user()) {
+  checkLoginStatus() {
+    if (!Meteor.loggingIn() && Meteor.user()) { //User is logged in or did log in
+      console.log("USER IS LOGGED IN");
       return (
         <ul className="nav navbar-nav pull-right">
           <li><a href="#profile">{this.user().emails[0].address}</a></li>
@@ -13,6 +14,7 @@ Nav = React.createClass({
       );
 
     } else {
+      console.log("USER IS NOT LOGGED IN");
       return (
         <ul className="nav navbar-nav pull-right">
           <li><a href="/sign-in">Sign In</a></li>
@@ -34,13 +36,12 @@ Nav = React.createClass({
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-
             </div>
             <div className="collapse navbar-collapse">
               <ul className="nav navbar-nav">
                 <li><a href="/">Home</a></li>
               </ul>
-              {this.navLinks()}
+              {this.checkLoginStatus()}
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ publicRoutes.route("/", {
   }
 });
 
-FlowRpublicRoutes.route("/logout", {
+publicRoutes.route("/logout", {
   name: "logout",
   action() {
     Meteor.logout(() => {
