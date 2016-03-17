@@ -8,10 +8,9 @@ DashboardPage = React.createClass({
             <Metadata />
           </div>
           <div className="col-md-5 col-sm-12">
-            <FrameGraphCo2 />
+            <ParentGraph />
           </div>
           <div className="col-md-5 col-sm-12">
-            <FrameGraphRh />
           </div>
         </div>
         <div className="row">
