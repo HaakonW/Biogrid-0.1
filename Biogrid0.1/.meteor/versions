@@ -36,7 +36,6 @@ fastclick@1.0.7
 fortawesome:fontawesome@4.5.0
 geojson-utils@1.0.4
 gwendall:blaze-to-react@0.1.2
-gwendall:useraccounts-react@0.1.1
 hot-code-push@1.0.0
 html-tools@1.0.5
 htmljs@1.0.5
@@ -45,6 +44,7 @@ id-map@1.0.4
 insecure@1.0.4
 jquery@1.11.4
 jsx@0.2.3
+kadira:blaze-layout@2.3.0
 kadira:flow-router@2.10.1
 kadira:react-layout@1.5.3
 launch-screen@1.0.4
@@ -95,5 +95,6 @@ underscore@1.0.4
 url@1.0.5
 useraccounts:bootstrap@1.13.1
 useraccounts:core@1.13.1
+useraccounts:flow-routing@1.13.1
 webapp@1.2.3
 webapp-hashing@1.0.5

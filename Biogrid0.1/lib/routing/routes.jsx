@@ -6,20 +6,21 @@ publicRoutes = FlowRouter.group({
   name:"publicroutes"
 })
 
-
-publicRoutes.route("/",{
-  name:"Login",
-  action:function(){
-    ReactLayout.render(Login,{})
+publicRoutes.route("/", {
+  name: "home",
+  action() {
+    ReactLayout.render(MainLayout, { content: <Home /> });
   }
-})
+});
 
-privateRoutes.route("/site",{
-  name:"Site",
-  action:function(){
-    ReactLayout.render(Site,{})
+publicRoutes.route("/logout", {
+  name: "logout",
+  action() {
+    Meteor.logout(() => {
+      FlowRouter.redirect("/");
+    });
   }
-})
+});
 
 privateRoutes.route("/DashboardPage",{
   name:"DashboardPage",
@@ -28,24 +29,10 @@ privateRoutes.route("/DashboardPage",{
   }
 })
 
-/*Route to Login-page
-FlowRouter.route("/",{
-  name:"Login",
-  action:function(){
-    ReactLayout.render(Login,{})
-  }
-})
-
-FlowRouter.route("/locationPage",{
-  name:"LocationPage",
-  action:function(){
-    ReactLayout.render(LocationPage,{})
-  }
-})
-
-FlowRouter.route("/dashboardPage",{
-  name:"DashboardPage",
-  action:function(){
-    ReactLayout.render(DashboardPage,{})
-  }
-})*/
+// UserAccounts Routes
+AccountsTemplates.configureRoute("changePwd");
+AccountsTemplates.configureRoute("forgotPwd");
+AccountsTemplates.configureRoute("resetPwd");
+AccountsTemplates.configureRoute("signIn");
+AccountsTemplates.configureRoute("signUp");
+AccountsTemplates.configureRoute("verifyEmail");
