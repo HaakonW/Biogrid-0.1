@@ -5,7 +5,7 @@
 //Things = new Mongo.Collection('things')
 //Readings = new Mongo.Collection('readings')
 
-if (Sites.find().count() === 0) {
+/*if (Sites.find().count() === 0) {
   console.log("Seeding database...")
 
   try {
@@ -124,3 +124,4 @@ if (Sites.find().count() === 0) {
 else {
   console.log("Using existing database")
 }
+*/
