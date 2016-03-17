@@ -1,10 +1,10 @@
 privateRoutes = FlowRouter.group({
   name:"privateroutes"
-})
+});
 
 publicRoutes = FlowRouter.group({
   name:"publicroutes"
-})
+});
 
 publicRoutes.route("/", {
   name: "home",
@@ -22,12 +22,19 @@ publicRoutes.route("/logout", {
   }
 });
 
+privateRoutes.route("/site",{
+  name: "Site",
+  action: function(){
+    ReactLayout.render(Site,{})
+  }
+});
+
 privateRoutes.route("/DashboardPage",{
   name:"DashboardPage",
   action:function(){
     ReactLayout.render(DashboardPage,{})
   }
-})
+});
 
 // UserAccounts Routes
 AccountsTemplates.configureRoute("changePwd");

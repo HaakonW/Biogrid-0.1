@@ -23,9 +23,10 @@ Site = React.createClass({
         })
     }
 
+    //Navbar is replaced by Nav. Nav in lib/components/home/nav
     return(
       <div className="text-center">
-        <Navbar />
+        <Nav />
         <h2>Your sites</h2>
           {sitesList}
       </div>
