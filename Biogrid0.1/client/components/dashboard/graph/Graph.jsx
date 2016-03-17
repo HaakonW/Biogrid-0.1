@@ -50,7 +50,7 @@ Graph = React.createClass({
   },
 
   writeGraphStringOneDay:function(allValues){
-    //console.log("oneDay", allValues);
+    allValues = allValues[0];
     let graphString = "";
     let sensorType;
     //TODO type = ?
