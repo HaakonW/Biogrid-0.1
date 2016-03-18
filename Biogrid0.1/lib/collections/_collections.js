@@ -20,4 +20,14 @@ if(Meteor.isServer){
   Meteor.publish('sites', function(){
     return Sites.find();
   });
+
+  //Publish from Hubs
+  Meteor.publish('hubs', function(siteId){
+    return Hubs.find({siteId:siteId});
+  });
+
+  //Publish from Sensors1
+  Meteor.publish('sensors1', function(hubId){
+    return Sensors1.find({hubId:hubId});
+  });
 }
