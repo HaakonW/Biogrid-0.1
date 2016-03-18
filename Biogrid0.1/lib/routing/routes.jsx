@@ -29,7 +29,7 @@ privateRoutes.route("/site",{
   }
 });
 
-privateRoutes.route("/dashboard",{
+privateRoutes.route("/dashboard/:siteId" ,{
   name:"Dashboard",
   action:function(){
     ReactLayout.render(Dashboard,{})
