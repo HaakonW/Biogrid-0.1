@@ -17,7 +17,7 @@ Site = React.createClass({
           sitesList = this.data.sites.map(function(site){
           return(
             <div key={site._id}>
-              <a href="/dashboardPage"> {site.name} </a>
+              <a href="/dashboard"> {site.name} </a>
             </div>
           )
         })
