@@ -29,10 +29,21 @@ privateRoutes.route("/site",{
   }
 });
 
-privateRoutes.route("/Dashboard",{
+privateRoutes.route("/dashboard",{
   name:"Dashboard",
   action:function(){
     ReactLayout.render(Dashboard,{})
   }
 }
 );
+
+//TODO Make not found component
+FlowRouter.notFound = {
+    // Subscriptions registered here don't have Fast Render support.
+    subscriptions: function() {
+
+    },
+    action: function() {
+
+    }
+};
