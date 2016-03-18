@@ -12,6 +12,7 @@ Dashboard = React.createClass({
   render(){
     return(
       <div id="bg">
+      <NavBar />
         <div className="row">
           <div className="col-md-2 col-sm-12">
             <Metadata />

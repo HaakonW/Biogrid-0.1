@@ -2,10 +2,11 @@ NavBar = React.createClass({
 
     navLinks() {
       if (!Meteor.loggingIn() && Meteor.user()) {
+        FlowRouter.go("/Dashboard");
         return (
           <ul className="nav navbar-nav pull-right">
             <li><a href="#profile">{Meteor.user().emails[0].address}</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="/logout">Logout</a></li>
           </ul>
         );
       }

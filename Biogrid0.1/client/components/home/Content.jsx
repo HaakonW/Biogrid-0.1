@@ -7,11 +7,7 @@ userStatus(){
   }
   else {
     return (
-      <div>
-        <a href="/Site">Go to Sites</a><br/>
-        <a href="/Dashboard">Go to DashBoard</a>
-      </div>
-
+      <h3 className="text-center">Logged in</h3>
     )
     //FlowRouter.route('/Dashboard')
   }
