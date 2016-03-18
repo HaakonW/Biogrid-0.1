@@ -34,6 +34,7 @@ privateRoutes.route("/DashboardPage",{
   action:function(){
     ReactLayout.render(DashboardPage,{})
   }
+<<<<<<< HEAD
 });
 
 // UserAccounts Routes
@@ -43,3 +44,6 @@ AccountsTemplates.configureRoute("resetPwd");
 AccountsTemplates.configureRoute("signIn");
 AccountsTemplates.configureRoute("signUp");
 AccountsTemplates.configureRoute("verifyEmail");
+=======
+})
+>>>>>>> useraccounts

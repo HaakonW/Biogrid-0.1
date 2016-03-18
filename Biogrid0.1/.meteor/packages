@@ -23,9 +23,12 @@ twbs:bootstrap
 fortawesome:fontawesome
 aldeed:simple-schema
 aldeed:collection2
+<<<<<<< HEAD
 useraccounts:bootstrap
 useraccounts:core
 useraccounts:flow-routing
 kadira:react-layout
 gwendall:blaze-to-react
+=======
+>>>>>>> useraccounts
 accounts-password
