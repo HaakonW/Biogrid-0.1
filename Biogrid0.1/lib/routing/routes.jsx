@@ -15,7 +15,7 @@ publicRoutes.route("/", {
 
 publicRoutes.route("/logout", {
   name: "logout",
-  action() {
+  action() {kljhgfdjklhgfjhk
     Meteor.logout(() => {
       FlowRouter.redirect("/");
     });
