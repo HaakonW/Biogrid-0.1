@@ -1,8 +1,8 @@
 Hub = React.createClass({
-  mixins:[ReactMeteorData],
+/*  mixins:[ReactMeteorData],
   getMeteorData(){
-
-  },
+    //subscribe to Sensors1 with this.props.hubId
+  },*/
   render(){
     return(
       <div>
