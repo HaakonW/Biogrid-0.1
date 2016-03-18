@@ -4,20 +4,14 @@ Home = React.createClass({
   getMeteorData(){
     return {
        user : Meteor.userId(),
-       email: Meteor
     }
   },
 
   render() {
     return(
-      <div >
-          <h1>BioGrid Cortex</h1>
-
-          <h3>AccountsUIWrapper</h3>
-
-          <AccountsUIWrapper />
-          <h3>{this.data.user}</h3>
-
+      <div>
+        <NavBar />
+        <Content />
       </div>
     )
   }
