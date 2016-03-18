@@ -4,6 +4,7 @@ Home = React.createClass({
   getMeteorData(){
     return {
        user : Meteor.userId(),
+       email: Meteor
     }
   },
 
