@@ -29,10 +29,10 @@ privateRoutes.route("/site",{
   }
 });
 
-privateRoutes.route("/DashboardPage",{
-  name:"DashboardPage",
+privateRoutes.route("/Dashboard",{
+  name:"Dashboard",
   action:function(){
-    ReactLayout.render(DashboardPage,{})
+    ReactLayout.render(Dashboard,{})
   }
 }
 );
