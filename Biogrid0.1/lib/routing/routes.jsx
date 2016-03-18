@@ -7,9 +7,9 @@ publicRoutes = FlowRouter.group({
 });
 
 publicRoutes.route("/", {
-  name: "home",
+  name: "Home",
   action() {
-    ReactLayout.render(MainLayout, { content: <Home /> });
+    ReactLayout.render(Home, { content: <Home /> });
   }
 });
 
@@ -25,7 +25,7 @@ publicRoutes.route("/logout", {
 privateRoutes.route("/site",{
   name: "Site",
   action: function(){
-    ReactLayout.render(Site,{})
+    ReactLayout.render(Site,{});
   }
 });
 
@@ -34,16 +34,5 @@ privateRoutes.route("/DashboardPage",{
   action:function(){
     ReactLayout.render(DashboardPage,{})
   }
-<<<<<<< HEAD
-});
-
-// UserAccounts Routes
-AccountsTemplates.configureRoute("changePwd");
-AccountsTemplates.configureRoute("forgotPwd");
-AccountsTemplates.configureRoute("resetPwd");
-AccountsTemplates.configureRoute("signIn");
-AccountsTemplates.configureRoute("signUp");
-AccountsTemplates.configureRoute("verifyEmail");
-=======
-})
->>>>>>> useraccounts
+}
+);

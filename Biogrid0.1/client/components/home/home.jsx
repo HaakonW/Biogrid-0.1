@@ -1,15 +1,23 @@
 Home = React.createClass({
+  mixins:[ReactMeteorData],
+
+  getMeteorData(){
+    return {
+       user : Meteor.userId(),
+    }
+  },
+
   render() {
-    return (
-      <div className="container">
-        <div className="text-center">
-          <h1 id="test">BioGrid Cortex</h1>
-          <h3 id="test">Please sign In to access BioGrid Cortex</h3>
-          <p>
-            Internet is getting physical
-          </p>
-        </div>
+    return(
+      <div >
+          <h1>BioGrid Cortex</h1>
+
+          <h3>AccountsUIWrapper</h3>
+
+          <AccountsUIWrapper />
+          <h3>{this.data.user}</h3>
+
       </div>
-    );
+    )
   }
 });
