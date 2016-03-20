@@ -25,20 +25,12 @@ Site = React.createClass({
         })
     }
 
-    //Navbar is replaced by Nav. Nav in lib/components/home/nav
-      if(true) {
-        return(
-          <div className="text-center">
-            <h2>Your sites</h2>
-              {sitesList}
-          </div>
-        )
-      } else {
-        return(
-          <div>
-            dashboard
-          </div>
-        )
-      }
+    return(
+      <div className="text-center">
+        <Navbar />
+        <h2>Your sites</h2>
+          {sitesList}
+      </div>
+    )
   }
 })

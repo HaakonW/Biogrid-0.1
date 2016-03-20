@@ -1,15 +1,22 @@
 privateRoutes = FlowRouter.group({
-  name:"privateroutes"
+  name:"privateroutes",
+  triggersEnter:[function (context,redirect) {
+    //let route;
+    if(!Meteor.userId()) {
+      alert("You dont have access!");
+      redirect("/");
+    }
+  }]
 });
 
 publicRoutes = FlowRouter.group({
-  name:"publicroutes"
+  name:"publicroutes",
 });
 
 publicRoutes.route("/", {
   name: "Home",
   action() {
-    ReactLayout.render(Home, { content: <Home /> });
+    ReactLayout.render(Home, { content: <Home /> })
   }
 });
 
@@ -44,6 +51,9 @@ FlowRouter.notFound = {
 
     },
     action: function() {
-
+      ReactLayout.render(PageNotFound,{}),
+      Meteor.setTimeout(function(){
+         FlowRouter.go("/");
+      }, 3000);
     }
 };
