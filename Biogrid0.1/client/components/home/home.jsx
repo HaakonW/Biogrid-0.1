@@ -10,7 +10,7 @@ Home = React.createClass({
   render() {
     return(
       <div>
-        <NavBar />
+        <Navbar />
         <Content />
       </div>
     )
