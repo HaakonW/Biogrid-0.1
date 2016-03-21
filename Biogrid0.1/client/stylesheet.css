@@ -49,6 +49,32 @@
 
 /*FRONT PAGE LOGIN*/
 
+body{
+  background-color: #1c1d21;
+}
+
+#loginBox{
+  margin-left: 500px;
+}
+
+#loginFields{
+  height: 400px;
+  width: 800px;
+  padding: 50px;
+  border-radius: 50px;
+  background-color: #484a54;
+
+
+}
+
+
+
+
+
+
+
+
+
 /*FRONT PAGE LOGIN*/
 /*FRONT PAGE LOGIN*/
 /*FRONT PAGE LOGIN*/

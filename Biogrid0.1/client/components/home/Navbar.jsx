@@ -5,7 +5,7 @@ Navbar = React.createClass({
       let logInWrapper;
       if(!Meteor.loggingIn() && Meteor.user()) {
           logInWrapper = <ul className="nav navbar-nav pull-right">
-            <li><a href="#profile">{Meteor.user().emails[0].address}</a></li>
+            <li><a href="#">User | {Meteor.user().emails[0].address}</a></li>
             <li><a href="/logout">Logout</a></li>
           </ul>;
       } else {
