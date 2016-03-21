@@ -18,9 +18,14 @@ Site = React.createClass({
             let id = site._id;
             let link = "/dashboard/"+id;
           return(
-            <div key={site._id}>
-              <a href={link}> {site.name} </a>
+            <div className="row site-row">
+              <div className="col-md-12 col-sm-12">
+                <div key={site._id}>
+                  <a href={link}> {site.name} </a>
+                </div>
+              </div>
             </div>
+
           )
         })
     }
@@ -29,6 +34,7 @@ Site = React.createClass({
       <div className="text-center">
         <Navbar />
         <h2>Your sites</h2>
+        <hr/>
           {sitesList}
       </div>
     )

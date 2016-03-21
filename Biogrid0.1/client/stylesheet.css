@@ -47,6 +47,10 @@
   color:white;
 }
 
+.site-row:hover{
+  background:#F3F3F3;
+}
+
 /*FRONT PAGE LOGIN*/
 
 body{
