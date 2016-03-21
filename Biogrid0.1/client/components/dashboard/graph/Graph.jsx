@@ -22,7 +22,7 @@ Graph = React.createClass({
 
   //check if object has more days than one
   isObjectMoreThanOneDay:function(obj) {
-      return Object.keys(obj).length > 1
+      return obj.length > 1
   },
 
   writeGraphStringSeveralDays:function(allValues){

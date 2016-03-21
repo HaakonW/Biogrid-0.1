@@ -30,4 +30,14 @@ if(Meteor.isServer){
   Meteor.publish('sensors1', function(hubId){
     return Sensors1.find({hubId:hubId});
   });
+
+  //Publish from Things
+  Meteor.publish('things', function(thingId){
+    return Things.find({_id:thingId});
+  });
+
+  //Publish from Readings
+  Meteor.publish('readings', function(sensorId){
+    return Readings.find({sensorId:sensorId});
+  });
 }
