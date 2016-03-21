@@ -35,6 +35,7 @@ Hub = React.createClass({
     }
   },*/
 
+  //TODO return ParentGraph. Map through this.data
   render(){
     return(
       <div>tom</div>
