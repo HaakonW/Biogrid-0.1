@@ -3,7 +3,7 @@ privateRoutes = FlowRouter.group({
   triggersEnter:[function (context,redirect) {
     //let route;
     if(!Meteor.userId()) {
-      alert("You dont have access!");
+      //alert("You dont have access!");
       redirect("/");
     }
   }]
@@ -14,9 +14,9 @@ publicRoutes = FlowRouter.group({
 });
 
 publicRoutes.route("/", {
-  name: "Home",
+  name: "Layout",
   action() {
-    ReactLayout.render(Home, { content: <Home /> })
+    ReactLayout.render(Loginlayout, { content: <Loginlayout /> })
   }
 });
 

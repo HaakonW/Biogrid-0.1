@@ -54,32 +54,42 @@
 /*FRONT PAGE LOGIN*/
 
 body{
-  background-color: #1c1d21;
+  background-color: #1f1f1f;
+}
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
 }
 
 #loginBox{
-  margin-left: 500px;
+  background-color: black;
+  margin-top: 5%;
+  padding-bottom: 5%;
 }
 
-#loginFields{
-  height: 400px;
-  width: 800px;
-  padding: 50px;
-  border-radius: 50px;
-  background-color: #484a54;
-
-
+#loginBox h3{
+  color: white;
 }
 
+/*NAVBAR*/
+#navCortex{
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  font-size: 1.2em;
+}
 
-
-
-
-
-
-
-
-/*FRONT PAGE LOGIN*/
+.blueText{
+  color: #6494ed;
+}
 /*FRONT PAGE LOGIN*/
 /*FRONT PAGE LOGIN*/
 /*FRONT PAGE LOGIN*/
