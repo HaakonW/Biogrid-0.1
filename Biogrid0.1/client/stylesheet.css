@@ -54,8 +54,9 @@
 /*FRONT PAGE LOGIN*/
 
 body{
-  background-color: #1f1f1f;
+  background-color: black;
 }
+
 .row-centered {
     text-align:center;
 }
@@ -68,23 +69,45 @@ body{
     margin-right:-4px;
 }
 
+.spacer10{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 #loginBox{
-  background-color: black;
   margin-top: 5%;
   padding-bottom: 5%;
 }
 
 #loginBox h3{
-  color: white;
+  color: #169776;
+  font-weight: bold;
+  text-transform: uppercase;;
+
+}
+.greenBtn{
+  background-color: #169776;
+  border: 0px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-transform: uppercase;;
+}
+
+.fa-user, .fa-lock{
+  color: black;
+  min-width: 15px;
 }
 
 /*NAVBAR*/
-#navCortex{
+.navCortex{
   font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  color: black;
+  color: black !important ;
   font-size: 1.2em;
+}
+
+.glyphicon-grain, .glyphicon-home{
+  color: #169776;
 }
 
 .blueText{
