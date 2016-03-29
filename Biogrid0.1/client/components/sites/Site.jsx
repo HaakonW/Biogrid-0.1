@@ -21,11 +21,10 @@ Site = React.createClass({
             <div className="row site-row">
               <div className="col-md-12 col-sm-12">
                 <div key={site._id}>
-                  <a href={link}> {site.name} </a>
+                  <h2 className=""><a className="site-links" href={link}> {site.name} </a></h2>
                 </div>
               </div>
             </div>
-
           )
         })
     }
@@ -33,7 +32,7 @@ Site = React.createClass({
     return(
       <div className="text-center">
         <Navbar />
-        <h2>Your sites</h2>
+        <h1>Your sites</h1>
         <hr/>
           {sitesList}
       </div>
