@@ -1,72 +1,24 @@
-.metadataColumn{
-  /*background-color: red;*/
-  border: solid black 1px;
-  color:black;
-  height:200px;
+body {
+  background-color: #252830;
 }
 
-.graphRow{
-  background-color: yellow;
-  height: 150px;
+h1 {
+  color: white;
 }
 
-.extraFunctionality{
-  background-color: blue;
-  color:black;
-  height:150px;
-}
-
-.graph{
-  width: 100%;
-  height: 250px;
-       left: 10px;
-       right: 10px;
-       top: 0;
-       bottom: 10px;
-}
-
-#bg{
+#bg {
   height: 100%;
-  background-color: rgb(37,40,48);
+  background-color: #252830;
 }
 
-.panel-body{
-  background-color: rgb(37,40,48);
+.panel-body {
+  background-color: #252830;
 }
 
-/* !important to override Bootstrap settings
-.panel-heading{
-  background-color: rgb(37,40,48)!important;
-}*/
-
-.dygraph-axis-label-y{
-  color:white;
-}
-
-.fa-spinner{
-  color:white;
-}
-
-.site-row:hover{
-  background:#F3F3F3;
-}
-
-/*FRONT PAGE LOGIN*/
-
-body{
-  background-color: black;
-}
-
-.row-centered {
-    text-align:center;
-}
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
+.metadataColumn {
+  border: solid black 1px;
+  color: black;
+  height: 200px;
 }
 
 .spacer10{
@@ -74,18 +26,46 @@ body{
   margin-bottom: 10px;
 }
 
-#loginBox{
+/*NAVBAR*/
+.navCortex {
+  font-weight: bold;
+  color: black !important ;
+  font-size: 1.2em;
+}
+
+.glyphicon-grain,
+.glyphicon-home {
+  color: #169776;
+}
+
+.blueText{
+  color: #6494ed;
+}
+
+/*FRONT PAGE LOGIN*/
+.row-centered {
+  text-align:center;
+}
+
+.col-centered {
+  display:inline-block;
+  float:none;
+  text-align:left;
+  margin-right:-4px;
+}
+
+#loginBox {
   margin-top: 5%;
   padding-bottom: 5%;
 }
 
-#loginBox h3{
+#loginBox h3 {
   color: #169776;
   font-weight: bold;
-  text-transform: uppercase;;
-
+  text-transform: uppercase;
 }
-.greenBtn{
+
+.greenBtn {
   background-color: #169776;
   border: 0px;
   color: black;
@@ -94,25 +74,54 @@ body{
   text-transform: uppercase;;
 }
 
-.fa-user, .fa-lock{
+.fa-user,
+.fa-lock {
   color: black;
   min-width: 15px;
 }
 
-/*NAVBAR*/
-.navCortex{
-  font-weight: bold;
-  color: black !important ;
-  font-size: 1.2em;
+/*SITE*/
+.site-row {
+  height: 200px;
 }
 
-.glyphicon-grain, .glyphicon-home{
-  color: #169776;
+.site-row:hover {
+  background: #4D5465
 }
 
-.blueText{
-  color: #6494ed;
+.site-links {
+  color: white;
 }
+
+/*GRAPH*/
+.graphRow {
+  background-color: yellow;
+  height: 150px;
+}
+
+.extraFunctionality {
+  background-color: blue;
+  color: black;
+  height: 150px;
+}
+
+.graph {
+  width: 100%;
+  height: 250px;
+  left: 10px;
+  right: 10px;
+  top: 0;
+  bottom: 10px;
+}
+
+.dygraph-axis-label-y {
+  color: white;
+}
+
+.fa-spinner {
+  color: white;
+}
+
 /*FRONT PAGE LOGIN*/
 /*FRONT PAGE LOGIN*/
 /*FRONT PAGE LOGIN*/
