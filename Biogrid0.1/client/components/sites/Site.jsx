@@ -18,10 +18,10 @@ Site = React.createClass({
             let id = site._id;
             let link = "/dashboard/"+id;
           return(
-            <div className="row site-row">
+            <div className="row site-row" id="site-row">
               <div className="col-md-12 col-sm-12">
                 <div key={site._id}>
-                  <h2 className=""><a className="site-links" href={link}> {site.name} </a></h2>
+                  <h2><a className="site-links" href={link}> {site.name} </a></h2>
                 </div>
               </div>
             </div>
