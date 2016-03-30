@@ -11,7 +11,6 @@ Site = React.createClass({
   },
 
   render(){
-
     let sitesList;
     if( this.data.ready) {
           sitesList = this.data.sites.map(function(site){
@@ -21,20 +20,22 @@ Site = React.createClass({
             <div className="row site-row" id="site-row">
               <div className="col-md-12 col-sm-12">
                 <div key={site._id}>
-                  <h2><a className="site-links" href={link}> {site.name} </a></h2>
+                  <h2><a className="site-links" href={link}> {site.name} </a> </h2>
+                    <Map />
                 </div>
               </div>
             </div>
           )
         })
     }
-
     return(
       <div className="text-center">
         <Navbar />
-        <h1>Your sites</h1>
-        <hr/>
-          {sitesList}
+        <div>
+          <h1>Your sites</h1>
+          <hr/>
+            {sitesList}
+        </div>
       </div>
     )
   }
