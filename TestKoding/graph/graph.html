@@ -1,38 +1,8 @@
 <head>
-  <title>graph</title>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/dygraph/1.1.1/dygraph-combined.js"></script>
+  <title>googlemaps-react</title>
 </head>
 
 <body>
-  <h1>BioGrid 0.1</h1>
-  {{> graph}}
-
-
+  <h2>Fake sites</h2>
+  <div id="root"></div>
 </body>
-
-
-<template name="graph">
-<h3>GRAPH TEST UNO</h3>
-
-<div id="graphdiv"></div>
-<script type=text/javascript>
-  g = new Dygraph(
-    document.getElementById("graphdiv"),
-    "Date,time,Value\n" +
-    "2016-02-18,11-03-19,1276.5014518141647\n" +
-    "2016-02-19,11-03-20,1399.7787571636275\n" +
-    "2016-02-20,11-03-21,1690.055215939916\n" +
-    "2016-02-21,11-03-22,1200.331930606972\n" +
-    "2016-02-22,11-03-23,1078.608350055789\n"
-  );
-
-</script>
-
-
-
-
-
-
-
-
-</template>
