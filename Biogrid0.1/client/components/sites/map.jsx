@@ -13,8 +13,29 @@ Map = React.createClass({
     return {
       center: new google.maps.LatLng(59.9127300, 10.7460900),
       zoom: 13,
-      scrollwheel: false
-    };
+      scrollwheel: false,
+      styles: [
+        {
+        stylers: [
+          { hue: "#169776" },
+          { saturation: -40 }
+        ]
+      },{
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [
+          { lightness: 80 },
+          { visibility: "simplified" }
+        ]
+      },{
+        featureType: "road",
+        elementType: "labels",
+        stylers: [
+          { visibility: "off" }
+        ]
+      }
+          ]
+        };
   },
   render() {
     if (this.data.loaded) {
@@ -39,7 +60,7 @@ GoogleMap = React.createClass({
     GoogleMaps.ready(this.props.name, function(map) {
       let marker = new google.maps.Marker({
         position:map.options.center,
-        map: map.instance
+        map: map.instance,
       });
     });
   },
