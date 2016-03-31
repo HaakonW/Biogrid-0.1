@@ -26,7 +26,7 @@ Navbar = React.createClass({
       }
       return (
         <div>
-          <nav className="navbar navbar-default navbar-static-top" role="navigation">
+          <nav className="navbar navbar-inverse navbar-static-top" role="navigation">
             <div className="container">
               <div className="container-fluid">
                 <div className="navbar-header">

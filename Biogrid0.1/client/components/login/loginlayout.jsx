@@ -4,7 +4,7 @@ Loginlayout = React.createClass({
       <div>
         <Navbar />
         <Login />
-        <div>Footer</div>
+        <Footer />
       </div>
     )
   }
