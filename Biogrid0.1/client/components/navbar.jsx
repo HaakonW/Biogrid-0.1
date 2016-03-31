@@ -18,7 +18,7 @@ Navbar = React.createClass({
       else{
         userinfo = <ul className="nav navbar-nav pull-right">
           <li>
-            <a className="navCortex" href="http:www.biogrid.no">Biogrid.no <span className="glyphicon glyphicon-home" aria-hidden="true">
+            <a className="navCortex" href="http://www.biogrid.no" target="_blank">Biogrid.no <span className="glyphicon glyphicon-home" aria-hidden="true">
               </span>
             </a>
           </li>
