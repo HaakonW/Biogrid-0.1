@@ -9,24 +9,21 @@ Navbar = React.createClass({
               </a>
             </li>
             <li>
-              <a className="navCortex" href="/logout">Logout <span className="glyphicon glyphicon-off" aria-hidden="true">
-                </span>
+              <a className="navCortex" href="/logout">Logout
+                <span className="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </li>
           </ul>;
       }
       else{
         userinfo = <ul className="nav navbar-nav pull-right">
-
           <li>
             <a className="navCortex" href="http:www.biogrid.no">Biogrid.no <span className="glyphicon glyphicon-home" aria-hidden="true">
               </span>
             </a>
           </li>
         </ul>;
-
       }
-
       return (
         <div>
           <nav className="navbar navbar-default navbar-static-top" role="navigation">
@@ -34,7 +31,8 @@ Navbar = React.createClass({
               <div className="container-fluid">
                 <div className="navbar-header">
                     <ul className="nav navbar-nav pull-left"><li>
-                        <a className="navCortex" href="/"><span className="glyphicon glyphicon-grain" aria-hidden="true"> </span> Biogrid Cortex
+                        <a className="navCortex" href="/site">
+                          <span className="glyphicon glyphicon-grain" aria-hidden="true"> </span> Biogrid Cortex
                         </a>
                       </li>
                     </ul>
