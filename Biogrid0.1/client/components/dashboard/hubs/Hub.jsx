@@ -2,43 +2,26 @@ Hub = React.createClass({
   mixins:[ReactMeteorData],
   getMeteorData(){
     let data = {};
-    data.sensor = {}; //_id, sensorType, graph{}, uuid, hubId, thingId
-
-    //subscribe to Sensors1 with this.props.hubId
-    const subscriptionSensors1 = Meteor.subscribe('sensors1', this.props.hubId);
-    if(subscriptionSensors1.ready()) {
-      data.sensor = Sensors1.find().fetch();
-
-      data.sensor.map(function(sensor){
-        //console.log("one sensor: ", sensor);
-
-        //FIXME things.find returns two objects. Should check out callback and make functions
-        let subscriptionReading = Meteor.subscribe('readings', sensor._id);
-        if(subscriptionReading.ready()) {
-          sensor.reading = Readings.find().fetch();
-          let subscriptionThings = Meteor.subscribe('things', sensor.thingId);
-          if(subscriptionThings.ready()) {
-            let tmp = Things.find().fetch();
-            console.log("things.find", tmp);
-            //data.sensors.thingDescription = tmp.description
-          }
-        }
-        console.log("sensor: ", sensor);
-      })
+    data.sensors = [];
+    const subscriptionSensors = Meteor.subscribe('sensors1', this.props.hubId);
+    if(subscriptionSensors.ready()) {
+      data.sensors = Sensors1.find({hubId:this.props.hubId}).fetch();
     }
     return data;
   },
-  /*subscribeSensor() {
-    const subscrSensors1 = Meteor.subscribe('sensors1',this.props.hubId);
-    if(subscrSensors1.ready()) {
-      data.sensor = Sensors1.find().fetch();
-    }
-  },*/
 
-  //TODO return ParentGraph. Map through this.data
   render(){
+    var rows = this.data.sensors.map(function(sensor) {
+      return (
+        <div className="col-md-6 col-sm-12">
+            <ParentGraph key={sensor._id} sensorId={sensor._id} />
+        </div>
+
+      )
+    })
+
     return(
-      <div>tom</div>
+      <div> {rows} </div>
     )
   }
 })

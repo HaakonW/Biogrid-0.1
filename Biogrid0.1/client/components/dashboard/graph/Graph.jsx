@@ -63,7 +63,7 @@ Graph = React.createClass({
             for (let second in allValues[key][hour][minute]) {
               let value = allValues[key][hour][minute][second];
               graphString += dayDate + " " + hour + ":" + minute + ":" + second + "," + value + "\n";
-              break; //only 1 post pr minute, not every second
+              //break; //only 1 post pr minute, not every second
             }
           }
         }
@@ -119,19 +119,19 @@ Graph = React.createClass({
   },
 
   componentDidUpdate:function(){
-    if (this.props.ready) this.createGraph(); //waits until all data is ready to draw the graph
+    if (this.props.sensors) this.createGraph(); //waits until all data is ready to draw the graph
     //console.log("didUpdate");
   },
 
   render(){
     return(
-      //TODO if data
+      //FIXME have to use a ready-function to show spinners while data is loading
       <div className="panel panel-default">
         <div className="panel-heading">
           <h3 className="panel-title text-center">tittel</h3>
         </div>
         <div className="panel-body">
-        {this.props.ready ? <div id="graf" className="graph" ref={(ref) => this.graf = ref}></div> : <div className="text-center"><i className="fa fa-spinner fa-pulse fa-5x"></i></div>}
+          {this.props.sensors ? <div id="graf" className="graph" ref={(ref) => this.graf = ref}></div> : <div className="text-center"><i className="fa fa-spinner fa-pulse fa-5x"></i></div>}
         </div>
       </div>
     )
