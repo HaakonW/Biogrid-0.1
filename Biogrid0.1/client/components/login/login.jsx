@@ -34,8 +34,8 @@ Login = React.createClass({
             <div className="col-md-12">
               <h3 className="text-center">login to access your things</h3>
             </div>
-            <div className="row row-centered">
-              <div className="col-md-4 col-centered">
+            <div className="row">
+              <div className="col-md-4 col-md-offset-4">
                 <form onSubmit={this.handleSubmit}>
                   <div className="spacer10">
                     <div className="input-group">
