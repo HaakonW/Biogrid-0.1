@@ -33,7 +33,7 @@ Site = React.createClass({
       <div className="text-center">
         <Navbar />
         <div>
-          <h1>Your sites</h1>
+          <h1 className="blueText">Your sites:</h1>
           <hr/>
             {sitesList}
         </div>
