@@ -14,7 +14,7 @@ Hub = React.createClass({
     var rows = this.data.sensors.map(function(sensor) {
       return (
         <div className="col-md-6 col-sm-12">
-            <ParentGraph key={sensor._id} sensorId={sensor._id} />
+            <ParentGraph key={sensor._id} sensorId={sensor._id} thingId={sensor.thingId} />
         </div>
 
       )
