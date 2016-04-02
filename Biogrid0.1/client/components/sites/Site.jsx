@@ -31,7 +31,7 @@ Site = React.createClass({
               <div className="col-md-12 col-sm-12">
                 <div>
                   <h2><a className="site-links" href={link}> {site.name} </a> </h2>
-                    <Map />
+                    <Map lat={site.latitude} lng={site.longitude} />
                 </div>
               </div>
             </div>
