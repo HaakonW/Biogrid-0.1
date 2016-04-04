@@ -30,6 +30,8 @@ h1 {
 .greenText{
   color: #169776;
 }
+
+/* Two blueText classes */
 .blueText{
   color: #2281e5;
 }
@@ -46,6 +48,7 @@ h1 {
   color: #169776;
 }
 
+/* Two blueText classes */
 .blueText{
   color: #6494ed;
 }
@@ -121,6 +124,12 @@ h1 {
 
 /********** SITE **********/
 
+.site-links {
+  /* cant remove underline without important */
+  text-decoration: none !important;
+  color: #169776;
+}
+
 .map-container {
   height: 200px;
   width: 100%;
@@ -138,12 +147,6 @@ h1 {
   border-radius: 5px;
   padding-bottom: 15px;
   margin-bottom: 15px;
-}
-
-.extraFunctionality {
-  background-color: blue;
-  color: black;
-  height: 150px;
 }
 
 .graph {
