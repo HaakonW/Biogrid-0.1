@@ -106,6 +106,8 @@ Graph = React.createClass({
           axisLineColor: 'rgb('+this.props.color+')', //TODO get colors based on graphType
           showRangeSelector: true,
           rangeSelectorHeight: 30,
+          //retainDateWindow is new. Should keep zoom level when new data
+          retainDateWindow:true,
           rangeSelectorPlotFillColor: 'rgb('+this.props.color+')', //TODO get colors based on graphType
           rangeSelectorPlotStrokeColor: 'rgb('+this.props.color+')', //TODO get colors based on graphType
         }
