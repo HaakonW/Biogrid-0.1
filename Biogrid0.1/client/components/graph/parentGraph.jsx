@@ -20,7 +20,7 @@ ParentGraph = React.createClass({
   //TODO colors have to be choosen by graphType
   render() {
       return (
-        <div>
+        <div className="oneGraph">
           <Graph sensors={this.data.readings} color={this.props.graph.color} graphType={this.props.graph.graphType} thingDescription={this.data.thing} />
         </div>
       )

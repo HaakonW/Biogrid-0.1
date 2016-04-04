@@ -128,11 +128,9 @@ Graph = React.createClass({
   render(){
     return(
       //FIXME have to use a ready-function to show spinners while data is loading
-      <div className="panel panel-default">
-        <div className="panel-heading">
-          <h3 className="panel-title text-center">{this.props.thingDescription}</h3>
-        </div>
-        <div className="panel-body">
+        <div>
+          <h3 className="text-center">{this.props.thingDescription}</h3>
+        <div>
           {this.props.sensors ? <div id="graf" className="graph" ref={(ref) => this.graf = ref}></div> : <div className="text-center"><i className="fa fa-spinner fa-pulse fa-5x"></i></div>}
         </div>
       </div>

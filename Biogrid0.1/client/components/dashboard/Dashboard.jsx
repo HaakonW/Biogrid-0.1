@@ -15,7 +15,7 @@ Dashboard = React.createClass({
     if(this.data.hubsReady) {
       var hubsList = this.data.hubs.map(function(hub){
         return(
-              <Hub key={hub._id} hubId={hub._id} />
+              <Hub className="hubFrame" key={hub._id} hubId={hub._id} />
         )
       })
     }
@@ -24,9 +24,7 @@ Dashboard = React.createClass({
       <div id="bg">
       <Navbar />
         <div className="row">
-          <div className="col-md-2 col-sm-12">
-            <Metadata />
-          </div>
+          
           <div className="col-md-10">
             {hubsList}
           </div>

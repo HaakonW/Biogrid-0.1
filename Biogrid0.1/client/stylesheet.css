@@ -133,6 +133,13 @@ h1 {
   height: 150px;
 }
 
+.oneGraph {
+  background-color: rgb(34, 34, 34);;
+  border-radius: 5px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
 .extraFunctionality {
   background-color: blue;
   color: black;
