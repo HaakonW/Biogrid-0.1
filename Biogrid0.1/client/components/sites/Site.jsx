@@ -27,25 +27,27 @@ Site = React.createClass({
             let id = site._id;
             let link = "/dashboard/"+id;
           return(
-            <div key={site._id} className="row site-row" id="site-row">
-              <div className="col-md-12 col-sm-12">
+              <div key={site._id} className="col-md-5 col-sm-12 siteWrapper">
                 <div>
-                  <h2><a className="site-links" href={link}> {site.name} </a> </h2>
+                  <a className="site-links" href={link}>
+                  <h2 className="text-center"> {site.name}  </h2>
                     <Map lat={site.latitude} lng={site.longitude} />
+                    </a>
                 </div>
               </div>
-            </div>
           )
         })
     } else {
-      sitesList = <div className="blueText"> Sorry, no sites available or loading </div>
+      sitesList = <div className=""> Sorry, no sites available or loading </div>
     }
 
     return(
-      <div className="text-center">
+      <div className="">
         <Navbar />
-        <div>
+        <div className="row">
+          <div className="col-md-10 col-md-offset-2">
             {sitesList}
+          </div>
         </div>
       </div>
     )

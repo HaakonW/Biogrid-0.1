@@ -31,11 +31,6 @@ h1 {
   color: #169776;
 }
 
-/* Two blueText classes */
-.blueText{
-  color: #2281e5;
-}
-
 /********** NAVBAR **********/
 .navbar{
   margin-bottom: 0px;
@@ -52,10 +47,6 @@ h1 {
   color: #169776;
 }
 
-/* Two blueText classes */
-.blueText{
-  color: #6494ed;
-}
 
 #subNavbar{
   border-top: solid #169776 1px !important;
@@ -116,14 +107,27 @@ h1 {
 
 /********** SITE **********/
 
+.siteWrapper {
+  background-color: rgb(34, 34, 34);
+  border-radius: 5px;
+  /*padding-bottom: 15px;
+  margin-bottom: 15px;
+  margin:1px;*/
+  margin: 10px;
+}
+
 .site-links {
   /* cant remove underline without important */
   text-decoration: none !important;
   color: #169776;
 }
 
+.site-links:hover {
+  color: #169776;
+}
+
 .map-container {
-  height: 200px;
+  height: 350px;
   width: 100%;
   margin-bottom: 50px;
 }
