@@ -8,11 +8,6 @@ Navbar = React.createClass({
             <span className="glyphicon glyphicon-user greenIcon " aria-hidden="true"></span>
           </a>
         </li>
-        <li>
-          <a className="navCortex" href="/logout">Logout
-            <span className="glyphicon glyphicon-off greenIcon" aria-hidden="true"></span>
-          </a>
-        </li>
       </ul>;
     }
     else{
@@ -27,21 +22,16 @@ Navbar = React.createClass({
   return (
     <div>
       <nav className="navbar navbar-inverse navbar-static-top" role="navigation">
-        <div className="container">
-          <div className="container-fluid">
             <div className="navbar-header collapse navbar-collapse">
-              <ul className="nav navbar-nav pull-left">
-                <li><a className="navCortex" href="/site">
-                  <span className="glyphicon glyphicon-grain" aria-hidden="true"></span> Biogrid Cortex
-                  </a>
+              <ul className="nav navbar-nav">
+                <li>
+                  <a className="navCortex" href="/site">Biogrid Cortex</a>
                 </li>
               </ul>
             </div>
             <div className="">
               {userinfo}
             </div>
-          </div>
-        </div>
       </nav>
     </div>
   )

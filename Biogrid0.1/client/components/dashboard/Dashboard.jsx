@@ -23,6 +23,7 @@ Dashboard = React.createClass({
     return(
       <div id="bg">
       <Navbar />
+      <SubNavbar />
         <div className="row">
 
           <div className="col-md-10">

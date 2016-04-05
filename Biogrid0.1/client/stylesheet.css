@@ -37,10 +37,14 @@ h1 {
 }
 
 /********** NAVBAR **********/
+.navbar{
+  margin-bottom: 0px;
+}
+
 .navCortex {
   font-weight: bold;
   font-size: 1.2em;
-  border-width: thin;
+  margin-left: 35px;
 }
 
 .glyphicon-grain,
@@ -53,16 +57,11 @@ h1 {
   color: #6494ed;
 }
 
-#subNavBar{
-  border-top: solid #169776;
-  border-width: thin;
+#subNavbar{
+  border-top: solid #169776 1px !important;
 }
 
-.fa-caret-down,
-.fa-cog,
-.fa-arrow-left{
-  color: white;
-}
+
 
 /********** FRONT PAGE LOGIN **********/
 .row-centered {
