@@ -52,6 +52,14 @@ h1 {
   border-top: solid #169776 1px !important;
 }
 
+#rangeBtn {
+  display: none;
+}
+
+.dateRangeInput {
+  background: rgb(34, 34, 34) !important;
+}
+
 #yourSites{
   background-color: #222222 !important;
   min-width: 250px !important;
@@ -151,7 +159,7 @@ h1 {
 }
 
 .oneGraph {
-  background-color: rgb(34, 34, 34);;
+  background-color: rgb(34, 34, 34);
   border-radius: 5px;
   padding-bottom: 15px;
   margin-bottom: 15px;

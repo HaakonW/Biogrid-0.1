@@ -1,8 +1,6 @@
 SubNavbar = React.createClass({
   mixins:[ReactMeteorData],
   getMeteorData() {
-
-
     const siteId = FlowRouter.getParam("siteId");
     const subscription = Meteor.subscribe('sites');
     return {
@@ -20,7 +18,8 @@ SubNavbar = React.createClass({
   },
 
   componentDidMount() {
-    $("#subNavBarToday").css("border-color", "red");
+    $("#subNavbarToday").css("border-color", "red");
+    $('#datepicker').datepicker();
   },
 
   handleButtonClicks(period) {
@@ -32,25 +31,37 @@ SubNavbar = React.createClass({
         date[0] = this.getTodaysDate();
         date[1] = this.getTodaysDate();
         Session.set('timePeriod', date);
-        $("#subNavBarToday").css("border-color", "red");
-        $("#subNavBarWeek").css("border-color", "#1f1f1f");
-        $("#subNavBarMonth").css("border-color", "#1f1f1f");
+        $("#subNavbarToday").css("border-color", "red");
+        $("#subNavbarWeek").css("border-color", "#1f1f1f");
+        $("#subNavbarMonth").css("border-color", "#1f1f1f");
+        $("#subNavbarCustom").css("border-color", "#1f1f1f");
         break;
       case 'week':
         date[0] = this.getRequestedDate(new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7));
         date[1] = this.getTodaysDate();
         Session.set('timePeriod', date);
-        $("#subNavBarToday").css("border-color", "#1f1f1f");
-        $("#subNavBarWeek").css("border-color", "red");
-        $("#subNavBarMonth").css("border-color", "#1f1f1f");
+        $("#subNavbarToday").css("border-color", "#1f1f1f");
+        $("#subNavbarWeek").css("border-color", "red");
+        $("#subNavbarMonth").css("border-color", "#1f1f1f");
+        $("#subNavbarCustom").css("border-color", "#1f1f1f");
         break;
       case 'month':
         date[0] = this.getRequestedDate(new Date(today.getFullYear(), today.getMonth() - 1, today.getDate()));
         date[1] = this.getTodaysDate();
         Session.set('timePeriod', date);
-        $("#subNavBarToday").css("border-color", "#1f1f1f");
-        $("#subNavBarWeek").css("border-color", "#1f1f1f");
-        $("#subNavBarMonth").css("border-color", "red");
+        $("#subNavbarToday").css("border-color", "#1f1f1f");
+        $("#subNavbarWeek").css("border-color", "#1f1f1f");
+        $("#subNavbarMonth").css("border-color", "red");
+        $("#subNavbarCustom").css("border-color", "#1f1f1f");
+        break;
+      case 'custom':
+        date[0] = this.getRequestedDate(this.refs.start.value);
+        date[1] = this.getRequestedDate(this.refs.end.value);
+        Session.set('timePeriod', date);
+        $("#subNavbarToday").css("border-color", "#1f1f1f");
+        $("#subNavbarWeek").css("border-color", "#1f1f1f");
+        $("#subNavbarMonth").css("border-color", "#1f1f1f");
+        $("#subNavbarCustom").css("border-color", "#red");
         break;
       default:
         //todays date
@@ -59,6 +70,11 @@ SubNavbar = React.createClass({
         Session.set('timePeriod', date);
         break;
     }
+  },
+
+  dateRangeHandler() {
+    $('#datepicker').datepicker();
+    //$('#rangeBtn').css("display", "inline");
   },
 
   getTodaysDate() {
@@ -109,9 +125,17 @@ SubNavbar = React.createClass({
             </li>
           </ul>
           <ul className="nav navbar-nav">
-            <li className="subNavbarLi" id="subNavBarToday"><a href="" onClick={this.handleButtonClicks.bind(this, 'today')}>Today</a></li>
-            <li className="subNavbarLi" id="subNavBarWeek"><a href="" onClick={this.handleButtonClicks.bind(this, 'week')}>Last week</a></li>
-            <li className="subNavbarLi" id="subNavBarMonth"><a href="" onClick={this.handleButtonClicks.bind(this, 'month')}>Last month</a></li>
+            <li className="subNavbarLi" id="subNavbarToday"><a href="" onClick={this.handleButtonClicks.bind(this, 'today')}>Today</a></li>
+            <li className="subNavbarLi" id="subNavbarWeek"><a href="" onClick={this.handleButtonClicks.bind(this, 'week')}>Last week</a></li>
+            <li className="subNavbarLi" id="subNavbarMonth"><a href="" onClick={this.handleButtonClicks.bind(this, 'month')}>Last month</a></li>
+            <li className="subNavbarLi" id="subNavbarCustom">
+              <div className="input-group input-group-sm input-daterange" id="datepicker">
+                <input type="text" className="input-sm form-control dateRangeInput" ref="start" onClick={this.dateRangeHandler}/>
+                <span className="input-group-addon">to</span>
+                <input type="text" className="input-sm form-control dateRangeInput" ref="end" onClick={this.dateRangeHandler}/>
+              </div>
+            </li>
+            <li><button type="button" className="btn btn-default form-control" id="rangeBtn" onClick={this.handleButtonClicks.bind(this, 'custom')}>GO!</button></li>
           </ul>
         </div>
       </nav>
