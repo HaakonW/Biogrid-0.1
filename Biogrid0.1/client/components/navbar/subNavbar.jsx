@@ -1,12 +1,14 @@
 SubNavbar = React.createClass({
   mixins:[ReactMeteorData],
   getMeteorData() {
-    let data = {};
-    data.sites = [];
+
+
+    const siteId = FlowRouter.getParam("siteId");
     const subscription = Meteor.subscribe('sites');
     return {
       ready: subscription.ready(),
       sites: Sites.find().fetch(),
+      siteId: siteId
     }
   },
 
@@ -74,11 +76,17 @@ SubNavbar = React.createClass({
   },
 
   render(){
-    let sitesList;
+    let sitesList = [];
+    let currentSite = "";
+    let temp = this.data.siteId;
+
     if( this.data.ready) {
       sitesList = this.data.sites.map(function(site){
         let id = site._id;
         let link = "/dashboard/"+id;
+        if (temp === id) {
+          currentSite = site.name;
+        }
         return(
           <div key={site._id}>
             <li><a className="queryLinks" href={link}> {site.name} </a></li>
@@ -94,7 +102,7 @@ SubNavbar = React.createClass({
           <ul className="nav navbar-nav">
             <li className="dropdown subNavbarLi">
               <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Change Site <i className="fa fa-caret-down greenIcon"></i> </a>
+                {currentSite} <i className="fa fa-caret-down greenIcon"></i> </a>
               <ul className="dropdown-menu" id="yourSites">
                 {sitesList}
               </ul>
