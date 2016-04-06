@@ -52,6 +52,24 @@ h1 {
   border-top: solid #169776 1px !important;
 }
 
+#yourSites{
+  background-color: #222222 !important;
+  min-width: 250px !important;
+  margin-top: 2px !important;
+  padding: 20px;
+  border-bottom: solid black 4px;
+  border-right: solid black 6px;
+
+}
+
+.queryLinks{
+  color: #9d9d9d;
+}
+.queryLinks:hover{
+  text-decoration: none;
+  color: #169776;
+}
+
 
 
 /********** FRONT PAGE LOGIN **********/
