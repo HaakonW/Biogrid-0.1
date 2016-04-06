@@ -9,23 +9,70 @@ SubNavbar = React.createClass({
       sites: Sites.find().fetch(),
     }
   },
+
+  componentWillMount() {
+    let date = [];
+    date[0] = this.getTodaysDate();
+    date[1] = this.getTodaysDate();
+    Session.set('timePeriod', date);
+  },
+
+  componentDidMount() {
+    $("#subNavBarToday").css("border-color", "red");
+  },
+
   handleButtonClicks(period) {
     //timePeriod = new ReactiveVar();
+    let date = [];
+    let today = new Date();
     switch (period) {
       case 'today':
-      Session.set('timePeriod', 'today');
-      break;
+        date[0] = this.getTodaysDate();
+        date[1] = this.getTodaysDate();
+        Session.set('timePeriod', date);
+        $("#subNavBarToday").css("border-color", "red");
+        $("#subNavBarWeek").css("border-color", "#1f1f1f");
+        $("#subNavBarMonth").css("border-color", "#1f1f1f");
+        break;
       case 'week':
-      Session.set('timePeriod', 'week');
-      break;
+        date[0] = this.getRequestedDate(new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7));
+        date[1] = this.getTodaysDate();
+        Session.set('timePeriod', date);
+        $("#subNavBarToday").css("border-color", "#1f1f1f");
+        $("#subNavBarWeek").css("border-color", "red");
+        $("#subNavBarMonth").css("border-color", "#1f1f1f");
+        break;
       case 'month':
-      Session.set('timePeriod', 'month');
-      break;
+        date[0] = this.getRequestedDate(new Date(today.getFullYear(), today.getMonth() - 1, today.getDate()));
+        date[1] = this.getTodaysDate();
+        Session.set('timePeriod', date);
+        $("#subNavBarToday").css("border-color", "#1f1f1f");
+        $("#subNavBarWeek").css("border-color", "#1f1f1f");
+        $("#subNavBarMonth").css("border-color", "red");
+        break;
       default:
-      //Session.set('timePeriod', 'today');
+        //todays date
+        date[0] = this.getTodaysDate();
+        date[1] = this.getTodaysDate();
+        Session.set('timePeriod', date);
+        break;
     }
-    console.log(Session.get('timePeriod'));
   },
+
+  getTodaysDate() {
+    let date = new Date();
+    return date.getFullYear() + "-" +
+    ('0' + (date.getMonth() + 1)).slice(-2) + "-" +
+    ('0' + date.getDate()).slice(-2);
+  },
+
+  getRequestedDate(inDate) {
+    let date = new Date(inDate);
+    return date.getFullYear() + "-" +
+    ('0' + (date.getMonth() + 1)).slice(-2) + "-" +
+    ('0' + date.getDate()).slice(-2);
+  },
+
   render(){
     let sitesList;
     if( this.data.ready) {
@@ -54,9 +101,9 @@ SubNavbar = React.createClass({
             </li>
           </ul>
           <ul className="nav navbar-nav">
-            <li className="subNavbarLi"><a href="" onClick={this.handleButtonClicks.bind(this, 'today')}>Today</a></li>
-            <li className="subNavbarLi"><a href="" onClick={this.handleButtonClicks.bind(this, 'week')}>Week</a></li>
-            <li className="subNavbarLi"><a href="" onClick={this.handleButtonClicks.bind(this, 'month')}>Month</a></li>
+            <li className="subNavbarLi" id="subNavBarToday"><a href="" onClick={this.handleButtonClicks.bind(this, 'today')}>Today</a></li>
+            <li className="subNavbarLi" id="subNavBarWeek"><a href="" onClick={this.handleButtonClicks.bind(this, 'week')}>Last week</a></li>
+            <li className="subNavbarLi" id="subNavBarMonth"><a href="" onClick={this.handleButtonClicks.bind(this, 'month')}>Last month</a></li>
           </ul>
         </div>
       </nav>

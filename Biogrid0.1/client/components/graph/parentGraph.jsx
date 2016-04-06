@@ -10,26 +10,15 @@ ParentGraph = React.createClass({
     let timePeriod = Session.get('timePeriod');
 
     if(subscriptionReadings.ready()) {
-      switch (timePeriod) {
-        case 'week':
-          data.readings = Readings.find({sensorId:this.props.sensorId, //from 7 days ago
-            day: {
-              $gte: "2016-29-03",
-              $lt: "2016-05-04"
-            }}).fetch();
-          break;
-          case 'month':
-          data.readings = Readings.find({sensorId:this.props.sensorId, //from 30 days ago
-            day: {
-              $gte: "2016-02-08",
-              $lt: "2016-05-04"
-            }}).fetch();
-          break;
-        default:
-        data.readings = Readings.find({sensorId:this.props.sensorId, day: "2016-02-09"}).fetch(); //today
+      let date = Session.get('timePeriod');
+        data.readings = Readings.find({sensorId:this.props.sensorId,
+          day:
+          {
+            $gte: date[0],
+            $lte: date[1]
+          }}).fetch();
       }
-      //data.readings = Readings.find({sensorId:this.props.sensorId}).fetch();
-    }
+
     if(subscriptionThings.ready()) {
       let thing = Things.find({_id:this.props.thingId}).fetch();
       data.thing = thing[0].description;
