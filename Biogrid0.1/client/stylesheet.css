@@ -51,6 +51,13 @@ h1 {
 
 #subNavbar{
   border-top: solid #169776 1px !important;
+  animation: loadingPic 1.5s;  animation-delay: 0s;
+  animation-iteration-count: 1;
+
+}
+@keyframes loadingPic{
+  0% {margin-top: 100%; }
+  100% {margin-top:  0%; }
 }
 
 #subNavbarCustom {
