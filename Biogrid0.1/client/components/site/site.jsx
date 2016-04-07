@@ -46,7 +46,7 @@ Site = React.createClass({
       <div className="">
         <Navbar />
         <div className="row">
-          <div className="col-md-12 ">
+          <div className="col-md-11 col-md-offset-1">
             {sitesList}
           </div>
         </div>
