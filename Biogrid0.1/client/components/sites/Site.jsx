@@ -34,18 +34,19 @@ Site = React.createClass({
                     <Map lat={site.latitude} lng={site.longitude} />
                     </a>
                 </div>
+                <Weatherdata />
               </div>
           )
         })
     } else {
-      sitesList = <div className=""> Sorry, no sites available or loading </div>
+      sitesList = <NoDataMessage datatype={"sites"} />
     }
 
     return(
       <div className="">
         <Navbar />
         <div className="row">
-          <div className="col-md-10 col-md-offset-2">
+          <div className="col-md-12 ">
             {sitesList}
           </div>
         </div>
