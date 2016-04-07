@@ -92,9 +92,7 @@ CustomRange = React.createClass({
           </div>
         </li>
         <li>
-          <button type="button" id="rangeBtn" onClick={this.handleButtonClicks.bind(this, 'custom')}>
-            <i className="fa fa-search"></i>
-          </button>
+            <i className="fa fa-search fa-lg" onClick={this.handleButtonClicks.bind(this, 'custom')}></i>
         </li>
       </ul>
     )
