@@ -42,22 +42,50 @@ h1 {
   margin-left: 35px;
 }
 
-.glyphicon-grain,
 .glyphicon-home {
   color: #169776;
 }
 
+/********** SUBNAVBAR **********/
 
 #subNavbar{
   border-top: solid #169776 1px !important;
 }
 
-#rangeBtn {
-  display: none;
+#subNavbarCustom {
+  margin-top: 11px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.dateRangeInput{
+  background: #222222 !important;
+  color: white !important;
+  font-size: 1.1em !important;
+  width: 100px !important;
+  height: 30px !important;
+  border-color: #169776 !important;
 }
 
-.dateRangeInput {
-  background: rgb(34, 34, 34) !important;
+.datepicker-dropdown{
+  background: #222222 !important;
+  color: #169776 !important;
+}
+
+.range{
+  background-color: #169776 !important;
+}
+
+#rangeBtn{
+  margin-top: 11px;
+  width: 54px;
+  background-color: #222222;
+  color: #169776;
+  border-radius: 3px;
+  border-color: #169776;
+}
+
+.input-group-addon{
+  display: none;
 }
 
 #yourSites{
