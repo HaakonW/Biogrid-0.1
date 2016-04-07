@@ -1,10 +1,8 @@
 Loginlayout = React.createClass({
   render() {
     return(
-      <div>
-        <Navbar />
+      <div className="login-frontpage">
         <Login />
-        <Footer />
       </div>
     )
   }
