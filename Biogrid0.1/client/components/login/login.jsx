@@ -1,5 +1,4 @@
 Login = React.createClass({
-
   mixins:[ReactMeteorData],
 
   getMeteorData(){
@@ -19,11 +18,16 @@ Login = React.createClass({
     Meteor.loginWithPassword(email, password, (err) => {
       if(err){
         this.setState({value: err.reason});
+        $("#userStatus").slideDown(300);
       }
       else {
         FlowRouter.go('/site');
       }
     });
+  },
+
+  newLogin(){
+    $("#userStatus").slideUp(300);
   },
 
   render(){
@@ -40,7 +44,7 @@ Login = React.createClass({
                   <div className="spacer10">
                     <div className="input-group">
                       <span className="input-group-addon"><i className="fa fa-user"></i></span>
-                      <input type="text" ref="email" placeholder="Email address" id="email" className="form-control"/>
+                      <input type="text" ref="email" placeholder="Email address" id="email" className="form-control" onClick={this.newLogin}/>
                     </div>
                   </div>
                   <div className="spacer10">
@@ -49,11 +53,13 @@ Login = React.createClass({
                       <input type="password" ref="password" placeholder="Password" className="form-control"/>
                     </div>
                   </div>
-                  <button type="submit" className="btn btn-primary form-control greenBtn">Login</button>
+                  <button type="submit"  className="btn btn-primary form-control greenBtn">Login</button>
                 </form>
                 <div>
                   <br/>
-                  <p className="text-center greenBtn">{this.state.value}</p>
+                  <div>
+                    <button className="btn btn-danger form-control"  id="userStatus">{this.state.value}</button>
+                  </div>
                 </div>
               </div>
             </div>

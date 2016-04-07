@@ -104,6 +104,7 @@ h1 {
 }
 
 /********** FRONT PAGE LOGIN **********/
+
 .row-centered {
   text-align:center;
 }
@@ -123,6 +124,13 @@ h1 {
   color: #169776;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+#userStatus{
+  display: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 
 .greenBtn {
@@ -227,6 +235,7 @@ h1 {
 .fa-spinner {
   color: white;
 }
+
 
 /********** Footer **********/
 
