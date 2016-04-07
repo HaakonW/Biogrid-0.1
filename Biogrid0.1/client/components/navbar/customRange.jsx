@@ -87,7 +87,6 @@ CustomRange = React.createClass({
         <li className="subNavbarLi" id="subNavbarCustom">
           <div className="input-group input-group-sm input-daterange" id="datepicker">
             <input type="text" className="input-sm form-control dateRangeInput" ref="from" onClick={this.dateRangeHandler}/>
-            <span className="input-group-addon">to</span>
             <input type="text" className="input-sm form-control dateRangeInput" ref="end" onClick={this.dateRangeHandler}/>
           </div>
         </li>

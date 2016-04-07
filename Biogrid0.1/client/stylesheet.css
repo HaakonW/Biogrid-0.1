@@ -81,10 +81,6 @@ h1 {
   cursor: pointer;
 }
 
-.input-group-addon{
-  display: none;
-}
-
 #yourSites{
   background-color: #222222 !important;
   min-width: 250px !important;
@@ -155,7 +151,7 @@ h1 {
 }
 
 .login-frontpage {
-  background-image: url("images/field.jpg");
+  background-image: url("images/fiber.jpg");
   background-size: cover;
   /* Set rules to fill background */
   min-height: 100%;
