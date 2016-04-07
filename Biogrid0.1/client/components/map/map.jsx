@@ -6,10 +6,10 @@ Map = React.createClass({
   getMeteorData() {
     return {
       loaded: GoogleMaps.loaded(),
-      mapOptions: GoogleMaps.loaded() && this._mapOptions()
+      mapOptions: GoogleMaps.loaded() && this.mapOptions()
     };
   },
-  _mapOptions() {
+  mapOptions() {
     return {
       center: new google.maps.LatLng(this.props.lat, this.props.lng),
       //FIXME id is now a combination of lat and long. Not good?
@@ -18,16 +18,23 @@ Map = React.createClass({
       scrollwheel: false,
       disableDefaultUI: true,
       draggable:false,
-      styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
+      styles: [
+        {"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},
+        {"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},
+        {"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},
+        {"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},
+        {"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+        {"featureType":"poi","stylers":[{"visibility":"off"}]},
+        {"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},
+        {"featureType":"transit","stylers":[{"visibility":"off"}]}
+      ]
     };
   },
   render() {
-    if (this.data.loaded) {
-      console.log("ID: ", this.data.mapOptions.id );
-
+    if(this.data.loaded) {
       return <GoogleMap name={this.data.mapOptions.id} options={this.data.mapOptions} />;
     }
-    return <div>Loading Map</div>;
+    return <div className="text-center">Loading Map</div>;
   }
 });
 
