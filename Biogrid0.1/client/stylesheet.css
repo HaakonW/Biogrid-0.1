@@ -41,6 +41,8 @@ h1 {
   font-weight: bold;
   font-size: 1.2em;
   margin-left: 35px;
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
 
 .glyphicon-home {
@@ -48,7 +50,6 @@ h1 {
 }
 
 /********** SUBNAVBAR **********/
-
 #subNavbar{
   border-top: solid #169776 1px !important;
   animation: loadingPic 1.5s;  animation-delay: 0s;
