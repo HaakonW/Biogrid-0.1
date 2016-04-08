@@ -7,7 +7,7 @@ CustomRange = React.createClass({
   },
 
   componentDidMount() {
-    $("#subNavbarToday").css("border-color", "red");
+    $("#subNavbarToday").css("border-color", "#2aa9dc");
     $('#datepicker').datepicker({
       autoclose: true,
       format: "dd M 'yy"
@@ -26,7 +26,7 @@ CustomRange = React.createClass({
         date[0] = this.getTodaysDate();
         date[1] = this.getTodaysDate();
         Session.set('timePeriod', date);
-        $("#subNavbarToday").css("border-color", "red");
+        $("#subNavbarToday").css("border-color", "#2aa9dc");
         $("#subNavbarWeek").css("border-color", "#222222");
         $("#subNavbarMonth").css("border-color", "#222222");
         $("#subNavbarCustom").css("border-color", "#222222");
@@ -36,7 +36,7 @@ CustomRange = React.createClass({
         date[1] = this.getTodaysDate();
         Session.set('timePeriod', date);
         $("#subNavbarToday").css("border-color", "#222222");
-        $("#subNavbarWeek").css("border-color", "red");
+        $("#subNavbarWeek").css("border-color", "#2aa9dc");
         $("#subNavbarMonth").css("border-color", "#222222");
         $("#subNavbarCustom").css("border-color", "#222222");
         break;
@@ -46,7 +46,7 @@ CustomRange = React.createClass({
         Session.set('timePeriod', date);
         $("#subNavbarToday").css("border-color", "#222222");
         $("#subNavbarWeek").css("border-color", "#222222");
-        $("#subNavbarMonth").css("border-color", "red");
+        $("#subNavbarMonth").css("border-color", "#2aa9dc");
         $("#subNavbarCustom").css("border-color", "#222222");
         break;
       case 'custom':
@@ -56,7 +56,7 @@ CustomRange = React.createClass({
         $("#subNavbarToday").css("border-color", "#222222");
         $("#subNavbarWeek").css("border-color", "#222222");
         $("#subNavbarMonth").css("border-color", "#222222");
-        //$("#subNavbarCustom").css("border-color", "red");
+        //$("#subNavbarCustom").css("border-color", "#2aa9dc");
         break;
       default:
         //todays date
