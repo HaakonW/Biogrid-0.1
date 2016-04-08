@@ -40,7 +40,7 @@ Login = React.createClass({
         <div className="row">
           <div className="col-md-4 col-md-offset-4" id="login-bg">
             <div className="col-md-12">
-              <h3 className="text-center">login to access your things</h3>
+              <h3 className="text-center greenText">Login to access your things</h3>
             </div>
             <div className="row">
               <div className="col-md-10 col-md-offset-1">
