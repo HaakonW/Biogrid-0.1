@@ -7,6 +7,10 @@ Login = React.createClass({
     return data;
   },
 
+  componentDidMount() {
+    $('#email').focus();
+  },
+
   getInitialState: function(){
     return {value: ""}
   },

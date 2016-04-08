@@ -54,6 +54,6 @@ FlowRouter.notFound = {
       ReactLayout.render(PageNotFound,{}),
       Meteor.setTimeout(function(){
          FlowRouter.go("/");
-      }, 3000);
+      }, 6000);
     }
 };
