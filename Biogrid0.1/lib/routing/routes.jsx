@@ -53,7 +53,7 @@ FlowRouter.notFound = {
     action: function() {
       ReactLayout.render(PageNotFound,{}),
       Meteor.setTimeout(function(){
-         FlowRouter.go("/");
+         FlowRouter.go("/site");
       }, 6000);
     }
 };
