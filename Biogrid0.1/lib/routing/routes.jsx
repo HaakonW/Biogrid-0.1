@@ -16,7 +16,7 @@ publicRoutes = FlowRouter.group({
 publicRoutes.route("/", {
   name: "Layout",
   action() {
-    ReactLayout.render(Loginlayout, { content: <Loginlayout /> })
+    ReactLayout.render(Loginlayout, {})
   }
 });
 

@@ -24,13 +24,13 @@ Dashboard = React.createClass({
         })
       }
     }
-    
+
     return(
       <div id="bg">
       <Navbar />
       <SubNavbar />
         <div className="row">
-          <div className="col-md-10">
+          <div className="col-md-10 col-md-offset-1">
             {hubsList}
           </div>
         </div>

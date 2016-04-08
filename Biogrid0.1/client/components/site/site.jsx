@@ -34,7 +34,6 @@ Site = React.createClass({
                     <Map lat={site.latitude} lng={site.longitude} />
                     </a>
                 </div>
-                <Weatherdata />
               </div>
           )
         })

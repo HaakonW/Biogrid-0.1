@@ -62,6 +62,13 @@ h1 {
   border: none;
 }
 
+#userOptions{
+  background-color: #222222 !important;
+  color: white;
+  border-bottom: solid black 1px;
+  border-right: solid black 1px;
+}
+
 .navCortex {
   font-weight: bold;
   font-size: 1.2em;
@@ -172,7 +179,13 @@ h1 {
   color: black;
   font-weight: bold;
   font-size: 1.2em;
-  text-transform: uppercase;;
+  text-transform: uppercase;
+  outline: 0 !important;
+}
+
+.greenBtn:hover {
+  background-color: #169776 !important;
+  outline: 0 !important;
 }
 
 .fa-user,
@@ -216,7 +229,7 @@ h1 {
   /*padding-bottom: 15px;
   margin-bottom: 15px;
   margin:1px;*/
-  margin: 10px;
+  margin: 5px;
 }
 
 .site-links {

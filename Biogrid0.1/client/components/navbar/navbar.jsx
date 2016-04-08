@@ -3,22 +3,16 @@ Navbar = React.createClass({
     let userinfo;
     if(!Meteor.loggingIn() && Meteor.user()) {
       userinfo = <ul className="nav navbar-nav pull-right">
-        <li>
-          <a className="navCortex" href="/site"> {Meteor.user().emails[0].address}
-            <span className="glyphicon glyphicon-user greenIcon " aria-hidden="true"></span>
+        <li className="dropdown">
+          <a className="dropdown-toggle navCortex" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {Meteor.user().emails[0].address}
           </a>
+          <ul className="dropdown-menu" id="userOptions">
+            <li className="">Logout</li>
+          </ul>
         </li>
       </ul>;
     }
-    else{
-      userinfo = <ul className="nav navbar-nav pull-right">
-        <li>
-          <a className="navCortex" href="http://www.biogrid.no" target="_blank">Biogrid.no <span className="glyphicon glyphicon-home greenIcon" aria-hidden="true">
-          </span>
-        </a>
-      </li>
-    </ul>;
-  }
+
   return (
     <div>
       <nav className="navbar navbar-inverse navbar-static-top" role="navigation">
