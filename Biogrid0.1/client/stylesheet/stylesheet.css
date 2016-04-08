@@ -176,13 +176,14 @@ h1 {
 }
 
 .greenBtn {
-  background-color: #2aa9dc;
+  background: -webkit-linear-gradient(#2BCAFA, #2068EB);
   border: 0px;
   color: black;
   font-weight: bold;
   font-size: 1.2em;
   text-transform: uppercase;
   outline: 0 !important;
+  margin-top: 4%;
 }
 
 .greenBtn:hover {
@@ -203,12 +204,13 @@ h1 {
 }
 
 #login-bg {
-  background-color:rgba(34, 34, 34, 0.7);
+  background-color:rgba(34, 34, 34, 0.9);
   border-radius: 5px;
+  padding-bottom: 20px;
 }
 
 .login-frontpage {
-  background-image: url("images/fiber.jpg");
+  background-image: url("images/servers.jpg");
   background-size: cover;
   /* Set rules to fill background */
   min-height: 100%;
