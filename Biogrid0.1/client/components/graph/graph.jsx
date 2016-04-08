@@ -96,7 +96,8 @@ Graph = React.createClass({
         "Date,Value\n" + graphString,
         {
           ylabel: this.props.graphType, // TODO fix this to get the sensors.graph.graphType
-          axisLabelColor:'#fff',
+          axisLabelColor:'#2aa9dc',
+          drawGrid: false,
           //xlabel: allValues.sensor_id,
           title: sensorData.type, //TODO fix this to get the sensors.sensorType
           strokeWidth: 2,
@@ -129,7 +130,7 @@ Graph = React.createClass({
     return(
       //FIXME have to use a ready-function to show spinners while data is loading
         <div>
-          <h3 className="text-center">{this.props.thingDescription}</h3>
+          <h4 className="text-center greenText">{this.props.thingDescription}</h4>
         <div>
           {this.props.sensors ? <div id="graf" className="graph" ref={(ref) => this.graf = ref}></div> : <div className="text-center"><i className="fa fa-spinner fa-pulse fa-5x"></i></div>}
         </div>
