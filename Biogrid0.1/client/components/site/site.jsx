@@ -30,7 +30,7 @@ Site = React.createClass({
               <div key={site._id} className="col-md-5 col-sm-12 siteWrapper">
                 <div>
                   <a className="site-links" href={link}>
-                  <h2 className="text-center"> {site.name}  </h2>
+                  <h4 className="text-center"> {site.name}  </h4>
                     <Map lat={site.latitude} lng={site.longitude} />
                     </a>
                 </div>
