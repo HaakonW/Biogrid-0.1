@@ -29,6 +29,7 @@ Dashboard = React.createClass({
       <div id="bg">
       <Navbar />
       <SubNavbar />
+      <MetaData />
         <div className="row">
           <div className="col-md-10 col-md-offset-1">
             {hubsList}
