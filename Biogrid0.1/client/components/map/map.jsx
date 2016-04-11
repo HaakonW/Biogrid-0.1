@@ -19,16 +19,16 @@ Map = React.createClass({
       disableDefaultUI: true,
       draggable:false,
       styles: [
-        {"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},
-        {"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},
-        {"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},
-        {"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},
+        {"stylers": [{"hue": "#ff1a00"},{"invert_lightness": true},{"saturation": -100},{"lightness": 33},{"gamma": 0.5}]},
+        {"featureType":"water","elementType": "geometry","stylers":[{"color": "#2aa9dc"},{"saturation":30},{"lightness":-35}]},
         {"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+        {"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#1db954"},{"lightness":-20},{"saturation":-60},{"weigth":0.1}]},
+        {"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},
         {"featureType":"poi","stylers":[{"visibility":"off"}]},
-        {"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},
-        {"featureType":"transit","stylers":[{"visibility":"off"}]}
+        {"featureType":"transit","stylers":[{"visibility":"off"}]},
+        {"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#7c7878"},{"lightness":-50},{"saturation":-60}]},
       ]
-    };
+    }
   },
   render() {
     if(this.data.loaded) {
