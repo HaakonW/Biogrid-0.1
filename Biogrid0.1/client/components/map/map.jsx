@@ -1,7 +1,7 @@
 Map = React.createClass({
   mixins: [ReactMeteorData],
   componentDidMount() {
-    GoogleMaps.load({Key: "AIzaSyBDKQkczCHMHcHjDGJuOYvdeuxJ4mz0690"});
+    GoogleMaps.load();
   },
   getMeteorData() {
     return {
