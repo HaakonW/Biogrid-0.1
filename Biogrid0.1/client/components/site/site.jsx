@@ -27,8 +27,8 @@ Site = React.createClass({
             let id = site._id;
             let link = "/dashboard/"+id;
           return(
-              <div key={site._id} className="col-md-5 col-sm-12 siteWrapper">
-                <div>
+              <div key={site._id} className="col-md-6 col-sm-12">
+                <div className="col-md-12 siteWrapper">
                   <a className="site-links" href={link}>
                   <h4 className="text-center"> {site.name}  </h4>
                     <Map lat={site.latitude} lng={site.longitude} />
@@ -45,7 +45,7 @@ Site = React.createClass({
       <div className="">
         <Navbar />
         <div className="row">
-          <div className="col-md-11 col-md-offset-1">
+          <div className="col-md-12 col-sm-12">
             {sitesList}
           </div>
         </div>

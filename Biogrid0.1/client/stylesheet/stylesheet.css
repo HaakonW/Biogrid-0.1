@@ -262,10 +262,9 @@ h1 {
 .siteWrapper {
   background-color: rgb(34, 34, 34);
   border-radius: 5px;
-  /*padding-bottom: 15px;
-  margin-bottom: 15px;
-  margin:1px;*/
-  margin: 5px;
+  margin-top: 25px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .site-links {
