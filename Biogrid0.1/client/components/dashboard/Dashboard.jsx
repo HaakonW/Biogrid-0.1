@@ -14,7 +14,7 @@ Dashboard = React.createClass({
   render(){
     if(this.data.hubsReady) {
       if(this.data.hubs.length === 0) {
-        var hubsList = <NoDataMessage datatype={"sensors"}/>
+        var hubsList = <NoDataMessage datatype={"hubs"}/>
       }
       else {
         var hubsList = this.data.hubs.map(function(hub){

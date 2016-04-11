@@ -283,6 +283,10 @@ h1 {
   margin-bottom: 50px;
 }
 
+.noDataMessage {
+  margin-top: 20%;
+}
+
 /********** GRAPH **********/
 .graphRow {
   background-color: yellow;

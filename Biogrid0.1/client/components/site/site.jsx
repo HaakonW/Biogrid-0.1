@@ -38,7 +38,9 @@ Site = React.createClass({
           )
         })
     } else {
-      sitesList = <NoDataMessage datatype={"sites"} />
+      sitesList = <div className="col-md-4 col-md-offset-4 col-sm-12 noDataMessage">
+                    <NoDataMessage datatype={"sites"} />
+                  </div>
     }
 
     return(
