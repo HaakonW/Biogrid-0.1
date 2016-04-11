@@ -2,30 +2,33 @@ Navbar = React.createClass({
   render() {
     let userinfo;
     if(!Meteor.loggingIn() && Meteor.user()) {
-      userinfo = <ul className="nav navbar-nav pull-right">
-        <li className="dropdown">
-          <a className="dropdown-toggle navCortex" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {Meteor.user().emails[0].address}
-          </a>
-          <ul className="dropdown-menu" id="userOptions">
-            <li className="">Logout</li>
-          </ul>
-        </li>
-      </ul>;
+      userinfo = Meteor.user().emails[0].address;
     }
 
-  return (
-    <div>
-      <nav className="navbar navbar-inverse navbar-static-top" role="navigation">
-            <div className="navbar-header collapse navbar-collapse">
-              <ul className="nav navbar-nav">
-                <li>
-                  <a className="navCortex" href="/site">Biogrid Cortex</a>
+    return (
+      <div>
+        <nav className="navbar navbar-inverse" id="topNavbar">
+          <div className="container-fluid">
+            <div className="navbar-header">
+              <a className="navbar-brand" href="/site">Biogrid Cortex</a>
+            </div>
+            <div id="navbar" className="navbar-collapse collapse">
+              <ul className="nav navbar-nav navbar-right">
+                <ul className="nav navbar-nav">
+                  <li className="dropdown">
+                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      {userinfo} <span className="caret"></span>
+                  </a>
+                  <ul className="dropdown-menu" id="testDrop">
+                    <li><a href="/site"><i className="fa fa-list"></i> My Sites</a></li>
+                    <li role="separator" className="divider"></li>
+                    <li><a href="/logout"><i className="fa fa-power-off"></i> Log out</a></li>
+                  </ul>
                 </li>
               </ul>
-            </div>
-            <div className="">
-              {userinfo}
-            </div>
+            </ul>
+          </div>
+        </div>
       </nav>
     </div>
   )

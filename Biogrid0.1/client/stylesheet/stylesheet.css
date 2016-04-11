@@ -62,23 +62,23 @@ h1 {
   border: none;
 }
 
-#userOptions{
+.dropdown-menu{
   background-color: #222222 !important;
-  color: white;
-  border-bottom: solid black 1px;
-  border-right: solid black 1px;
 }
 
-.navCortex {
+#testDrop a{
+  color: #2aa9dc !important;
+}
+
+#testDrop a:hover{
+  background-color: inherit;
+  color: white !important;
+}
+
+#topNavbar {
+  padding-top: 20px;
+  padding-bottom: 10px;
   font-size: 1.2em;
-  margin-left: 35px;
-  margin-top: 10%;
-  margin-bottom: 5%;
-  margin-right: 22px;
-}
-
-.glyphicon-home {
-  color: #2aa9dc;
 }
 
 /********** SUBNAVBAR **********/
@@ -86,7 +86,7 @@ h1 {
   border-top: solid #2aa9dc 1px !important;
   animation: loadingPic 1.5s;  animation-delay: 0s;
   animation-iteration-count: 1;
-
+  z-index: 1 !important;
 }
 @keyframes loadingPic{
   0% {margin-top: 100%; }
@@ -123,7 +123,6 @@ h1 {
 }
 
 #yourSites{
-  background-color: #222222 !important;
   min-width: 250px !important;
   margin-top: 2px !important;
   padding: 20px;
@@ -136,11 +135,12 @@ h1 {
 }
 
 .queryLinks{
-  color: #9d9d9d;
+  color: #2aa9dc;
 }
+
 .queryLinks:hover{
   text-decoration: none;
-  color: #2aa9dc;
+  color: white;
 }
 
 /********** FRONT PAGE LOGIN **********/
