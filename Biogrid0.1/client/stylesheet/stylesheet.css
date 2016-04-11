@@ -143,6 +143,37 @@ h1 {
   color: white;
 }
 
+/********** METADATA **********/
+#metaData{
+  margin-bottom: 5%;
+  margin-bottom: 6%;
+}
+.metaCol{
+  opacity: 0.9;
+  margin: 5px;
+}
+
+.metaText{
+  color: white;
+}
+
+#firstMeta{
+  background-color: #1db954;
+}
+#secondMeta{
+  background-color: red;
+}
+#thirdMeta{
+  background-color: #2aa9dc;
+}
+#forthMeta{
+  background-color: orange;
+}
+
+.countNumber{
+  font-size: 83px;
+  font-weight: bolder;
+}
 /********** FRONT PAGE LOGIN **********/
 
 .row-centered {
