@@ -8,6 +8,7 @@ Dashboard = React.createClass({
     return {
       hubsReady: subscriptionHubs.ready(),
       hubs: Hubs.find({siteId:siteId}).fetch(),
+      countHubs: Hubs.find({siteId:siteId}).count()
     }
   },
 
@@ -29,7 +30,7 @@ Dashboard = React.createClass({
       <div id="bg">
       <Navbar />
       <SubNavbar />
-      <MetaData />
+      <MetaData countHubs={this.data.countHubs} />
         <div className="row">
           <div className="col-md-10 col-md-offset-1">
             {hubsList}

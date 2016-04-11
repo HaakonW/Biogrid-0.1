@@ -13,7 +13,7 @@ MetaData = React.createClass({
                 <p className="metaText pull-right">Things</p>
             </div>
             <div className="col-md-2 col-xs-5 metaCol" id="thirdMeta">
-              <h1 className="countNumber">4</h1>
+              <h1 className="countNumber">{this.props.countHubs}</h1>
                 <p className="metaText pull-right">Hubs</p>
             </div>
             <div className="col-md-2 col-xs-5 metaCol" id="forthMeta">
