@@ -1,14 +1,10 @@
 Graph = React.createClass({
-
-  /* FIXME How not to render when theres new data in getMeteorData in FrameGraphCo2
-  When return true the graph is displayed
-  */
   shouldComponentUpdate:function(nextProps, nextState) {
     return true;
   },
 
   //check if object is empty
-  isEmpty:function(obj) {
+  isEmpty(obj) {
     let hasOwnProperty = Object.prototype.hasOwnProperty;
 
     if (obj == null) return true;
@@ -21,15 +17,13 @@ Graph = React.createClass({
   },
 
   //check if object has more days than one
-  isObjectMoreThanOneDay:function(obj) {
+  isObjectMoreThanOneDay(obj) {
       return obj.length > 1
   },
 
-  writeGraphStringSeveralDays:function(allValues){
-    //console.log("severalDays", allValues);
+  writeGraphStringSeveralDays(allValues) {
     let graphString = "";
     let sensorType;
-    //TODO type = ?
     for (let day = 0; day < allValues.length; day++) {
       let dayDate = allValues[day].day;
       for (let key in allValues[day]) {
@@ -49,13 +43,11 @@ Graph = React.createClass({
     return graphString;
   },
 
-  writeGraphStringOneDay:function(allValues){
+  writeGraphStringOneDay(allValues) {
     allValues = allValues[0];
     let graphString = "";
     let sensorType;
-    //TODO type = ?
     let dayDate = allValues.day;
-
     for (let key in allValues) {
       if (key === "values") {
         for (let hour in allValues[key]) {
@@ -72,9 +64,8 @@ Graph = React.createClass({
     return graphString;
   },
 
-  createGraph:function(){
-    let sensorData = this.props.sensors; //TODO this.props.readings
-    //console.log("createGraph", sensorData);
+  createGraph() {
+    let sensorData = this.props.sensors;
     let graphString;
     if (this.isEmpty(sensorData)) {
       graphString = ",\n0,0";
@@ -91,42 +82,40 @@ Graph = React.createClass({
     else {
       graphString = this.isObjectMoreThanOneDay(sensorData) ? this.writeGraphStringSeveralDays(sensorData) : this.writeGraphStringOneDay(sensorData);
       this.g2 = new Dygraph(
-        /*document.getElementById('graf')*/
         this.graf,
         "Date,Value\n" + graphString,
         {
-          ylabel: this.props.graphType, // TODO fix this to get the sensors.graph.graphType
+          ylabel: this.props.graphType,
           axisLabelColor:'#2aa9dc',
           drawGrid: false,
-          //xlabel: allValues.sensor_id,
-          title: sensorData.type, //TODO fix this to get the sensors.sensorType
-          strokeWidth: 2,
-          //gridLineColor: 'rgb(204,0,255)',
-          color: 'rgb('+this.props.color+')', //TODO get colors based on graphType
+          title: sensorData.type,
+          drawPoints: true,
+          strokeWidth: 0,
+          pointSize: 0.5,
+          color: 'rgb('+this.props.color+')',
           fillGraph: true,
-          axisLineColor: 'rgb('+this.props.color+')', //TODO get colors based on graphType
+          axisLineColor: 'rgb('+this.props.color+')',
           showRangeSelector: true,
           rangeSelectorHeight: 30,
           //retainDateWindow is new. Should keep zoom level when new data
           retainDateWindow:true,
-          rangeSelectorPlotFillColor: 'rgb('+this.props.color+')', //TODO get colors based on graphType
-          rangeSelectorPlotStrokeColor: 'rgb('+this.props.color+')', //TODO get colors based on graphType
+          rangeSelectorPlotFillColor: 'rgb('+this.props.color+')',
+          rangeSelectorPlotStrokeColor: 'rgb('+this.props.color+')',
         }
       );
     }
   },
 
-  componentDidMount:function(){
+  componentDidMount() {
     //this.createGraph();
     //console.log("didMount");
   },
 
-  componentDidUpdate:function(){
+  componentDidUpdate() {
     if (this.props.sensors) this.createGraph(); //waits until all data is ready to draw the graph
-    //console.log("didUpdate");
   },
 
-  render(){
+  render() {
     return(
       //FIXME have to use a ready-function to show spinners while data is loading
         <div>
