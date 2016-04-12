@@ -55,6 +55,7 @@ GoogleMap = React.createClass({
         position:map.options.center,
         map: map.instance,
       });
+      //marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
     });
   },
   componentWillUnmount() {
