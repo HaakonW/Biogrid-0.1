@@ -121,7 +121,7 @@ CustomRange = React.createClass({
     return(
       <ul className="nav navbar-nav">
         <li className="subNavbarLi" id="subNavbarToday"><a href="" onClick={this.handleButtonClicks.bind(this, 'today')}>Today</a></li>
-        <li className="subNavbarLi" id="subNavbarWeek"><a href="" onClick={this.handleButtonClicks.bind(this, 'week')}>Last week</a></li>
+        <li className="subNavbarLi" id="subNavbarWeek"><a href="" onClick={this.handleButtonClicks.bind(this, 'week')}>Last 7 days</a></li>
         <li className="subNavbarLi" id="subNavbarMonth"><a href="" onClick={this.handleButtonClicks.bind(this, 'month')}>Last month</a></li>
         <li className="subNavbarLi" id="subNavbarCustom">
           <div className="input-group input-group-sm input-daterange" id="datepicker">
