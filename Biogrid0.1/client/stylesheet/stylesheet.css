@@ -22,12 +22,12 @@ h1 {
   height: 200px;
 }
 
-.spacer10{
+.spacer10 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.greenText{
+.blueText {
   color: #2aa9dc !important;
 }
 
@@ -198,9 +198,14 @@ h1 {
 
 #userStatus{
   display: none;
-  font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 40px;
+  margin-top: 20px;
+  border: none;
+  padding-top: 10px;
+  font-size: 15px;
+  background: -webkit-linear-gradient(#fc0b34, #6a0000);
+
 }
 
 .greenBtn {

@@ -11,7 +11,7 @@ Login = React.createClass({
     $('#email').focus();
   },
 
-  getInitialState: function(){
+  getInitialState(){
     return {value: ""}
   },
 
@@ -21,8 +21,13 @@ Login = React.createClass({
     let password = ReactDOM.findDOMNode(this.refs.password).value.trim();
     Meteor.loginWithPassword(email, password, (err) => {
       if(err){
-        this.setState({value: err.reason});
-        $("#userStatus").slideDown(300);
+        if(err.reason.length > 20){
+          alert(err.reason);
+        }
+        else {
+          this.setState({value: err.reason});
+          $("#userStatus").slideDown(300);
+        }
       }
       else {
         FlowRouter.go('/site');
@@ -40,7 +45,7 @@ Login = React.createClass({
         <div className="row">
           <div className="col-md-4 col-md-offset-4" id="login-bg">
             <div className="col-md-12">
-              <h3 className="text-center greenText">Login to access your things</h3>
+              <h3 className="text-center blueText">Login to access your things</h3>
             </div>
             <div className="row">
               <div className="col-md-10 col-md-offset-1">
@@ -54,16 +59,13 @@ Login = React.createClass({
                   <div className="spacer10">
                     <div className="input-group">
                       <span className="input-group-addon"><i className="fa fa-lock"></i></span>
-                      <input type="password" ref="password" placeholder="Password" className="form-control"/>
+                      <input type="password" ref="password" placeholder="Password" className="form-control" onClick={this.newLogin}/>
                     </div>
                   </div>
                   <button type="submit"  className="btn btn-primary form-control greenBtn">Login</button>
+                  <span className="label label-danger form-control" id="userStatus">{this.state.value}</span>
                 </form>
                 <div>
-                  <br/>
-                  <div>
-                    <button className="btn btn-danger form-control"  id="userStatus">{this.state.value}</button>
-                  </div>
                 </div>
               </div>
             </div>
