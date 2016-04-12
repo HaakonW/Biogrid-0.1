@@ -1,3 +1,5 @@
+let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+
 Hub = React.createClass({
   mixins:[ReactMeteorData],
   getMeteorData(){
@@ -19,9 +21,10 @@ Hub = React.createClass({
 
       )
     })
-
     return(
-      <div> {rows} </div>
+      <ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={1500} transitionEnterTimeout={1500} transitionLeaveTimeout={1000}>
+          {rows}
+        </ReactCSSTransitionGroup>
     )
   }
 })
