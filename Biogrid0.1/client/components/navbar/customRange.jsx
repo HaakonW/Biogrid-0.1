@@ -10,59 +10,92 @@ CustomRange = React.createClass({
     $("#subNavbarToday").css("border-color", "#2aa9dc");
     $('#datepicker').datepicker({
       autoclose: true,
-      format: "dd M 'yy"
+      format: "yyyy-mm-dd",
+      todayHighlight: true,
+      weekStart: 1
     });
     $('#from').datepicker()
       .on('changeDate', function(){
         $('#end').focus();
       });
+      $('#from').datepicker('update', new Date());
+      $('#end').datepicker('update', new Date());
+  },
+
+  getToday(date) {
+    date[0] = this.getTodaysDate();
+    date[1] = this.getTodaysDate();
+    Session.set('timePeriod', date);
+    $("#subNavbarToday").css("border-color", "#2aa9dc");
+    $("#subNavbarWeek").css("border-color", "#222222");
+    $("#subNavbarMonth").css("border-color", "#222222");
+    $("#subNavbarCustom").css("border-color", "#222222");
+    $('#from').datepicker('update', new Date());
+    $('#end').datepicker('update', new Date());
+  },
+
+  getWeek(date) {
+    let today = new Date();
+    let week = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
+    date[0] = this.getRequestedDate(week);
+    date[1] = this.getTodaysDate();
+    Session.set('timePeriod', date);
+    $("#subNavbarToday").css("border-color", "#222222");
+    $("#subNavbarWeek").css("border-color", "#2aa9dc");
+    $("#subNavbarMonth").css("border-color", "#222222");
+    $("#subNavbarCustom").css("border-color", "#222222");
+    $('#from').datepicker('update', week);
+    $('#end').datepicker('update', today);
+  },
+
+  getMonth(date) {
+    let today = new Date();
+    let month = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+    date[0] = this.getRequestedDate(month);
+    date[1] = this.getTodaysDate();
+    Session.set('timePeriod', date);
+    $("#subNavbarToday").css("border-color", "#222222");
+    $("#subNavbarWeek").css("border-color", "#222222");
+    $("#subNavbarMonth").css("border-color", "#2aa9dc");
+    $("#subNavbarCustom").css("border-color", "#222222");
+    $('#from').datepicker('update', month);
+    $('#end').datepicker('update', new Date());
+  },
+
+  getCustom(date) {
+    date[0] = this.getRequestedDate(new Date(this.refs.from.value));
+    date[1] = this.getRequestedDate(new Date(this.refs.end.value));
+    Session.set('timePeriod', date);
+    $("#subNavbarToday").css("border-color", "#222222");
+    $("#subNavbarWeek").css("border-color", "#222222");
+    $("#subNavbarMonth").css("border-color", "#222222");
+  },
+
+  getDefault(date) {
+    date[0] = this.getTodaysDate();
+    date[1] = this.getTodaysDate();
+    Session.set('timePeriod', date);
+    $('#from').datepicker('update', today);
+    $('#end').datepicker('update', today);
   },
 
   handleButtonClicks(period) {
     let date = [];
-    let today = new Date();
     switch (period) {
       case 'today':
-        date[0] = this.getTodaysDate();
-        date[1] = this.getTodaysDate();
-        Session.set('timePeriod', date);
-        $("#subNavbarToday").css("border-color", "#2aa9dc");
-        $("#subNavbarWeek").css("border-color", "#222222");
-        $("#subNavbarMonth").css("border-color", "#222222");
-        $("#subNavbarCustom").css("border-color", "#222222");
+        this.getToday(date);
         break;
       case 'week':
-        date[0] = this.getRequestedDate(new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7));
-        date[1] = this.getTodaysDate();
-        Session.set('timePeriod', date);
-        $("#subNavbarToday").css("border-color", "#222222");
-        $("#subNavbarWeek").css("border-color", "#2aa9dc");
-        $("#subNavbarMonth").css("border-color", "#222222");
-        $("#subNavbarCustom").css("border-color", "#222222");
+        this.getWeek(date);
         break;
       case 'month':
-        date[0] = this.getRequestedDate(new Date(today.getFullYear(), today.getMonth() - 1, today.getDate()));
-        date[1] = this.getTodaysDate();
-        Session.set('timePeriod', date);
-        $("#subNavbarToday").css("border-color", "#222222");
-        $("#subNavbarWeek").css("border-color", "#222222");
-        $("#subNavbarMonth").css("border-color", "#2aa9dc");
-        $("#subNavbarCustom").css("border-color", "#222222");
+        this.getMonth(date);
         break;
       case 'custom':
-        date[0] = this.getRequestedDate(this.refs.from.value);
-        date[1] = this.getRequestedDate(this.refs.end.value);
-        Session.set('timePeriod', date);
-        $("#subNavbarToday").css("border-color", "#222222");
-        $("#subNavbarWeek").css("border-color", "#222222");
-        $("#subNavbarMonth").css("border-color", "#222222");
-        //$("#subNavbarCustom").css("border-color", "#2aa9dc");
+        this.getCustom(date);
         break;
       default:
-        //todays date
-        date[0] = this.getTodaysDate();
-        date[1] = this.getTodaysDate();
-        Session.set('timePeriod', date);
+        this.getDefault(date);
         break;
     }
   },
@@ -79,11 +112,11 @@ CustomRange = React.createClass({
   },
 
   getRequestedDate(inDate) {
-    let date = new Date(inDate);
-    return date.getFullYear() + "-" +
-    ('0' + (date.getMonth() + 1)).slice(-2) + "-" +
-    ('0' + date.getDate()).slice(-2);
+    return inDate.getFullYear() + "-" +
+    ('0' + (inDate.getMonth() + 1)).slice(-2) + "-" +
+    ('0' + inDate.getDate()).slice(-2);
   },
+
   render(){
     return(
       <ul className="nav navbar-nav">
