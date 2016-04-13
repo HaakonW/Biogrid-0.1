@@ -23,52 +23,52 @@ CustomRange = React.createClass({
   },
 
   getToday(date) {
-    date[0] = this.getTodaysDate();
-    date[1] = this.getTodaysDate();
-    Session.set('timePeriod', date);
     $("#subNavbarToday").css("border-color", "#2aa9dc");
     $("#subNavbarWeek").css("border-color", "#222222");
     $("#subNavbarMonth").css("border-color", "#222222");
     $("#subNavbarCustom").css("border-color", "#222222");
+    date[0] = this.getTodaysDate();
+    date[1] = this.getTodaysDate();
+    Session.set('timePeriod', date);
     $('#from').datepicker('update', new Date());
     $('#end').datepicker('update', new Date());
   },
 
   getWeek(date) {
+    $("#subNavbarToday").css("border-color", "#222222");
+    $("#subNavbarWeek").css("border-color", "#2aa9dc");
+    $("#subNavbarMonth").css("border-color", "#222222");
+    $("#subNavbarCustom").css("border-color", "#222222");
     let today = new Date();
     let week = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
     date[0] = this.getRequestedDate(week);
     date[1] = this.getTodaysDate();
     Session.set('timePeriod', date);
-    $("#subNavbarToday").css("border-color", "#222222");
-    $("#subNavbarWeek").css("border-color", "#2aa9dc");
-    $("#subNavbarMonth").css("border-color", "#222222");
-    $("#subNavbarCustom").css("border-color", "#222222");
     $('#from').datepicker('update', week);
     $('#end').datepicker('update', today);
   },
 
   getMonth(date) {
+    $("#subNavbarToday").css("border-color", "#222222");
+    $("#subNavbarWeek").css("border-color", "#222222");
+    $("#subNavbarMonth").css("border-color", "#2aa9dc");
+    $("#subNavbarCustom").css("border-color", "#222222");
     let today = new Date();
     let month = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
     date[0] = this.getRequestedDate(month);
     date[1] = this.getTodaysDate();
     Session.set('timePeriod', date);
-    $("#subNavbarToday").css("border-color", "#222222");
-    $("#subNavbarWeek").css("border-color", "#222222");
-    $("#subNavbarMonth").css("border-color", "#2aa9dc");
-    $("#subNavbarCustom").css("border-color", "#222222");
     $('#from').datepicker('update', month);
     $('#end').datepicker('update', new Date());
   },
 
   getCustom(date) {
-    date[0] = this.getRequestedDate(new Date(this.refs.from.value));
-    date[1] = this.getRequestedDate(new Date(this.refs.end.value));
-    Session.set('timePeriod', date);
     $("#subNavbarToday").css("border-color", "#222222");
     $("#subNavbarWeek").css("border-color", "#222222");
     $("#subNavbarMonth").css("border-color", "#222222");
+    date[0] = this.getRequestedDate(new Date(this.refs.from.value));
+    date[1] = this.getRequestedDate(new Date(this.refs.end.value));
+    Session.set('timePeriod', date);
   },
 
   getDefault(date) {
@@ -102,6 +102,10 @@ CustomRange = React.createClass({
 
   dateRangeHandler() {
     $('#datepicker').datepicker();
+    let self = this;
+    $('#end').on("changeDate", function() {
+      self.handleButtonClicks('custom');
+    });
   },
 
   getTodaysDate() {
@@ -128,9 +132,6 @@ CustomRange = React.createClass({
             <input type="text" className="input-sm form-control dateRangeInput" ref="from" id="from" onClick={this.dateRangeHandler}/>
             <input type="text" className="input-sm form-control dateRangeInput" ref="end" id="end" onClick={this.dateRangeHandler}/>
           </div>
-        </li>
-        <li>
-            <i className="fa fa-search fa-lg" onClick={this.handleButtonClicks.bind(this, 'custom')}></i>
         </li>
       </ul>
     )
