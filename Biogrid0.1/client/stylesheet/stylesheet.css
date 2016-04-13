@@ -315,6 +315,10 @@ h1 {
   color: #2aa9dc;
 }
 
+.dygraph-legend {
+  background-color: rgb(34, 34, 34) !important;
+  color: #2aa9dc;
+}
 /********** Footer **********/
 
 .footer {
