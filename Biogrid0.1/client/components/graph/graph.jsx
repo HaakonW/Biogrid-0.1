@@ -121,7 +121,7 @@ Graph = React.createClass({
         <div>
           <h4 className="text-center blueText">{this.props.thingDescription}</h4>
         <div>
-          {this.props.sensors ? <div id="graf" className="graph" ref={(ref) => this.graf = ref}></div> : <div className="text-center"><i className="fa fa-spinner fa-pulse fa-5x"></i></div>}
+          <div id="graf" className="graph" ref={(ref) => this.graf = ref}></div>
         </div>
       </div>
     )
