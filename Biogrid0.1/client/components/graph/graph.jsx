@@ -1,8 +1,4 @@
 Graph = React.createClass({
-  shouldComponentUpdate:function(nextProps, nextState) {
-    return true;
-  },
-
   //check if object is empty
   isEmpty(obj) {
     let hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -118,11 +114,9 @@ Graph = React.createClass({
   render() {
     return(
       //FIXME have to use a ready-function to show spinners while data is loading
-        <div>
-          <h4 className="text-center blueText">{this.props.thingDescription}</h4>
-        <div>
-          <div id="graf" className="graph" ref={(ref) => this.graf = ref}></div>
-        </div>
+      <div>
+        <h4 className="text-center blueText">{this.props.thingDescription}</h4>
+        <div className="graph" ref={(ref) => this.graf = ref}></div>
       </div>
     )
   }

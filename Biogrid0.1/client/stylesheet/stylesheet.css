@@ -290,11 +290,6 @@ h1 {
 }
 
 /********** GRAPH **********/
-.graphRow {
-  background-color: yellow;
-  height: 150px;
-}
-
 .oneGraph {
   background-color: rgb(34, 34, 34);
   border-radius: 5px;
