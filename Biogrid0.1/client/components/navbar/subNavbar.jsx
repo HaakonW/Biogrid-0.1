@@ -32,31 +32,47 @@ SubNavbar = React.createClass({
       sitesList = <li> Sorry, no sites available or loading </li>
     }
     return(
+      <div>
+        <nav className="navbar navbar-inverse visible-xs visible-sm" id="subNavbar">
+          <div className="container-fluid">
+              <CustomRange/>
+            <h5 id="smallSites" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Change site
+              <i className="fa fa-caret-down blueIcon"></i>
+              <span className="pull-right" >{currentSite}</span>
+            </h5>
+            <ul className="dropdown-menu" id="yourSites">
+              {sitesList}
+            </ul>
+          </div>
+        </nav>
 
-      <nav className="navbar navbar-inverse" id="subNavbar">
-  <div className="container-fluid">
-    <div className="navbar-header">
-      <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span className="icon-bar"></span>
-        <span className="icon-bar"></span>
-        <span className="icon-bar"></span>
-      </button>
+        <nav className="navbar navbar-inverse hidden-xs hidden-sm" id="subNavbar">
+          <div className="container-fluid">
+            <div className="navbar-header">
+              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </button>
+            </div>
+            <div className="collapse navbar-collapse" id="myNavbar">
+              <ul className="nav navbar-nav">
+                <li className="dropdown subNavbarLi">
+                  <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    {currentSite} <i className="fa fa-caret-down blueIcon"></i></a>
+                  <ul className="dropdown-menu" id="yourSites">
+                    {sitesList}
+                  </ul>
+                </li>
+              </ul>
+              <CustomRange/>
+            </div>
+          </div>
+        </nav>
 
-    </div>
-    <div className="collapse navbar-collapse" id="myNavbar">
-      <ul className="nav navbar-nav">
-        <li className="dropdown subNavbarLi">
-          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            {currentSite} <i className="fa fa-caret-down blueIcon"></i></a>
-          <ul className="dropdown-menu" id="yourSites">
-            {sitesList}
-          </ul>
-        </li>
-      </ul>
-        <CustomRange/>
-    </div>
-  </div>
-</nav>
+      </div>
+
 
     )
   }

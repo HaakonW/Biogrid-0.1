@@ -15,11 +15,11 @@ CustomRange = React.createClass({
       weekStart: 1
     });
     $('#from').datepicker()
-      .on('changeDate', function(){
-        $('#end').focus();
-      });
-      $('#from').datepicker('update', new Date());
-      $('#end').datepicker('update', new Date());
+    .on('changeDate', function(){
+      $('#end').focus();
+    });
+    $('#from').datepicker('update', new Date());
+    $('#end').datepicker('update', new Date());
   },
 
   getToday(date) {
@@ -83,20 +83,20 @@ CustomRange = React.createClass({
     let date = [];
     switch (period) {
       case 'today':
-        this.getToday(date);
-        break;
+      this.getToday(date);
+      break;
       case 'week':
-        this.getWeek(date);
-        break;
+      this.getWeek(date);
+      break;
       case 'month':
-        this.getMonth(date);
-        break;
+      this.getMonth(date);
+      break;
       case 'custom':
-        this.getCustom(date);
-        break;
+      this.getCustom(date);
+      break;
       default:
-        this.getDefault(date);
-        break;
+      this.getDefault(date);
+      break;
     }
   },
 
@@ -123,17 +123,35 @@ CustomRange = React.createClass({
 
   render(){
     return(
-      <ul className="nav navbar-nav">
-        <li className="subNavbarLi" id="subNavbarToday"><a href="" onClick={this.handleButtonClicks.bind(this, 'today')}>Today</a></li>
-        <li className="subNavbarLi" id="subNavbarWeek"><a href="" onClick={this.handleButtonClicks.bind(this, 'week')}>Last 7 days</a></li>
-        <li className="subNavbarLi" id="subNavbarMonth"><a href="" onClick={this.handleButtonClicks.bind(this, 'month')}>Last month</a></li>
-        <li className="subNavbarLi" id="subNavbarCustom">
-          <div className="input-group input-group-sm input-daterange" id="datepicker">
+      <div>
+        <div className="visible-xs visible-sm">
+          <h4 className="text-center blueText">Choose Date Range</h4>
+          <ul id="mobileList">
+            <li className="mobileListing"><h4 onClick={this.handleButtonClicks.bind(this, 'today')}>Today</h4></li>
+            <li className="mobileListing"><h4 onClick={this.handleButtonClicks.bind(this, 'week')}>Last 7 days</h4></li>
+            <li className="mobileListing"><h4 onClick={this.handleButtonClicks.bind(this, 'month')}>Last month</h4></li>
+          </ul>
+          <div className="input-group input-group-sm input-daterange" id="smallRange">
             <input type="text" className="input-sm form-control dateRangeInput" ref="from" id="from" onClick={this.dateRangeHandler}/>
             <input type="text" className="input-sm form-control dateRangeInput" ref="end" id="end" onClick={this.dateRangeHandler}/>
           </div>
-        </li>
-      </ul>
+        </div>
+
+        <div className="hidden-xs hidden-sm">
+          <ul className="nav navbar-nav">
+            <li className="subNavbarLi" id="subNavbarToday"><a href="" onClick={this.handleButtonClicks.bind(this, 'today')}>Today</a></li>
+            <li className="subNavbarLi" id="subNavbarWeek"><a href="" onClick={this.handleButtonClicks.bind(this, 'week')}>Last 7 days</a></li>
+            <li className="subNavbarLi" id="subNavbarMonth"><a href="" onClick={this.handleButtonClicks.bind(this, 'month')}>Last month</a></li>
+            <li className="subNavbarLi" id="subNavbarCustom">
+              <div className="input-group input-group-sm input-daterange" id="datepicker">
+                <input type="text" className="input-sm form-control dateRangeInput" ref="from" id="from" onClick={this.dateRangeHandler}/>
+                <input type="text" className="input-sm form-control dateRangeInput" ref="end" id="end" onClick={this.dateRangeHandler}/>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
     )
   }
 });
