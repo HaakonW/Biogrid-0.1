@@ -1,5 +1,5 @@
 PageNotFound = React.createClass({
-  render(){
+  render() {
     return(
       <div className="not-found text-center">
         <div className="not-found-text">

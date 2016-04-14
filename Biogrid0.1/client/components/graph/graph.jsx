@@ -93,7 +93,6 @@ Graph = React.createClass({
           axisLineColor: 'rgb('+this.props.color+')',
           showRangeSelector: true,
           rangeSelectorHeight: 30,
-          //retainDateWindow is new. Should keep zoom level when new data
           retainDateWindow:true,
           rangeSelectorPlotFillColor: 'rgb('+this.props.color+')',
           rangeSelectorPlotStrokeColor: 'rgb('+this.props.color+')',
@@ -102,18 +101,12 @@ Graph = React.createClass({
     }
   },
 
-  componentDidMount() {
-    //this.createGraph();
-    //console.log("didMount");
-  },
-
   componentDidUpdate() {
-    if (this.props.sensors) this.createGraph(); //waits until all data is ready to draw the graph
+    if (this.props.sensors) this.createGraph();
   },
 
   render() {
     return(
-      //FIXME have to use a ready-function to show spinners while data is loading
       <div>
         <h4 className="text-center blueText">{this.props.thingDescription}</h4>
         <div className="graph" ref={(ref) => this.graf = ref}></div>

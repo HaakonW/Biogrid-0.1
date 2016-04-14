@@ -1,5 +1,5 @@
 NoDataMessage = React.createClass({
-  render(){
+  render() {
     return(
       <div>
         <h2  className="blueText"> Sorry, no {this.props.datatype} available at this time!  </h2>

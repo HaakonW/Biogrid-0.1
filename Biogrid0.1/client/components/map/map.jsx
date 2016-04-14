@@ -3,12 +3,14 @@ Map = React.createClass({
   componentDidMount() {
     GoogleMaps.load();
   },
+
   getMeteorData() {
     return {
       loaded: GoogleMaps.loaded(),
       mapOptions: GoogleMaps.loaded() && this.mapOptions()
     };
   },
+
   mapOptions() {
     return {
       center: new google.maps.LatLng(this.props.lat, this.props.lng),
@@ -30,6 +32,7 @@ Map = React.createClass({
       ]
     }
   },
+
   render() {
     if(this.data.loaded) {
       return <GoogleMap name={this.data.mapOptions.id} options={this.data.mapOptions} />;
@@ -43,6 +46,7 @@ GoogleMap = React.createClass({
     name: React.PropTypes.string.isRequired,
     options: React.PropTypes.object.isRequired
   },
+
   componentDidMount() {
     GoogleMaps.create({
       name: this.props.name,
@@ -55,9 +59,10 @@ GoogleMap = React.createClass({
         position:map.options.center,
         map: map.instance,
       });
-      //marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
+      //FIXME marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
     });
   },
+
   componentWillUnmount() {
     if (GoogleMaps.maps[this.props.name]) {
       google.maps.event.clearInstanceListeners(GoogleMaps.maps[this.props.name].instance);

@@ -1,7 +1,6 @@
 Dashboard = React.createClass({
   mixins: [ReactMeteorData],
-  getMeteorData(){
-
+  getMeteorData() {
     const siteId = FlowRouter.getParam("siteId");
     const subscriptionHubs = Meteor.subscribe('hubs', siteId);
 
@@ -12,15 +11,15 @@ Dashboard = React.createClass({
     }
   },
 
-  render(){
+  render() {
     if(this.data.hubsReady) {
       if(this.data.hubs.length === 0) {
         var hubsList = <NoDataMessage datatype={"hubs"}/>
       }
       else {
-        var hubsList = this.data.hubs.map(function(hub){
+        var hubsList = this.data.hubs.map(function(hub) {
           return(
-                <Hub className="hubFrame" key={hub._id} hubId={hub._id} />
+            <Hub className="hubFrame" key={hub._id} hubId={hub._id} />
           )
         })
       }

@@ -1,7 +1,6 @@
 Login = React.createClass({
   mixins:[ReactMeteorData],
-
-  getMeteorData(){
+  getMeteorData() {
     let data = {};
     data.currentUser = Meteor.user();
     return data;
@@ -11,17 +10,17 @@ Login = React.createClass({
     $('#email').focus();
   },
 
-  getInitialState(){
+  getInitialState() {
     return {value: ""}
   },
 
-  handleSubmit(e){
+  handleSubmit(e) {
     e.preventDefault();
     let email = ReactDOM.findDOMNode(this.refs.email).value.trim();
     let password = ReactDOM.findDOMNode(this.refs.password).value.trim();
     Meteor.loginWithPassword(email, password, (err) => {
-      if(err){
-        if(err.reason.length > 20){
+      if(err) {
+        if(err.reason.length > 20) {
           alert(err.reason);
         }
         else {
@@ -35,11 +34,11 @@ Login = React.createClass({
     });
   },
 
-  newLogin(){
+  newLogin() {
     $("#userStatus").slideUp(300);
   },
 
-  render(){
+  render() {
     return(
       <div id="loginBox">
         <div className="row">
@@ -65,8 +64,6 @@ Login = React.createClass({
                   <button type="submit"  className="btn btn-primary form-control greenBtn">Login</button>
                   <span className="label label-danger form-control" id="userStatus">{this.state.value}</span>
                 </form>
-                <div>
-                </div>
               </div>
             </div>
           </div>
