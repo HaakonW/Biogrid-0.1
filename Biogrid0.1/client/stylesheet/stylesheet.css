@@ -65,12 +65,16 @@ h1 {
 .dropdown-menu{
   background-color: #222222 !important;
 }
+.fa-user, .fa-cog{
+  color: #2aa9dc !important;
+  background-color: none;
+}
 
-#testDrop a{
+#testDrop a {
   color: #2aa9dc !important;
 }
 
-#testDrop a:hover{
+#testDrop a:hover {
   background-color: inherit;
   color: white !important;
 }
@@ -93,7 +97,8 @@ h1 {
   margin-right: 10px;
   margin-left: 10px;
 }
-.dateRangeInput{
+
+.dateRangeInput  {
   background: #222222 !important;
   color: #2aa9dc !important;
   font-size: 1em !important;
@@ -102,7 +107,7 @@ h1 {
   border-color: #2aa9dc !important;
 }
 
-.datepicker-dropdown{
+.datepicker-dropdown  {
   background: #222222 !important;
   color: #2aa9dc !important;
 }
@@ -128,6 +133,8 @@ h1 {
 .subNavbarLi{
   border-bottom: solid #222222 1px;
 }
+
+
 
 .queryLinks{
   color: #2aa9dc;

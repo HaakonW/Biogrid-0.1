@@ -32,20 +32,32 @@ SubNavbar = React.createClass({
       sitesList = <li> Sorry, no sites available or loading </li>
     }
     return(
-      <nav className="navbar navbar-inverse navbar-static-top" id="subNavbar" role="navigation">
-        <div className="navbar-header collapse navbar-collapse">
-          <ul className="nav navbar-nav">
-            <li className="dropdown subNavbarLi">
-              <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                {currentSite} <i className="fa fa-caret-down greenIcon"></i> </a>
-              <ul className="dropdown-menu" id="yourSites">
-                {sitesList}
-              </ul>
-            </li>
+
+      <nav className="navbar navbar-inverse" id="subNavbar">
+  <div className="container-fluid">
+    <div className="navbar-header">
+      <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span className="icon-bar"></span>
+        <span className="icon-bar"></span>
+        <span className="icon-bar"></span>
+      </button>
+
+    </div>
+    <div className="collapse navbar-collapse" id="myNavbar">
+      <ul className="nav navbar-nav">
+        <li className="dropdown subNavbarLi">
+          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            {currentSite} <i className="fa fa-caret-down blueIcon"></i></a>
+          <ul className="dropdown-menu" id="yourSites">
+            {sitesList}
           </ul>
-          <CustomRange/>
-        </div>
-      </nav>
+        </li>
+      </ul>
+        <CustomRange/>
+    </div>
+  </div>
+</nav>
+
     )
   }
 });
