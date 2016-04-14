@@ -1,9 +1,7 @@
 privateRoutes = FlowRouter.group({
   name:"privateroutes",
   triggersEnter:[function (context,redirect) {
-    //let route;
     if(!Meteor.userId()) {
-      //alert("You dont have access!");
       redirect("/");
     }
   }]
@@ -16,7 +14,7 @@ publicRoutes = FlowRouter.group({
 publicRoutes.route("/", {
   name: "Login",
   action() {
-    ReactLayout.render(Loginlayout, {})
+    { Meteor.userId() ? FlowRouter.redirect("/site") : ReactLayout.render(Loginlayout, {}) }
   }
 });
 
@@ -29,31 +27,25 @@ publicRoutes.route("/logout", {
   }
 });
 
-privateRoutes.route("/site",{
+privateRoutes.route("/site", {
   name: "Site",
-  action: function(){
-    ReactLayout.render(Site,{});
+  action: function() {
+    ReactLayout.render(Site, {});
   }
 });
 
-privateRoutes.route("/dashboard/:siteId" ,{
+privateRoutes.route("/dashboard/:siteId", {
   name:"Dashboard",
-  action:function(){
-    ReactLayout.render(Dashboard,{})
+  action:function() {
+    ReactLayout.render(Dashboard, {})
   }
-}
-);
+});
 
-//TODO Make not found component
 FlowRouter.notFound = {
-    // Subscriptions registered here don't have Fast Render support.
-    subscriptions: function() {
-
-    },
-    action: function() {
-      ReactLayout.render(PageNotFound,{}),
-      Meteor.setTimeout(function(){
-         FlowRouter.go("/site");
-      }, 6000);
-    }
+  action: function() {
+    ReactLayout.render(PageNotFound, {}),
+    Meteor.setTimeout(function() {
+      FlowRouter.go("/site");
+    }, 6000);
+  }
 };
