@@ -113,6 +113,17 @@ h1 {
   font-size: 1.2em;
 }
 
+#logoutLink {
+  color: gray;
+  border: 0px;
+}
+#logoutLink:hover {
+  background-color: inherit;
+  color: #2aa9dc;
+  text-decoration: none;
+}
+
+
 /********** SUBNAVBAR **********/
 #subNavbar{
   border-top: solid #2aa9dc 1px !important;

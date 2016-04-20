@@ -9,8 +9,7 @@ Navbar = React.createClass({
         <nav className="navbar navbar-inverse" id="topNavbar">
           <div className="container-fluid">
             <div className="navbar-header">
-              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="">
-                <a href="/logout"><i className="fa fa-power-off"></i></a></button>
+              <a id="logoutLink" href="/logout" className="navbar-toggle">Log Out</a>
               <a className="navbar-brand" href="/site">Biogrid Cortex</a>
             </div>
             <div id="navbar" className="navbar-collapse collapse">
