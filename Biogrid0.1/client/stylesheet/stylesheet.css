@@ -34,15 +34,10 @@ h1 {
 .not-found {
   background-image: url("images/not-found.jpg");
   background-size: cover;
-  /* Set rules to fill background */
   min-height: 100%;
   min-width: 100%;
-
-  /* Set up proportionate scaling */
   width: 100%;
   height: auto;
-
-  /* Set up positioning */
   position: fixed;
   top: 0;
   left: 0;
@@ -57,25 +52,19 @@ h1 {
 }
 
 @media only screen and (max-width:667px){
-  /* styles for mobile browsers smaller than 667px; (iPhone 6s) */
   .not-found {
     background-image: url("images/not-found-mobile.png");
     background-size: cover;
-    /* Set rules to fill background */
     min-height: 100%;
     min-width: 100%;
-
-    /* Set up proportionate scaling */
     width: 100%;
     height: auto;
-
-    /* Set up positioning */
     position: fixed;
     top: 0;
     left: 0;
   }
 
-  .not-found-text {
+.not-found-text {
     margin-top: 20%;
     color: white;
     font-weight:lighter;
@@ -85,15 +74,17 @@ h1 {
 }
 
 /********** NAVBAR **********/
-.navbar{
+.navbar {
   margin-bottom: 0px;
   border: none;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   background-color: #222222 !important;
 }
-.fa-user, .fa-cog{
+
+.fa-user,
+.fa-cog {
   color: #2aa9dc !important;
   background-color: none;
 }
@@ -114,9 +105,10 @@ h1 {
 }
 
 #logoutLink {
-  color: gray;
+  color: #7c7c7c;
   border: 0px;
 }
+
 #logoutLink:hover {
   background-color: inherit;
   color: #2aa9dc;
@@ -125,7 +117,8 @@ h1 {
 
 
 /********** SUBNAVBAR **********/
-#subNavbar{
+
+#subNavbar {
   border-top: solid #2aa9dc 1px !important;
   z-index: 1 !important;
   margin-bottom: 2%;
@@ -137,7 +130,7 @@ h1 {
   margin-left: 10px;
 }
 
-.dateRangeInput  {
+.dateRangeInput {
   background: #222222 !important;
   color: #2aa9dc !important;
   font-size: 1em !important;
@@ -146,22 +139,22 @@ h1 {
   border-color: #2aa9dc !important;
 }
 
-.datepicker-dropdown  {
+.datepicker-dropdown {
   background: #222222 !important;
   color: #2aa9dc !important;
 }
 
-.range{
+.range {
   background-color: #3d76bb !important;
 }
 
-.fa-search{
+.fa-search {
   margin-top: 18px;
   color: #3d76bb;
   cursor: pointer;
 }
 
-#yourSites{
+#yourSites {
   min-width: 250px !important;
   margin-top: 2px !important;
   padding: 20px;
@@ -169,51 +162,52 @@ h1 {
   border-right: solid black 1px;
 }
 
-.subNavbarLi{
+.subNavbarLi {
   border-bottom: solid #222222 1px;
 }
 
-
-
-.queryLinks{
+.queryLinks {
   color: #2aa9dc;
 }
 
-.queryLinks:hover{
+.queryLinks:hover {
   text-decoration: none;
   color: white;
 }
 
 /********** METADATA **********/
-#metaData{
+#metaData {
   margin-bottom: 3%;
 }
-.metaCol{
+.metaCol {
   opacity: 0.9;
 }
 
-.metaText{
+.metaText {
   color: white;
 }
 
-#firstMeta{
+#firstMeta {
   background-color: #1db954;
   border-radius: 5px;
 }
-#secondMeta{
+
+#secondMeta {
   background-color: red;
   border-radius: 5px;
 }
-#thirdMeta{
+
+#thirdMeta {
   background-color: #2aa9dc;
   border-radius: 5px;
 }
-#forthMeta{
+
+#forthMeta {
   background-color: orange;
   border-radius: 5px;
 }
 
-.countNumber{
+.countNumber {
   font-size: 83px;
   font-weight: bolder;
 }
@@ -242,7 +236,7 @@ h1 {
   font-family: HelveticaNeue-light;
 }
 
-#userStatus{
+#userStatus {
   display: none;
   text-transform: uppercase;
   margin-bottom: 40px;
@@ -276,7 +270,7 @@ h1 {
   min-width: 15px;
 }
 
-.greenIcon{
+.greenIcon {
   color: #2aa9dc;
   margin-left: 5px;
   margin-right: 5px;
@@ -373,12 +367,12 @@ h1 {
     border-top: solid black 2px;
   }
 
-  .footer a{
+  .footer a {
     text-decoration: none;
   }
 
 /**********ANIMATIONS**********/
-.example-enter{
+.example-enter {
   opacity: 0.01;
 }
 
@@ -395,10 +389,6 @@ h1 {
   opacity: 0.01;
   transition: opacity 1000ms ease-in;
 }
-
-
-
-
 
 
 /********** **********/
