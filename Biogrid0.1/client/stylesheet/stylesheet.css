@@ -265,7 +265,8 @@ h1 {
   outline: 0 !important;
 }
 
-.fa-lock {
+.fa-lock,
+.fa-user {
   color: black;
   min-width: 15px;
 }
@@ -364,7 +365,7 @@ h1 {
     border-top: solid black 2px;
   }
 
-  .footer a {
+.footer a {
     text-decoration: none;
   }
 
