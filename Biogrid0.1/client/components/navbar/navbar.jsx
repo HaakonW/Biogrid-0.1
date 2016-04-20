@@ -5,15 +5,16 @@ Navbar = React.createClass({
       userinfo = Meteor.user().emails[0].address;
     }
     return (
+      <div>
         <nav className="navbar navbar-inverse" id="topNavbar">
           <div className="container-fluid">
             <div className="navbar-header">
-                <a className="navbar-toggle" id="logOutToggle" href="/logout">Log out</a>
-                <a className="navbar-brand" href="/site">Biogrid Cortex</a>
-              </div>
-
-              <div id="logoutNavbar" className="collapse navbar-collapse pull-right">
-                <ul className="nav navbar-nav">
+              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="">
+                <a href="/logout"><i className="fa fa-power-off"></i></a></button>
+              <a className="navbar-brand" href="/site">Biogrid Cortex</a>
+            </div>
+            <div id="navbar" className="navbar-collapse collapse">
+              <ul className="nav navbar-nav navbar-right">
                   <li className="dropdown">
                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                       {userinfo} <span className="caret"></span>
@@ -24,10 +25,11 @@ Navbar = React.createClass({
                     <li><a href="/logout"><i className="fa fa-power-off"></i> Log out</a></li>
                   </ul>
                 </li>
-              </ul>
-            </div>
+            </ul>
           </div>
-        </nav>
-    )
-  }
+        </div>
+      </nav>
+    </div>
+  )
+}
 });
