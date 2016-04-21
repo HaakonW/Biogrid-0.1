@@ -132,7 +132,7 @@ CustomRange = React.createClass({
             <span >
               <a href="" className="customRangeXs" id="subNavbarToday" onClick={this.handleButtonClicks.bind(this, 'today')}>Today</a>
               <a href="" className="customRangeXs" id="subNavbarWeek" onClick={this.handleButtonClicks.bind(this, 'week')}>Last 7 days</a>
-              <a href="" className="customRangeXs" id="subNavbarMonth" onClick={this.handleButtonClicks.bind(this, 'today')}>Last month</a>
+              <a href="" className="customRangeXs" id="subNavbarMonth" onClick={this.handleButtonClicks.bind(this, 'month')}>Last month</a>
             </span>
           </li>
 
