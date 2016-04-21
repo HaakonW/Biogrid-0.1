@@ -26,6 +26,7 @@ Login = React.createClass({
         else {
           this.setState({value: err.reason});
           $("#userStatus").slideDown(300);
+          $("#password").val('');
         }
       }
       else {
@@ -58,7 +59,7 @@ Login = React.createClass({
                   <div className="spacer10">
                     <div className="input-group">
                       <span className="input-group-addon"><i className="fa fa-lock"></i></span>
-                      <input type="password" ref="password" placeholder="Password" className="form-control" onClick={this.newLogin}/>
+                      <input type="password" ref="password" placeholder="Password" id="password" className="form-control" onClick={this.newLogin}/>
                     </div>
                   </div>
                   <button type="submit"  className="btn btn-primary form-control greenBtn">Login</button>
