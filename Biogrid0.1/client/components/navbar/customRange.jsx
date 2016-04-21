@@ -121,19 +121,33 @@ CustomRange = React.createClass({
     ('0' + inDate.getDate()).slice(-2);
   },
 
-  render(){
+  render() {
     return(
-      <ul className="nav navbar-nav">
-        <li className="subNavbarLi" id="subNavbarToday"><a href="" onClick={this.handleButtonClicks.bind(this, 'today')}>Today</a></li>
-        <li className="subNavbarLi" id="subNavbarWeek"><a href="" onClick={this.handleButtonClicks.bind(this, 'week')}>Last 7 days</a></li>
-        <li className="subNavbarLi" id="subNavbarMonth"><a href="" onClick={this.handleButtonClicks.bind(this, 'month')}>Last month</a></li>
-        <li className="subNavbarLi" id="subNavbarCustom">
-          <div className="input-group input-group-sm input-daterange" id="datepicker">
-            <input type="text" className="input-sm form-control dateRangeInput" ref="from" id="from" onClick={this.dateRangeHandler}/>
-            <input type="text" className="input-sm form-control dateRangeInput" ref="end" id="end" onClick={this.dateRangeHandler}/>
+      <div>
+        <ul className="nav navbar-nav">
+          <li className="subNavbarLi hidden-xs" id="subNavbarToday"><a href="" onClick={this.handleButtonClicks.bind(this, 'today')}>Today</a></li>
+          <li className="subNavbarLi hidden-xs" id="subNavbarWeek"><a href="" onClick={this.handleButtonClicks.bind(this, 'week')}>Last 7 days</a></li>
+          <li className="subNavbarLi hidden-xs" id="subNavbarMonth"><a href="" onClick={this.handleButtonClicks.bind(this, 'month')}>Last month</a></li>
+          <li className="visible-xs">
+            <span >
+              <a href="" className="customRangeXs" id="subNavbarToday" onClick={this.handleButtonClicks.bind(this, 'today')}>Today</a>
+              <a href="" className="customRangeXs" id="subNavbarWeek" onClick={this.handleButtonClicks.bind(this, 'week')}>Last 7 days</a>
+              <a href="" className="customRangeXs" id="subNavbarMonth" onClick={this.handleButtonClicks.bind(this, 'today')}>Last month</a>
+            </span>
+          </li>
+
+          <li className="subNavbarLi" id="subNavbarCustom">
+            <div className="input-group input-group-sm input-daterange" id="datepicker">
+              <div className="testDiv">
+                <input type="text" className="input-sm form-control dateRangeInput" ref="from" id="from" onClick={this.dateRangeHandler}/>
+                <input type="text" className="input-sm form-control dateRangeInput" ref="end" id="end" onClick={this.dateRangeHandler}/>
+              </div>
+
           </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
+
     )
   }
 });

@@ -18,7 +18,7 @@ Navbar = React.createClass({
                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                       {userinfo} <span className="caret"></span>
                   </a>
-                  <ul className="dropdown-menu" id="testDrop">
+                  <ul className="dropdown-menu" id="customDropDown">
                     <li><a href="/site"><i className="fa fa-list"></i> My Sites</a></li>
                     <li role="separator" className="divider"></li>
                     <li><a href="/logout"><i className="fa fa-power-off"></i> Log out</a></li>
