@@ -28,7 +28,7 @@ Site = React.createClass({
         return(
           <div key={site._id} className="col-md-6 col-sm-12">
             <div className="col-md-12 siteWrapper">
-              <a className="site-links" href={link}>
+              <a className="blueText" href={link}>
                 <h4 className="text-center"> {site.name}  </h4>
                 <Map lat={site.latitude} lng={site.longitude} />
               </a>
@@ -42,7 +42,7 @@ Site = React.createClass({
                     <NoDataMessage datatype={"sites"} />
                   </div>
     }
-    
+
     return(
       <div className="">
         <Navbar />

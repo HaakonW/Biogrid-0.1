@@ -62,7 +62,7 @@ Login = React.createClass({
                       <input type="password" ref="password" placeholder="Password" id="password" className="form-control" onClick={this.newLogin}/>
                     </div>
                   </div>
-                  <button type="submit"  className="btn btn-primary form-control greenBtn">Login</button>
+                  <button type="submit"  className="btn form-control blueBtn">Login</button>
                   <span className="label label-danger form-control" id="userStatus">{this.state.value}</span>
                 </form>
               </div>
