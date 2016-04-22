@@ -14,7 +14,7 @@ publicRoutes = FlowRouter.group({
 publicRoutes.route("/", {
   name: "Login",
   action() {
-    { Meteor.userId() ? FlowRouter.redirect("/site") : ReactLayout.render(Loginlayout, {}) }
+    { Meteor.userId() ? FlowRouter.redirect("/site") : ReactLayout.render(Login, {}) }
   }
 });
 
