@@ -17,27 +17,11 @@ a:hover {
 * {
   font-family: HelveticaNeue-light;
 }
-/*
-#bg {
-  height: 100%;
-  background-color: #252830;
-}
-
-.panel-body {
-  background-color: #252830;
-}
-
-.metadataColumn {
-  border: solid black 100px;
-  color: black;
-  height: 200px;
-}
 
 .spacer10 {
   margin-top: 10px;
-  margin-bottom: 10px;
 }
-*/
+
 .blueText {
   color: #2aa9dc !important;
 }
@@ -94,6 +78,7 @@ a:hover {
 
 .dropdown-menu {
   background-color: #222222 !important;
+  box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.7);
 }
 
 #customDropDown a {
@@ -163,6 +148,7 @@ a:hover {
 .datepicker-dropdown {
   background: #222222 !important;
   color: #2aa9dc !important;
+  box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.7);
 }
 
 @media only screen and (max-width:767px) {
@@ -179,6 +165,7 @@ a:hover {
   min-width: 250px !important;
   margin-top: 2px !important;
   padding: 20px;
+  box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.7);
 }
 
 .subNavbarLi {
@@ -205,32 +192,38 @@ a:hover {
 
 .metaText {
   color: white;
+  font-size: 0.8em;
+  text-align: center;
 }
 
 #firstMeta {
   background-color: #1db954;
   border-radius: 5px;
+  box-shadow: 5px 5px 4px 1px rgba(0,0,0,0.7);
 }
 
 #secondMeta {
   background-color: red;
   border-radius: 5px;
+  box-shadow: 5px 5px 4px 1px rgba(0,0,0,0.7);
 }
 
 #thirdMeta {
   background-color: #2aa9dc;
   border-radius: 5px;
+  box-shadow: 5px 5px 4px 1px rgba(0,0,0,0.7);
 }
 
 #forthMeta {
   background-color: orange;
   border-radius: 5px;
+  box-shadow: 5px 5px 4px 1px rgba(0,0,0,0.7);
 }
 
 .countNumber {
-  font-size: 83px;
-  font-weight: bolder;
   color: white;
+  font-size: 3em;
+  font-weight: bolder;
 }
 
 /********** FRONT PAGE LOGIN **********/
@@ -243,7 +236,13 @@ a:hover {
 }
 
 #loginBox {
-  margin-top: 18%;
+  position: absolute;
+  height: 40%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 #loginBox h3 {
@@ -285,8 +284,9 @@ a:hover {
 
 #login-bg {
   background-color:rgba(34, 34, 34, 0.9);
-  border-radius: 5px;
-  padding-bottom: 20px;
+  border-radius: 10px;
+  padding: 2%;
+  padding-bottom: 5%;
 }
 
 .login-frontpage {
@@ -301,6 +301,15 @@ a:hover {
   left: 0;
 }
 
+#biogrid {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 2%;
+  margin-top: 1%;
+}
+
 /********** SITE **********/
 
 .siteWrapper {
@@ -309,6 +318,7 @@ a:hover {
   margin-top: 25px;
   padding-top: 2px;
   padding-bottom: 2px;
+  box-shadow: 5px 5px 4px 1px rgba(0,0,0,0.7);
 }
 
 .map-container {
@@ -328,7 +338,8 @@ a:hover {
   border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 6%;
+  box-shadow: 5px 5px 4px 1px rgba(0,0,0,0.7);
 }
 
 .graph {
@@ -369,5 +380,8 @@ a:hover {
   transition: opacity 1000ms ease-in;
 }
 
+#greenline{
+  border: solid green;
+}
 /********** **********/
 /********** **********/
