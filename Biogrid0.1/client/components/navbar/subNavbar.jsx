@@ -41,7 +41,6 @@ SubNavbar = React.createClass({
               <span className="icon-bar"></span>
             </button>
           </div>
-
           <div className="collapse navbar-collapse text-center" id="myNavbar">
             <ul className="nav navbar-nav">
               <li className="dropdown subNavbarLi">

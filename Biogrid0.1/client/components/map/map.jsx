@@ -14,7 +14,6 @@ Map = React.createClass({
   mapOptions() {
     return {
       center: new google.maps.LatLng(this.props.lat, this.props.lng),
-      //FIXME id is now a combination of lat and long. Not good?
       id: this.props.lat + this.props.lng,
       zoom: 13,
       scrollwheel: false,
@@ -59,7 +58,6 @@ GoogleMap = React.createClass({
         position:map.options.center,
         map: map.instance,
       });
-      //FIXME marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
     });
   },
 

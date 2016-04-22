@@ -1,5 +1,4 @@
 Graph = React.createClass({
-  //check if object is empty
   isEmpty(obj) {
     let hasOwnProperty = Object.prototype.hasOwnProperty;
 
@@ -12,7 +11,6 @@ Graph = React.createClass({
     return true;
   },
 
-  //check if object has more days than one
   isObjectMoreThanOneDay(obj) {
       return obj.length > 1
   },

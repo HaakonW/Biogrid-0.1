@@ -135,19 +135,16 @@ CustomRange = React.createClass({
               <a href="" className="customRangeXs" id="subNavbarMonth" onClick={this.handleButtonClicks.bind(this, 'month')}>Last month</a>
             </span>
           </li>
-
           <li className="subNavbarLi" id="subNavbarCustom">
             <div className="input-group input-group-sm input-daterange" id="datepicker">
               <div className="testDiv">
                 <input type="text" className="input-sm form-control dateRangeInput" ref="from" id="from" onClick={this.dateRangeHandler}/>
                 <input type="text" className="input-sm form-control dateRangeInput" ref="end" id="end" onClick={this.dateRangeHandler}/>
               </div>
-
           </div>
           </li>
         </ul>
       </div>
-
     )
   }
 });

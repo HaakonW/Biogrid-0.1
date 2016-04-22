@@ -5,18 +5,10 @@ Site = React.createClass({
     data.sites = [];
     const subscription = Meteor.subscribe('sites');
 
-    /*FIXME added message when sites not available, but the message renders first
-    even though the sites are available. Think a solution is more like the one
-    underneath the return. Just as solved in Hub-component
-    */
     return {
       ready: subscription.ready(),
       sites: Sites.find().fetch(),
     }
-    /*if(subscription.ready()) {
-      data.sites = Sites.find({}).fetch();
-    }
-    return data;*/
   },
 
   render() {
@@ -42,7 +34,6 @@ Site = React.createClass({
                     <NoDataMessage datatype={"sites"} />
                   </div>
     }
-
     return(
       <div className="">
         <Navbar />
