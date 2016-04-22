@@ -47,7 +47,7 @@ a:hover {
   margin-left: 40%;
 }
 
-@media only screen and (max-width:667px){
+@media only screen and (max-width:767px){
   .not-found {
     background-image: url("images/not-found-mobile.png");
     background-size: cover;
@@ -66,6 +66,10 @@ a:hover {
     font-weight:lighter;
     font-size: 3em;
     margin-left: 0;
+  }
+
+  .metaText {
+    font-size: 12px;
   }
 }
 
@@ -226,6 +230,18 @@ a:hover {
   font-weight: bolder;
 }
 
+@media only screen and (max-width:767px){
+  .countNumber {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .metaText {
+    text-align: center;
+  }
+
+}
+
 /********** FRONT PAGE LOGIN **********/
 
 .col-centered {
@@ -252,7 +268,7 @@ a:hover {
 #userStatus {
   display: none;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   margin-top: 20px;
   border: none;
   padding-top: 10px;
@@ -286,7 +302,7 @@ a:hover {
   background-color:rgba(34, 34, 34, 0.9);
   border-radius: 10px;
   padding: 2%;
-  padding-bottom: 5%;
+  padding-bottom: 3%;
 }
 
 .login-frontpage {
@@ -307,7 +323,7 @@ a:hover {
   bottom: 0;
   right: 0;
   margin-right: 2%;
-  margin-top: 1%;
+  margin-top: 10px;
 }
 
 /********** SITE **********/
